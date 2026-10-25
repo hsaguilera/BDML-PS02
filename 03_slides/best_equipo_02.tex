@@ -1,0 +1,249 @@
+% ==============================================================================
+% best_equipo_02.tex -- Best Model Deep Dive (Problem Set 2: Predicting Poverty)
+% Compilar:  cd 03_slides && latexmk -pdf best_equipo_02.tex
+% Las cifras vienen de numbers.tex (generado por 01_code/17_harold_slide_assets.R)
+% y el puntaje de Kaggle de kaggle_scores.tex (se completa a mano).
+% ==============================================================================
+\def\deckname{Best Model Deep Dive}
+\input{preamble.tex}
+
+\begin{document}
+
+% ------------------------------------------------------------------------------
+% 1. Resumen del mejor modelo (diapositiva obligatoria)
+% ------------------------------------------------------------------------------
+\begin{frame}{Best Model Overview: LightGBM clasifica bien porque imputamos el ingreso que el test no trae}
+  \begin{columns}[T]
+    \column{.50\textwidth}
+    \begin{block}{Especificación}
+      \footnotesize
+      \begin{itemize}\setlength{\itemsep}{1pt}
+        \item \textbf{Algoritmo:} LightGBM, clasificación binaria (boosting de árboles)
+        \item \textbf{Variables:} \nNVarsLGBM{} a nivel de hogar; 72 construidas, entre ellas el \resaltar{ingreso imputado} por persona
+        \item \textbf{Hiperparámetros:} \nHojasLGBM{} hojas, \nRondasLGBM{} rondas, tasa de aprendizaje 0,03, penalización L2 de 50
+        \item \textbf{Umbral:} \nThrLGBM{} (maximiza el F1); validación en 5 pliegues, sin Bogotá
+      \end{itemize}
+    \end{block}
+    \column{.22\textwidth}
+    \estadistica{\kgLGBM}{F1 público\\en Kaggle}
+    \vspace{2mm}
+    \estadistica{\nFoneLGBM}{F1 en validación\\cruzada}
+    \column{.22\textwidth}
+    \estadistica{\nAUCLGBM}{AUC}
+    \vspace{2mm}
+    \estadistica{\nRecLGBM}{cobertura de los\\pobres}
+  \end{columns}
+  \begin{block}{Mensajes principales}
+    \footnotesize
+    \begin{enumerate}\setlength{\itemsep}{1pt}
+      \item El salto viene de los \resaltar{datos}, no del algoritmo: imputar el ingreso suma \nGainIncome{} de F1; cambiar Logit por LightGBM, \nGainAlgo{}.
+      \item Con ese umbral, \nUnderLGBM{}\,\% de los pobres quedan excluidos y \nLeakLGBM{}\,\% de los beneficiarios no son pobres.
+      \item Sin el ingreso imputado (encuesta corta) el F1 cae a \nFoneSurveyMin{}--\nFoneSurveyShort{}: \resaltar{no se despliega} con pocas preguntas.
+    \end{enumerate}
+  \end{block}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% DATOS
+% ------------------------------------------------------------------------------
+\begin{frame}{Datos: la pobreza crece con el tamaño del hogar, el hacinamiento y la baja educación}
+  \begin{columns}[T]
+    \column{.66\textwidth}
+    \figura{harold_slide_gradients.png}
+    \column{.32\textwidth}
+    \small
+    \textbf{Problema.} Un hogar es pobre si su ingreso per cápita queda por debajo de la línea de pobreza.
+    \vspace{2mm}
+    \begin{itemize}\setlength{\itemsep}{2pt}
+      \item \nPobreTrain{}\,\% de los hogares de train son pobres: clase desbalanceada, así que se optimiza el \resaltar{F1} y se elige el umbral.
+      \item Train: \nNTrain{} hogares; test: \nNTest{}.
+      \item El ingreso, que define la pobreza, \resaltar{no existe en test}.
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Datos: el ingreso no está en test, pero se puede predecir desde las preguntas laborales}
+  \begin{columns}[T]
+    \column{.44\textwidth}
+    \small
+    \begin{enumerate}\setlength{\itemsep}{3pt}
+      \item \textbf{Ingreso por persona.} Un LightGBM aprende el ingreso individual con las variables de cada persona que sí están en test (ocupación, horas, posición, afiliación, edad, educación).
+      \item \textbf{Fuera de muestra.} Cada hogar se predice con un modelo que no lo vio (5 pliegues por hogar): sin filtración de train a test.
+      \item \textbf{Regla de pobreza.} Se suma el ingreso imputado al arriendo imputado del propietario y se divide por la línea del hogar.
+    \end{enumerate}
+    \vspace{2mm}
+    \begin{block}{Calidad de la imputación}
+      \footnotesize
+      Correlación con el ingreso del hogar: \nCorrIng; AUC de la razón sola: \resaltar{\nAUCRazon}, frente a \nAUCHacin{} del hacinamiento.
+    \end{block}
+    \column{.54\textwidth}
+    \figura{harold_slide_ratio_density.png}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Datos: el ingreso imputado, por sí solo, ya predice casi tan bien como todas las variables}
+  \begin{columns}[T]
+    \column{.64\textwidth}
+    \figura{harold_slide_univariate.png}
+    \column{.34\textwidth}
+    \small
+    \begin{itemize}\setlength{\itemsep}{3pt}
+      \item Probamos cada variable por sí sola con un AUC no lineal (20 cuantiles), para no descartar relaciones en U.
+      \item Las de ingreso imputado (verde) lideran con AUC cercano a 0,95; el arriendo y las horas trabajadas no pasan de 0,8.
+      \item Es la razón entre el ingreso del hogar y la línea de pobreza, la misma regla con que se define la pobreza.
+      \item Con esa lista armamos los grupos A a D que se comparan en la siguiente diapositiva.
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Datos: sin el ingreso imputado, el F1 se queda en \nFoneA{}; con él, sube a \nFoneAD{}}
+  \begin{columns}[T]
+    \column{.66\textwidth}
+    \figura{harold_slide_ablation.png}
+    \column{.32\textwidth}
+    \small
+    \begin{itemize}\setlength{\itemsep}{3pt}
+      \item \textbf{A:} 77 variables base de hogar y personas agregadas.
+      \item \textbf{B:} razones e interacciones; \textbf{C:} estructura de la regla (arriendo imputado).
+      \item \textbf{D:} ingreso imputado.
+      \item Solo D mueve el F1; B y C aportan menos de 0,002.
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% MEJOR MODELO
+% ------------------------------------------------------------------------------
+\begin{frame}{Modelo: LightGBM construye árboles en secuencia, cada uno corrige los errores del anterior}
+  \begin{columns}[T]
+    \column{.56\textwidth}
+    \small
+    \begin{itemize}\setlength{\itemsep}{3pt}
+      \item \textbf{Boosting:} suma \nRondasLGBM{} árboles pequeños de \nHojasLGBM{} hojas; la tasa de aprendizaje de 0,03 evita que cada árbol sobreajuste.
+      \item \textbf{Captura no linealidades e interacciones} sin que las especifiquemos, y maneja categorías (dominio, tenencia).
+      \item \textbf{Protocolo:} 11 configuraciones aleatorias con 5 pliegues compartidos y parada temprana; la ganadora se reentrena con tasa baja y número fijo de rondas.
+      \item \textbf{Test:} promedio de los 5 modelos entrenados.
+      \item \textbf{Umbral} de \nThrLGBM{}, elegido con las predicciones fuera de muestra.
+    \end{itemize}
+    \column{.40\textwidth}
+    \centering\small\textbf{Hiperparámetros finales}\\[1mm]
+    \footnotesize
+    \input{tables/lgbm_hyper.tex}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Ajuste: el F1 casi no depende de los hiperparámetros ni del peso de la clase pobre}
+  \begin{columns}[T]
+    \column{.68\textwidth}
+    \figura{harold_slide_hyper_search.png}
+    \column{.30\textwidth}
+    \small
+    \begin{itemize}\setlength{\itemsep}{3pt}
+      \item Las \nNConfigs{} configuraciones van de \nFoneSearchMin{} a \nFoneSearchMax{}.
+      \item \textbf{Desbalance:} dar más peso a la clase pobre (1,5 y 2,5) \resaltar{no mejoró}; el mejor modelo usa peso 1.
+      \item Lo que sí ayuda es mover el \resaltar{umbral}: de 0,5 a \nThrLGBM{} el F1 sube de \nFoneLGBMAtHalf{} a \nFoneLGBM{}.
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Importancia: el ingreso imputado concentra \nShareSHAPD{}\,\% de la importancia SHAP}
+  \begin{columns}[T]
+    \column{.66\textwidth}
+    \figura{harold_slide_importance.png}
+    \column{.32\textwidth}
+    \small
+    \begin{itemize}\setlength{\itemsep}{3pt}
+      \item Las tres primeras variables explican \nShareSHAPTopThree{}\,\% de la importancia total y son versiones de la razón ingreso imputado / línea.
+      \item Le siguen los \textbf{subsidios}, el \textbf{arriendo imputado} y el \textbf{dominio}.
+      \item Hacinamiento y educación, tan claras en los datos, ya están resumidas en el ingreso imputado.
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Qué aprende el modelo: la probabilidad de pobreza cae rápido cuando el ingreso alcanza la línea}
+  \begin{columns}[T]
+    \column{.68\textwidth}
+    \figura{harold_slide_effects.png}
+    \column{.30\textwidth}
+    \small
+    \begin{itemize}\setlength{\itemsep}{3pt}
+      \item Con ingreso imputado por debajo de la línea (log\,<\,0) el efecto es de \textbf{más pobreza}; la caída es abrupta cerca de la línea.
+      \item Recibir subsidios (2 o más personas en el hogar) reduce la probabilidad de pobreza.
+      \item Que el arriendo imputado cubra buena parte de la línea (propietarios) la reduce.
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Diagnóstico: generaliza a hogares nuevos, pero la diferencia en Kaggle puede ser ruido}
+  \begin{columns}[T]
+    \column{.56\textwidth}
+    \centering\small\textbf{F1 con hogares nuevos y con regiones completamente nuevas}\\[2mm]
+    \footnotesize
+    \resizebox{\linewidth}{!}{\input{tables/generalization.tex}}\\[2mm]
+    \fuente{Regiones nuevas: en cada pliegue se dejan fuera dominios geográficos completos.}
+    \column{.40\textwidth}
+    \small
+    \begin{itemize}\setlength{\itemsep}{3pt}
+      \item El logit cae \nDropLogitRegions{} al pasar a regiones nuevas; el LightGBM, \nDropLGBMRegions{}: el boosting depende algo más de las regiones vistas.
+      \item Con la muestra pública (20\,\% del test), el F1 tiene desviación estándar de $\approx$\,\nPublicSD{}: diferencias de 0,005 en el \emph{leaderboard} no son concluyentes.
+      \item Por eso elegimos por validación cruzada y no por el puntaje público.
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+% POLÍTICA
+% ------------------------------------------------------------------------------
+\begin{frame}{Política: el F1 acepta \nUnderLGBM{}\,\% de pobres excluidos y \nLeakLGBM{}\,\% de filtración}
+  \begin{columns}[T]
+    \column{.36\textwidth}
+    \centering\small\textbf{Matriz de confusión}\\[1mm]
+    \footnotesize
+    \resizebox{\linewidth}{!}{\input{tables/confusion_lgbm.tex}}\\[2mm]
+    \small\raggedright
+    \textbf{Precisión} \nPrecLGBM, \textbf{cobertura} \nRecLGBM.\\[2mm]
+    El F1 pesa por igual excluir a un pobre y beneficiar a un no pobre.
+    \column{.62\textwidth}
+    \figura[.58\textheight]{harold_slide_threshold_tradeoff.png}
+  \end{columns}
+  \vspace{1mm}
+  \begin{block}{¿Preferiría un gobierno otro balance?}
+    \footnotesize
+    Para dejar fuera a solo 10\,\% de los pobres haría falta un umbral de \nThrUnderTen{}, y la filtración subiría a \nLeakAtUnderTen{}\,\%. El costo fiscal de ese equilibrio lo decide la política, no el F1.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Política: los pobres de hogares pequeños son los que más se quedan fuera}
+  \begin{columns}[T]
+    \column{.66\textwidth}
+    \figura{harold_slide_errors_by_group.png}
+    \column{.32\textwidth}
+    \small
+    \begin{itemize}\setlength{\itemsep}{3pt}
+      \item La subcobertura casi no cambia entre cabecera (\nUnderCabecera\,\%) y resto rural (\nUnderRestorural\,\%).
+      \item Pero es mucho mayor en hogares de 1--2 personas (hipótesis: con pocos perceptores, un error en el ingreso imputado cambia al hogar de lado de la línea).
+      \item Un instrumento de focalización debería \resaltar{revisar con visita} a estos hogares en el umbral.
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Política: el modelo no se despliega con una encuesta corta y barata}
+  \begin{columns}[T]
+    \column{.62\textwidth}
+    \figura{harold_slide_short_survey.png}
+    \column{.36\textwidth}
+    \small
+    \begin{itemize}\setlength{\itemsep}{3pt}
+      \item El ingreso imputado usa unas 60 variables por persona del módulo de empleo e ingresos.
+      \item Solo con vivienda, composición y educación (\nNVarsSurveyMin{} variables), el F1 es \nFoneSurveyMin{} y se excluye a \nUnderSurveyMin\,\% de los pobres.
+      \item Agregar empleo y salud lo lleva a \nFoneSurveyShort{}.
+    \end{itemize}
+    \vspace{1mm}
+    \begin{block}{Recomendación}
+      \footnotesize
+      Usar el modelo para \resaltar{priorizar} hogares a verificar con el módulo laboral completo, y probar un cuestionario corto \emph{con} las pocas preguntas de ingreso más informativas, no sin ellas.
+    \end{block}
+  \end{columns}
+\end{frame}
+
+\end{document}

@@ -3,9 +3,11 @@
 Big Data and Machine Learning para Economía Aplicada (MECA 4107, 2026-20) · Equipo 02
 
 **Integrantes (Equipo 02):**
-- Jhon Sebastián Vela Salcedo
-- Harold Santiago Aguilera Mulfo 
-- Cesar Augusto Vallejo Quiroga 
+- Jhon Sebastián Vela Salcedo (`jhon`)
+- Harold Santiago Aguilera Mulfo (`harold`)
+- Cesar Augusto Vallejo Quiroga (`cesar`)
+
+Entre paréntesis, el prefijo que cada integrante usa en los nombres de sus scripts y salidas.
 
 ## Pregunta
 ¿Cuál es el mejor modelo para predecir pobreza en Colombia a nivel de hogar y qué implica para la política pública?
@@ -39,13 +41,17 @@ source("01_code/00_rundirectory.R")
   12_harold_robust_logit.R       logit y probit regularizados + pruebas de estrés de generalización
   13_harold_model_comparison.R   comparación de todos los modelos (métricas, errores de política, acuerdo en test)
   14_harold_lightgbm_importance.R  importancia SHAP y efectos del mejor modelo (Python)
-  python/                scripts de Python que llaman los scripts 05, 06, 09, 10, 12 y 14 (no se ejecutan a mano)
+  15_harold_same_predictors.R    Elastic Net y LightGBM con las mismas 40 variables del Random Forest (igualdad de condiciones)
+  16_harold_short_survey.R       LightGBM con una encuesta corta (S1 y S2) frente al conjunto completo
+  17_harold_slide_assets.R       figuras y tablas (.tex) y cifras (numbers.tex) que alimentan las diapositivas
+  python/                scripts de Python que llaman los scripts 05, 06, 09, 10, 12, 14, 15 y 16 (no se ejecutan a mano)
   functions/             funciones reutilizables
 02_outputs/
   figures/               gráficos (PNG)
   tables/                tablas (.tex y .csv)
   predictions/           envíos a Kaggle (.csv)
   session_info.txt       versiones de R, paquetes y Python con que se generaron las salidas
+03_slides/               diapositivas en LaTeX (Beamer): best_equipo_02.tex, compare_equipo_02.tex y los PDF finales
 requirements.txt         paquetes de Python
 ```
 
@@ -70,6 +76,9 @@ Todas se generan automáticamente al correr `00_rundirectory.R` y se guardan en 
 | `12_harold_robust_logit.R` | Logit y probit diseñados para generalizar: eliminación de variables casi duplicadas (|r| ≥ 0,95), selección por estabilidad (40 submuestras), Elastic Net con validación repetida y regla de 1 error estándar, umbral en la meseta del F1. Pruebas de estrés: brecha dentro/fuera de muestra, validación agrupada por dominio (con LightGBM en `python/harold_grouped_cv_lightgbm.py`), calibración y ruido de un 20 % del test | `harold_{logit,probit}_robust_fe_*.csv`, `harold_robust_*.csv`, `harold_robust_*.png` |
 | `13_harold_model_comparison.R` | Compara los 10 modelos con el mismo protocolo (OOF, 5 pliegues, sin Bogotá): F1 con su desvío entre pliegues, precisión, cobertura, filtración (*leakage*), subcobertura y AUC; curvas precisión-cobertura; y acuerdo (Jaccard) entre las predicciones de test | `harold_comparison_*.{csv,tex,png}` |
 | `14_harold_lightgbm_importance.R` | Interpreta el mejor modelo: reentrena el LightGBM con los hiperparámetros del script 09 (`python/harold_lightgbm_shap.py`), importancia SHAP y por ganancia, y efecto SHAP medio de las seis variables principales | `harold_lightgbm_fe_importance.{csv,tex,png}`, `harold_lightgbm_fe_effects.png` |
+| `15_harold_same_predictors.R` | Elastic Net (`cv.glmnet`, malla de alpha, mismos pliegues) y LightGBM con las 40 variables del Random Forest, para que las diferencias de F1 reflejen el algoritmo y no el conjunto de predictores | `harold_same_predictors_cv.{csv,tex}`, `harold_{elastic_net,lightgbm}_40vars_scores.csv` |
+| `16_harold_short_survey.R` | Pregunta de despliegue: LightGBM con una encuesta corta (S1: hogar y vivienda; S2: S1 más composición y educación) frente al modelo completo con ingreso imputado | `harold_short_survey_{vars,cv}.csv`, `harold_lightgbm_{s1,s2}_scores.csv` |
+| `17_harold_slide_assets.R` | Genera las figuras `harold_slide_*.png`, las tablas de `03_slides/tables/` y las cifras de `03_slides/numbers.tex`; depende de las salidas de los scripts 09 a 16 | `harold_slide_*.png`, `03_slides/numbers.tex`, `03_slides/tables/*.tex` |
 
 | Función (`01_code/functions/`) | Qué hace |
 |---|---|
@@ -80,7 +89,18 @@ Todas se generan automáticamente al correr `00_rundirectory.R` y se guardan en 
 | `fun_models_fe.R` | `fun_auc()`, `fun_f1_curve()`, `fun_eval_oof()` (F1 con umbral óptimo, sin Bogotá), `fun_write_submission_fe()` (valida contra `sample_submission.csv`), `fun_save_scores()`, `fun_matrix_en()`, `fun_export_fe_csv()` (con columnas extra opcionales) |
 | `fun_metrics.R` | `f1_score()`, `conf_metrics()` (precisión, recall, *leakage*, *undercoverage*), `best_threshold()`, `make_folds()` |
 
-Los demás modelos y envíos a Kaggle se agregan como `15_*.R`, `16_*.R`, … y escriben en `02_outputs/predictions/`.
+Los demás modelos y envíos a Kaggle se agregan como `18_*.R`, `19_*.R`, … y escriben en `02_outputs/predictions/`.
+
+
+## Diapositivas
+Los dos PDF (`best_equipo_02.pdf`, `compare_equipo_02.pdf`) se compilan desde `03_slides/` con LaTeX (pdflatex + Beamer):
+
+```
+cd 03_slides
+latexmk -pdf best_equipo_02.tex compare_equipo_02.tex
+```
+
+Todas las cifras de las diapositivas se leen de `numbers.tex` (generado por el script 17), de modo que no se digitan a mano. Los puntajes públicos de Kaggle se escriben en `03_slides/kaggle_scores.tex` (macros `\kgLGBM`, `\kgRF`, etc.) y se recompila.
 
 ## Resultados
 Validación cruzada de 5 pliegues compartidos, hogares fuera de Bogotá (no existe en test) y umbral que maximiza el F1 de la clase pobre (`13_harold_model_comparison.R`). Entre paréntesis, la desviación estándar del F1 entre pliegues. *Filtración* = % de los clasificados como pobres que no lo son; *subcobertura* = % de los pobres que quedan excluidos.

@@ -1,0 +1,13 @@
+\begin{tabular}{llcccc}
+\toprule
+\textbf{Algoritmo} & \textbf{Hiperparámetros} & \textbf{F1} & \textbf{Precisión} & \textbf{Cobertura} & \textbf{AUC} \\
+\midrule
+Boosting (LightGBM) & 15 hojas; 954 rondas; tasa 0,03 & 0,777 & 0,741 & 0,816 & 0,957 \\
+Random Forest & mtry = 14; nodo mínimo = 150; 500 árboles & 0,774 & 0,748 & 0,801 & 0,956 \\
+Logit & Máxima verosimilitud & 0,771 & 0,738 & 0,807 & 0,954 \\
+Elastic Net & alpha = 1,0; lambda = 2,5e-06 & 0,771 & 0,737 & 0,808 & 0,954 \\
+LPM & MCO sobre 0/1 & 0,770 & 0,728 & 0,816 & 0,951 \\
+CART & cp = 0,001; minsplit = 50 & 0,769 & 0,755 & 0,783 & 0,871 \\
+Naive Bayes & Deciles; Laplace = 1 & 0,758 & 0,694 & 0,834 & 0,948 \\
+\bottomrule
+\end{tabular}

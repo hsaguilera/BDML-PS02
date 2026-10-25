@@ -1,0 +1,13 @@
+\begin{tabular}{llcccc}
+\toprule
+\textbf{Algoritmo} & \textbf{Versión} & \textbf{F1 (CV)} & \textbf{Precisión} & \textbf{Cobertura} & \textbf{F1 Kaggle} \\
+\midrule
+Boosting & LightGBM, 149 variables & 0,777 & 0,746 & 0,811 & \kgLGBM \\
+Random Forest & ranger, 40 variables & 0,774 & 0,748 & 0,801 & \kgRF \\
+Elastic Net & glmnet con splines, 102 columnas & 0,772 & 0,730 & 0,819 & \kgEN \\
+Logit & Logit regularizado, 59 variables & 0,771 & 0,739 & 0,806 & \kgLogit \\
+LPM & MCO, 40 variables & 0,770 & 0,728 & 0,816 & \kgLPM \\
+CART & rpart, 40 variables & 0,769 & 0,755 & 0,783 & \kgCART \\
+Naive Bayes & deciles, 40 variables & 0,758 & 0,694 & 0,834 & \kgNB \\
+\bottomrule
+\end{tabular}

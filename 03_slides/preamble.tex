@@ -1,0 +1,56 @@
+% ==============================================================================
+% preamble.tex -- Estilo común de las dos presentaciones (Equipo 02, MECA 4107)
+% Compilar con pdflatex (sin paquetes de idioma ni fuentes especiales).
+% ==============================================================================
+\documentclass[aspectratio=169,9pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{booktabs, graphicx, xcolor, array, microtype, amsmath}
+\graphicspath{{../02_outputs/figures/}}
+
+% --- Colores (los mismos de las figuras) --------------------------------------
+\definecolor{azul}{HTML}{1B3A6B}
+\definecolor{naranja}{HTML}{E07B00}
+\definecolor{verde}{HTML}{2A9D8F}
+\definecolor{gris}{HTML}{5B6575}
+\definecolor{fondo}{HTML}{F2F5FA}
+
+% --- Tema ----------------------------------------------------------------------
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=black!85}
+\setbeamercolor{structure}{fg=azul}
+\setbeamercolor{block title}{bg=azul, fg=white}
+\setbeamercolor{block body}{bg=fondo, fg=black!85}
+\setbeamerfont{block title}{size=\small, series=\bfseries}
+\setbeamertemplate{itemize item}{\color{naranja}\tiny$\blacksquare$}
+\setbeamertemplate{itemize subitem}{\color{naranja}\tiny$\blacksquare$}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\setlength{\leftmargini}{1.1em}
+
+\setbeamertemplate{frametitle}{%
+  \vspace{1.5mm}
+  \begin{minipage}[t]{\dimexpr\paperwidth-14mm\relax}
+    \raggedright\color{azul}\bfseries\fontsize{12.5}{14}\selectfont\insertframetitle\par
+    \vspace{0.8mm}{\color{naranja}\rule{12mm}{1.2pt}}
+  \end{minipage}}
+\setbeamertemplate{footline}{%
+  \leavevmode\hbox{\hspace{7mm}%
+    \begin{beamercolorbox}[wd=.80\paperwidth,ht=3.5ex,dp=1.2ex,left]{footline}
+      {\color{gris}\scriptsize Equipo 02 · MECA 4107 · \deckname}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.14\paperwidth,ht=3.5ex,dp=1.2ex,right]{footline}
+      {\color{gris}\scriptsize\insertframenumber\,/\,\inserttotalframenumber}
+    \end{beamercolorbox}}\vspace{1.5mm}}
+\setbeamersize{text margin left=7mm, text margin right=7mm}
+
+% --- Atajos --------------------------------------------------------------------
+\newcommand{\pend}[1]{\textcolor{red}{\textbf{[#1]}}}
+\newcommand{\estadistica}[2]{{\centering{\color{azul}\bfseries\fontsize{21}{23}\selectfont #1}\par{\color{gris}\footnotesize #2}\par}}
+\newcommand{\figura}[2][.70\textheight]{\includegraphics[width=\linewidth,height=#1,keepaspectratio]{#2}}
+\newcommand{\fuente}[1]{{\color{gris}\tiny #1}}
+\newcommand{\resaltar}[1]{\textcolor{naranja}{\textbf{#1}}}
+\input{numbers.tex}
+\input{kaggle_scores.tex}

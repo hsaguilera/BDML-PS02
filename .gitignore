@@ -21,3 +21,13 @@ Thumbs.db
 # Python
 __pycache__/
 *.pyc
+
+# LaTeX (se versionan solo los PDF finales)
+*.aux
+*.fls
+*.fdb_latexmk
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
