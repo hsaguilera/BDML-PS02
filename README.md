@@ -3,9 +3,9 @@
 Big Data and Machine Learning para Economía Aplicada (MECA 4107, 2026-20) · Equipo 02
 
 **Integrantes (Equipo 02):**
-- Jhon Sebastián Vela Salcedo (`jhon`)
-- Harold Santiago Aguilera Mulfo (`harold`)
-- Cesar Augusto Vallejo Quiroga (`cesar`)
+- Jhon Sebastián Vela Salcedo
+- Harold Santiago Aguilera Mulfo 
+- Cesar Augusto Vallejo Quiroga 
 
 Entre paréntesis, el prefijo que cada integrante usa en los nombres de sus scripts y salidas.
 
