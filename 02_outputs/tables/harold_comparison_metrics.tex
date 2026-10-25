@@ -1,0 +1,22 @@
+% latex table generated in R 4.3.3 by xtable 1.8-4 package
+% Sun Oct 25 17:28:35 2026
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrrrrrrr}
+  \hline
+Modelo & F1 & DE pliegues & Precisión & Cobertura & Filtración & Subcobertura & AUC \\ 
+  \hline
+LightGBM & 0.7772 & 0.0059 & 0.746 & 0.811 & 0.254 & 0.189 & 0.9576 \\ 
+  XGBoost (regresión + umbral) & 0.7748 & 0.0064 & 0.749 & 0.803 & 0.251 & 0.197 & 0.9509 \\ 
+  Random Forest & 0.7737 & 0.0065 & 0.748 & 0.801 & 0.252 & 0.199 & 0.9558 \\ 
+  Elastic Net (alpha 0,7) & 0.7721 & 0.0042 & 0.730 & 0.819 & 0.270 & 0.181 & 0.9545 \\ 
+  Logit robusto (59 vars) & 0.7713 & 0.0047 & 0.739 & 0.806 & 0.261 & 0.194 & 0.9541 \\ 
+  Logit (40 vars) & 0.7712 & 0.0047 & 0.738 & 0.807 & 0.262 & 0.193 & 0.9541 \\ 
+  Probit robusto (59 vars) & 0.7712 & 0.0040 & 0.739 & 0.807 & 0.261 & 0.193 & 0.9544 \\ 
+  LPM (40 vars) & 0.7695 & 0.0060 & 0.728 & 0.816 & 0.272 & 0.184 & 0.9514 \\ 
+  CART & 0.7689 & 0.0049 & 0.755 & 0.783 & 0.245 & 0.217 & 0.8712 \\ 
+  Naive Bayes (deciles) & 0.7577 & 0.0051 & 0.694 & 0.834 & 0.306 & 0.166 & 0.9481 \\ 
+   \hline
+\end{tabular}
+\caption{Comparación de modelos (OOF, 5 pliegues, sin Bogotá; umbral que maximiza F1)} 
+\end{table}
