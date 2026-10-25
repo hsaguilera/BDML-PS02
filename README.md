@@ -3,11 +3,9 @@
 Big Data and Machine Learning para Economía Aplicada (MECA 4107, 2026-20) · Equipo 02
 
 **Integrantes (Equipo 02):**
-- Jhon Sebastián Vela Salcedo (`jhon`)
-- Harold Santiago Aguilera Mulfo (`harold`)
-- Cesar Augusto Vallejo Quiroga (`cesar`)
-
-Entre paréntesis, el prefijo que cada integrante usa en los nombres de sus scripts y salidas.
+- Jhon Sebastián Vela Salcedo
+- Harold Santiago Aguilera Mulfo 
+- Cesar Augusto Vallejo Quiroga 
 
 ## Pregunta
 ¿Cuál es el mejor modelo para predecir pobreza en Colombia a nivel de hogar y qué implica para la política pública?
