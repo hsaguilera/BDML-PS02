@@ -1,0 +1,23 @@
+# Datos: pesados, se descargan de Kaggle (ver README)
+00_data/raw/*
+00_data/processed/*
+!00_data/raw/.gitkeep
+!00_data/processed/.gitkeep
+# Archivos sueltos en la raíz (datos y documentos del enunciado)
+/*.csv
+/*.pdf
+# R
+.Rhistory
+.Rapp.history
+.RData
+.Rproj.user/
+*.Rproj
+# Sistema
+.DS_Store
+Thumbs.db
+# Temporales de Office y registros
+~$*
+*.log
+# Python
+__pycache__/
+*.pyc
