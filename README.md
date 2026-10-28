@@ -196,8 +196,8 @@ si los insumos ya existen. Las diapositivas se recompilan con los resultados gua
 
 Puntaje público: 20 % del test (tablero durante la competencia); privado: 80 % (clasificación final). F1 de validación
 cruzada según el protocolo de cada bloque de scripts (no comparable entre bloques). Las predicciones de los scripts
-04–12 y 26–36 están en `02_outputs/predictions/` con el mismo nombre; las de 20–25 se guardan en `salidas/` al
-correr esos scripts.
+04–12 y 26–36 están en `02_outputs/predictions/` con el mismo nombre. Las de 20–25 las escribe cada script en `salidas/` al
+correrlo y se copiaron a `02_outputs/predictions/` con el nombre que figura abajo.
 
 | Archivo enviado | Algoritmo | Script | F1 CV | Público | Privado |
 |---|---|---|---|---|---|
@@ -218,12 +218,12 @@ correr esos scripts.
 | `RF_mtry_0_109_hoja_16_ms_0_67_crit_log_loss_arb_1000_n1152_lb1_s1000_v7.csv` | Random Forest | 33 | 0,752 | 0,74 | 0,75 |
 | `LPM_spl_T_n1152_lb0_s1_v7.csv` | Linear Probability Model | 31 | 0,750 | 0,74 | 0,75 |
 | `LGBM_fe_cat_leaves_15_lr_005_nr_924_umbral_0360.csv` | Boosting | 20 | 0,731 | 0,73 | 0,73 |
-| `XGB_fe_depth_6_eta_005_nr_541_umbral_0515.csv` | Boosting | 23 | 0,729 | 0,72 | 0,73 |
+| `XGB_fe_pesos_raiz_depth_6_eta_005_nr_541_umbral_0515.csv` | Boosting | 23 | 0,729 | 0,72 | 0,73 |
 | `RF_fe_pb0_Ktodas_mtry_0_3_leaf_40_ss_0_472_extratrees_spw_3_13_nt_600_umbral_0_36.csv.csv` | Random Forest | 22 | 0,720 | 0,71 | 0,72 |
 | `LOGIT_ingpred_fe_Ktodas_pb1_umbral_0350.csv` | Logit | 25* | 0,712 | 0,71 | 0,71 |
 | `S00_EN_lambda_1e-04_alpha_01_umbral_033.csv` | Elastic Net | 24 | 0,687 | 0,68 | 0,69 |
 | `NB_fe_cat_Ktodas_pb1_bins_8_lap_0137_umbral_0949.csv` | Naive Bayes | 21 | 0,657 | 0,64 | 0,65 |
-| `EN_lambda_0001_alpha_045.csv` | Elastic Net (réplica de la complementaria) | — | — | 0,44 | 0,45 |
+| `EN_lambda_0001_alpha_045.csv` (no versionado) | Elastic Net (réplica de la complementaria) | — | — | 0,44 | 0,45 |
 
 \* El script 25 del repositorio genera la variante `base` (sin ingreso predicho); el envío es la variante `ingpred`.
 
@@ -245,6 +245,9 @@ correr esos scripts.
 | `CART_prof_24_hoja_132_mss_35_crit_entropy_cp_0_000149_n83_lb1_s1_pars_v7.csv` | CART v7, parsimoniosa (83 variables) | 35 | 0,718 |
 | `NB_nb_categorico_bins_20_disc_cuantiles_alfa_9_98_n8_lb0_s1_v7.csv` | Naive Bayes v7 (8 variables, 28 preguntas) | 36 | 0,690 |
 | `EN_a_1_lam_0_000279_n386_lb1_s1_pars_v7.csv` | Elastic Net v7, parsimoniosa (386 variables) | 32 | 0,762 |
+| `ENopt_fe_spl_ninguno_lambda_000194_alpha_002_umbral_0350.csv` | Elastic Net con splines, variante optimizada (λ 0,00194; α 0,02; umbral 0,35) | 24 | — |
+| `LGBM_fe_cat_Ktodas_pb1_leaves_15_lr_005_nr_924_umbral_0360.csv` | LightGBM, variante con todas las variables (15 hojas, 924 rondas, umbral 0,36) | 20 | — |
+| `RF_base_K8_pb0_mtry_03_leaf_100_nt_360_umbral_0050.csv` | Random Forest, variante base (K = 8, 360 árboles, umbral 0,05) | 22 | — |
 | `*_n25_*_corta_v7.csv`, `CART_…_n19_…_corta_v7.csv` | Encuesta corta (25 variables de 19 preguntas) de cada modelo v7 | 29–36 | 0,632–0,706 |
 
 </details>

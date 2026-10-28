@@ -2,15 +2,15 @@
 % best_equipo_02.tex -- Best Model Deep Dive (Problem Set 2: Predicting Poverty)
 % Compilar:  cd 03_slides && latexmk -pdf best_equipo_02.tex
 % Las cifras vienen de numbers.tex (generado por 01_code/17_harold_diapositivas_figuras_y_cifras.R)
-% y el puntaje de Kaggle de kaggle_scores.tex (se completa a mano).
+% y los puntajes de Kaggle de preamble.tex.
 % ==============================================================================
 \def\deckname{Best Model Deep Dive}
 \input{preamble.tex}
-\graphicspath{{../../02_outputs/figures/}{02_outputs/figures/}}   % figuras del proyecto (desde 03_slides o desde la raíz)
+\graphicspath{{../02_outputs/figures/}{../../02_outputs/figures/}{02_outputs/figures/}}   % figuras del proyecto (desde 03_slides o desde la raíz)
 \newcommand{\lineaLeyenda}[2]{\textcolor{#1}{\rule[0.45ex]{1.3em}{1.4pt}}\,#2}   % leyenda de una línea (diapositiva de la matriz)
 
 % --- Puntajes de Kaggle usados en el PDF (públicos 0,78; privado 0,77) ------------------------
-% Se fijan aquí para que este archivo reproduzca el PDF sin depender de kaggle_scores.tex.
+% Se fijan aquí los puntajes usados en el PDF.
 \renewcommand{\kgLGBM}{0,78}
 \def\kgpLGBM{0,77}
 
@@ -127,6 +127,8 @@
       \footnotesize
       Correlación con el ingreso del hogar: \nCorrIng; AUC de la razón sola: \resaltar{\nAUCRazon}, frente a \nAUCHacin{} del hacinamiento.
     \end{block}
+    \vspace{1mm}
+    {\scriptsize\color{gris}\raggedright El ingreso imputado es solo una variable de entrada: el modelo final clasifica directamente a cada hogar como pobre o no pobre.\par}
     \column{.54\textwidth}
     \figura{harold_slide_ratio_density.png}\\[1mm]
     \footnotesize\raggedright

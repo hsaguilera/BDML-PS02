@@ -15,7 +15,7 @@ Jhon,Jhon · Logit (348 var.),Logit,348.0,21 oct,0.76,0.76,LOGIT_spl_T_n348_lb1_
 Jhon,Jhon · Random Forest (1.152 var.),Random Forest,1152.0,23 oct,0.74,0.75,RF_mtry_0_109_hoja_16_ms_0_67_crit_log_loss_arb_1000_n1152_lb1_s1000_v7.csv,sí,0
 Jhon,Jhon · LPM (1.152 var.),LPM,1152.0,23 oct,0.74,0.75,LPM_spl_T_n1152_lb0_s1_v7.csv,sí,0
 César,César · LightGBM (88 var.),Boosting,88.0,20 oct,0.73,0.73,LGBM_fe_cat_leaves_15_lr_005_nr_924_umbral_0360.csv,sí,0
-César,César · XGBoost,Boosting,,20 oct,0.72,0.73,XGB_fe_depth_6_eta_005_nr_541_umbral_0515.csv,sí,0
+César,César · XGBoost,Boosting,,20 oct,0.72,0.73,XGB_fe_pesos_raiz_depth_6_eta_005_nr_541_umbral_0515.csv,sí,0
 César,César · Random Forest,Random Forest,,23 oct,0.71,0.72,RF_fe_pb0_Ktodas_mtry_0_3_leaf_40_ss_0_472_extratrees_spw_3_13_nt_600_umbral_0_36.csv.csv,sí,0
 César,César · Logit (125 var.),Logit,125.0,24 oct,0.71,0.71,LOGIT_ingpred_fe_Ktodas_pb1_umbral_0350.csv,sí,0
 César,César · Elastic Net (101 var.),Elastic Net,101.0,19 oct,0.68,0.69,S00_EN_lambda_1e-04_alpha_01_umbral_033.csv,sí,0
