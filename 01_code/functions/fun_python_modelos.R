@@ -1,6 +1,5 @@
 # ==============================================================================
 # fun_python_modelos.R  --  Funciones para ejecutar desde R los scripts de Python 26–37
-# Autor: Jhon (Jhon Sebastián Vela Salcedo)
 #
 # Las usan los scripts 26 a 37 de 01_code/. Cada uno llama a un script de Python de 01_code/python/ (mismo nombre,
 # extensión .py), que usa el paquete 01_code/python/pobreza/. Requisitos de Python: requirements.txt.

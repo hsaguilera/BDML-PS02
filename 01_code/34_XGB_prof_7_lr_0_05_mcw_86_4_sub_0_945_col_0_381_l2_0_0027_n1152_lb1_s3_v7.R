@@ -1,6 +1,5 @@
 # ==============================================================================
 # 34_XGB_prof_7_lr_0_05_mcw_86_4_sub_0_945_col_0_381_l2_0_0027_n1152_lb1_s3_v7.R
-# Autor: Jhon (Jhon Sebastián Vela Salcedo)
 # Modelo: Boosting (XGBoost) · v7, sin primera etapa: 1.152 variables candidatas de 64 preguntas, nada derivado de modelos de ingreso.
 # Envío a Kaggle: XGB_prof_7_lr_0_05_mcw_86_4_sub_0_945_col_0_381_l2_0_0027_n1152_lb1_s3_v7.csv (2026-10-23; F1 público 0,77).
 #
@@ -14,8 +13,6 @@
 #          02_outputs/tables/34_XGB_v7/, 02_outputs/figures/34_XGB_v7/ (prefijo 36_).
 # Tiempo aproximado: 7,7 h con 12 hilos (más la cadena de datos la primera vez).
 # ==============================================================================
-AUTOR <- "Jhon"
-
 # Raíz del repositorio (carpeta con el archivo .here) y funciones para llamar a Python
 raiz <- normalizePath(getwd(), winslash = "/")
 while (!file.exists(file.path(raiz, ".here"))) {

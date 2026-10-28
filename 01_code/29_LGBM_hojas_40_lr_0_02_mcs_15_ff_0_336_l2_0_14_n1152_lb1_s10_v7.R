@@ -1,6 +1,5 @@
 # ==============================================================================
 # 29_LGBM_hojas_40_lr_0_02_mcs_15_ff_0_336_l2_0_14_n1152_lb1_s10_v7.R
-# Autor: Jhon (Jhon Sebastián Vela Salcedo)
 # Modelo: Boosting (LightGBM) · v7, sin primera etapa: 1.152 variables candidatas de 64 preguntas, nada derivado de modelos de ingreso.
 # Envío a Kaggle: LGBM_hojas_40_lr_0_02_mcs_15_ff_0_336_l2_0_14_n1152_lb1_s10_v7.csv (2026-10-20; F1 público 0,77).
 #
@@ -13,8 +12,6 @@
 #          02_outputs/tables/29_LGBM_v7/, 02_outputs/figures/29_LGBM_v7/ (prefijo 35_).
 # Tiempo aproximado: 5,0 h con 8 hilos (más la cadena de datos la primera vez).
 # ==============================================================================
-AUTOR <- "Jhon"
-
 # Raíz del repositorio (carpeta con el archivo .here) y funciones para llamar a Python
 raiz <- normalizePath(getwd(), winslash = "/")
 while (!file.exists(file.path(raiz, ".here"))) {

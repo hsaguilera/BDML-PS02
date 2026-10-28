@@ -1,6 +1,5 @@
 # ==============================================================================
 # 28_RF_mtry_0_292_minleaf_156_ms_0_443_depth_None_cw_none_trees_360_n_20_pars_bog0_5.R
-# Autor: Jhon (Jhon Sebastián Vela Salcedo)
 # Modelo: Random Forest · v5, con primera etapa: el ingreso esperado fuera de pliegue entra como variable (zona gris, ver README).
 # Envío a Kaggle: RF_mtry_0_292_minleaf_156_ms_0_443_depth_None_cw_none_trees_360_n_20_pars_bog0_5.csv (2026-10-19; F1 público 0,77).
 #
@@ -12,8 +11,6 @@
 #          02_outputs/tables/28_RF_v5/, 02_outputs/figures/28_RF_v5/ (prefijo 12_).
 # Tiempo aproximado: 45 min con 6 hilos (más la cadena de datos la primera vez).
 # ==============================================================================
-AUTOR <- "Jhon"
-
 # Raíz del repositorio (carpeta con el archivo .here) y funciones para llamar a Python
 raiz <- normalizePath(getwd(), winslash = "/")
 while (!file.exists(file.path(raiz, ".here"))) {

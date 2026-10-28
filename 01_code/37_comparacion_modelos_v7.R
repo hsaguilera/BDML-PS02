@@ -1,6 +1,5 @@
 # ==============================================================================
 # 37_comparacion_modelos_v7.R
-# Autor: Jhon (Jhon Sebastián Vela Salcedo)
 # Comparación de los ocho modelos v7 (scripts 29–36) y, aparte, de los tres v5 con primera etapa (26–28).
 #
 # Ejecuta 01_code/python/37_comparacion_modelos_v7.py (cuaderno interno 39_comparacion_v7). No entrena modelos: lee las señales
@@ -13,8 +12,6 @@
 # Salidas: 02_outputs/tables/37_comparacion_modelos_v7/ (39_*.csv, resultados_modelos_v7.xlsx) y 02_outputs/figures/37_comparacion_modelos_v7/.
 # Tiempo aproximado: 15 min.
 # ==============================================================================
-AUTOR <- "Jhon"
-
 # Raíz del repositorio (carpeta con el archivo .here) y funciones para llamar a Python
 raiz <- normalizePath(getwd(), winslash = "/")
 while (!file.exists(file.path(raiz, ".here"))) {

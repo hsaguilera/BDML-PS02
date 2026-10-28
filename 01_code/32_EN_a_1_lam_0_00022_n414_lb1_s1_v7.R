@@ -1,6 +1,5 @@
 # ==============================================================================
 # 32_EN_a_1_lam_0_00022_n414_lb1_s1_v7.R
-# Autor: Jhon (Jhon Sebastián Vela Salcedo)
 # Modelo: Elastic Net · v7, sin primera etapa: 1.152 variables candidatas de 64 preguntas, nada derivado de modelos de ingreso.
 # Envío a Kaggle: EN_a_1_lam_0_00022_n414_lb1_s1_v7.csv (2026-10-23; F1 público 0,76).
 #
@@ -13,8 +12,6 @@
 #          02_outputs/tables/32_EN_v7/, 02_outputs/figures/32_EN_v7/ (prefijo 32_).
 # Tiempo aproximado: 3,0 h con 3 hilos (más la cadena de datos la primera vez).
 # ==============================================================================
-AUTOR <- "Jhon"
-
 # Raíz del repositorio (carpeta con el archivo .here) y funciones para llamar a Python
 raiz <- normalizePath(getwd(), winslash = "/")
 while (!file.exists(file.path(raiz, ".here"))) {

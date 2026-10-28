@@ -1,6 +1,5 @@
 # ==============================================================================
 # 30_LOGIT_spl_T_n348_lb1_s1_v7.R
-# Autor: Jhon (Jhon Sebastián Vela Salcedo)
 # Modelo: Logit · v7, sin primera etapa: 1.152 variables candidatas de 64 preguntas, nada derivado de modelos de ingreso.
 # Envío a Kaggle: LOGIT_spl_T_n348_lb1_s1_v7.csv (2026-10-21; F1 público 0,76).
 #
@@ -13,8 +12,6 @@
 #          02_outputs/tables/30_LOGIT_v7/, 02_outputs/figures/30_LOGIT_v7/ (prefijo 31_).
 # Tiempo aproximado: 5,1 h con 3 hilos (más la cadena de datos la primera vez).
 # ==============================================================================
-AUTOR <- "Jhon"
-
 # Raíz del repositorio (carpeta con el archivo .here) y funciones para llamar a Python
 raiz <- normalizePath(getwd(), winslash = "/")
 while (!file.exists(file.path(raiz, ".here"))) {

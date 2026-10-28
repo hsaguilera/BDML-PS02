@@ -1,6 +1,5 @@
 # ==============================================================================
 # 27_XGB_depth_3_eta_0_0473_mcw_1_68_sub_0_561_col_0_876_n_8_bog0_5.R
-# Autor: Jhon (Jhon Sebastián Vela Salcedo)
 # Modelo: Boosting (XGBoost) · v5, con primera etapa: el ingreso esperado fuera de pliegue entra como variable (zona gris, ver README).
 # Envío a Kaggle: XGB_depth_3_eta_0_0473_mcw_1_68_sub_0_561_col_0_876_n_8_bog0_5.csv (2026-10-19; F1 público 0,77).
 #
@@ -12,8 +11,6 @@
 #          02_outputs/tables/27_XGB_v5/, 02_outputs/figures/27_XGB_v5/ (prefijo 11_).
 # Tiempo aproximado: 32 min con 6 hilos (más la cadena de datos la primera vez).
 # ==============================================================================
-AUTOR <- "Jhon"
-
 # Raíz del repositorio (carpeta con el archivo .here) y funciones para llamar a Python
 raiz <- normalizePath(getwd(), winslash = "/")
 while (!file.exists(file.path(raiz, ".here"))) {

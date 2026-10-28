@@ -1,6 +1,5 @@
 # ==============================================================================
 # 26_LGBM_leaves_10_lr_0_0253_mcs_22_ff_0_442_l2_0_00326_n_8.R
-# Autor: Jhon (Jhon Sebastián Vela Salcedo)
 # Modelo: Boosting (LightGBM) · v5, con primera etapa: el ingreso esperado fuera de pliegue entra como variable (zona gris, ver README).
 # Envío a Kaggle: LGBM_leaves_10_lr_0_0253_mcs_22_ff_0_442_l2_0_00326_n_8.csv (2026-10-19; F1 público 0,77).
 #
@@ -12,8 +11,6 @@
 #          02_outputs/tables/26_LGBM_v5/, 02_outputs/figures/26_LGBM_v5/ (prefijo 10_).
 # Tiempo aproximado: 22 min con 6 hilos (más la cadena de datos la primera vez).
 # ==============================================================================
-AUTOR <- "Jhon"
-
 # Raíz del repositorio (carpeta con el archivo .here) y funciones para llamar a Python
 raiz <- normalizePath(getwd(), winslash = "/")
 while (!file.exists(file.path(raiz, ".here"))) {

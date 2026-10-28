@@ -1,6 +1,5 @@
 # ==============================================================================
 # 35_CART_prof_24_hoja_132_mss_35_crit_entropy_cp_0_000104_n111_lb1_s1_v7.R
-# Autor: Jhon (Jhon Sebastián Vela Salcedo)
 # Modelo: CART · v7, sin primera etapa: 1.152 variables candidatas de 64 preguntas, nada derivado de modelos de ingreso.
 # No se subió a Kaggle: se entrena para comparar los siete algoritmos del enunciado.
 # Archivo de envío que genera: CART_prof_24_hoja_132_mss_35_crit_entropy_cp_0_000104_n111_lb1_s1_v7.csv.
@@ -14,8 +13,6 @@
 #          02_outputs/tables/35_CART_v7/, 02_outputs/figures/35_CART_v7/ (prefijo 33_).
 # Tiempo aproximado: 3,6 h con 3 hilos (más la cadena de datos la primera vez).
 # ==============================================================================
-AUTOR <- "Jhon"
-
 # Raíz del repositorio (carpeta con el archivo .here) y funciones para llamar a Python
 raiz <- normalizePath(getwd(), winslash = "/")
 while (!file.exists(file.path(raiz, ".here"))) {

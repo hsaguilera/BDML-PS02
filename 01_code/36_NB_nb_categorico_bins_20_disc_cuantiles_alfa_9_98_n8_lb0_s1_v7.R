@@ -1,6 +1,5 @@
 # ==============================================================================
 # 36_NB_nb_categorico_bins_20_disc_cuantiles_alfa_9_98_n8_lb0_s1_v7.R
-# Autor: Jhon (Jhon Sebastián Vela Salcedo)
 # Modelo: Naive Bayes · v7, sin primera etapa: 1.152 variables candidatas de 64 preguntas, nada derivado de modelos de ingreso.
 # No se subió a Kaggle: se entrena para comparar los siete algoritmos del enunciado.
 # Archivo de envío que genera: NB_nb_categorico_bins_20_disc_cuantiles_alfa_9_98_n8_lb0_s1_v7.csv.
@@ -14,8 +13,6 @@
 #          02_outputs/tables/36_NB_v7/, 02_outputs/figures/36_NB_v7/ (prefijo 38_).
 # Tiempo aproximado: 22 min con 2 hilos (más la cadena de datos la primera vez).
 # ==============================================================================
-AUTOR <- "Jhon"
-
 # Raíz del repositorio (carpeta con el archivo .here) y funciones para llamar a Python
 raiz <- normalizePath(getwd(), winslash = "/")
 while (!file.exists(file.path(raiz, ".here"))) {

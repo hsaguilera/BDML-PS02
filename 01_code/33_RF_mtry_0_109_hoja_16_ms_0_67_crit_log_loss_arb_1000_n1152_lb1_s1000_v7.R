@@ -1,6 +1,5 @@
 # ==============================================================================
 # 33_RF_mtry_0_109_hoja_16_ms_0_67_crit_log_loss_arb_1000_n1152_lb1_s1000_v7.R
-# Autor: Jhon (Jhon Sebastián Vela Salcedo)
 # Modelo: Random Forest · v7, sin primera etapa: 1.152 variables candidatas de 64 preguntas, nada derivado de modelos de ingreso.
 # Envío a Kaggle: RF_mtry_0_109_hoja_16_ms_0_67_crit_log_loss_arb_1000_n1152_lb1_s1000_v7.csv (2026-10-23; F1 público 0,74).
 #
@@ -13,8 +12,6 @@
 #          02_outputs/tables/33_RF_v7/, 02_outputs/figures/33_RF_v7/ (prefijo 34_).
 # Tiempo aproximado: 4,0 h con 12 hilos (más la cadena de datos la primera vez).
 # ==============================================================================
-AUTOR <- "Jhon"
-
 # Raíz del repositorio (carpeta con el archivo .here) y funciones para llamar a Python
 raiz <- normalizePath(getwd(), winslash = "/")
 while (!file.exists(file.path(raiz, ".here"))) {
