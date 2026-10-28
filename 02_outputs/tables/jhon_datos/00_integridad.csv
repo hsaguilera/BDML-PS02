@@ -1,0 +1,3 @@
+split,hogares,personas,id_hogar_unico,hogares_sin_personas,personas_sin_hogar,Nper==conteo_personas,orden_1_por_hogar,jefe_unico (P6050==1)
+train,164960,543109,True,0,0,1.0,1.0,1.0
+test,66168,219644,True,0,0,1.0,1.0,1.0
