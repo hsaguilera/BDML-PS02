@@ -10,7 +10,7 @@ Protocolo (idéntico al de los demás modelos):
      (solo hogares fuera de Bogotá);
   2) con la mejor configuración se reentrena con lr bajo y número de árboles fijo (sin parada
      temprana, para que el OOF no se vea favorecido) y se promedian los 5 modelos en test.
-Uso: python harold_lightgbm.py <hogares.csv> <salida_scores.csv> <salida_busqueda.csv> <salida_params.json>
+Uso: python harold_modelo_lightgbm_fe_leaves_15_rounds_954.py <hogares.csv> <salida_scores.csv> <salida_busqueda.csv> <salida_params.json>
 """
 import sys, json, os, time
 import numpy as np, pandas as pd, lightgbm as lgb

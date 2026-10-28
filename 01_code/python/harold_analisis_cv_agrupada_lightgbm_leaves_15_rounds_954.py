@@ -3,7 +3,7 @@
 Cada pliegue deja fuera ciudades/dominios completos (columna `gfold`), así que el modelo se
 evalúa en regiones que no vio, una situación más dura que los pliegues aleatorios. Usa los
 hiperparámetros del modelo final (json del script 09).
-Uso: python harold_grouped_cv_lightgbm.py <hogares.csv> <params.json> <salida_scores.csv>
+Uso: python harold_analisis_cv_agrupada_lightgbm_leaves_15_rounds_954.py <hogares.csv> <params.json> <salida_scores.csv>
 """
 import sys, os, json
 import numpy as np, pandas as pd, lightgbm as lgb

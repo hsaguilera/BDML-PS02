@@ -1,10 +1,10 @@
 # ==============================================================================
-# 10_harold_xgboost_reg_fe.R
+# 10_harold_modelo_xgboost_reg_fe_depth_6_rounds_910.R
 # Modelo 4 (externo a la clase): XGBoost de REGRESIÓN con umbral ("regress-then-threshold").
 # Predice z = log(ingreso per cápita / línea de pobreza) (el ingreso solo existe en train) y
 # clasifica pobre si z_hat < tau; tau maximiza F1 en OOF. Variables: A + C + D (sin el grupo B,
 # que en la ablación no aportó a los modelos de árboles). Entrenamiento en Python
-# (01_code/python/harold_xgboost_reg.py); este script evalúa y escribe el envío.
+# (01_code/python/harold_modelo_xgboost_reg_fe_depth_6_rounds_910.py); este script evalúa y escribe el envío.
 # Entradas : 00_data/processed/hogares_fe.rds, hogares_fe_grupos.rds
 # Salidas  : predictions/harold_xgboost_reg_fe_*.csv, tables/harold_xgboost_reg_fe_{search,cv}.{csv,tex},
 #            figures/harold_xgboost_reg_fe_*.png
@@ -21,7 +21,7 @@ f_se   <- file.path(DIR_TAB,  paste0(AUTOR, "_xgboost_reg_fe_search.csv"))
 f_pa   <- file.path(DIR_PROC, paste0(AUTOR, "_xgboost_reg_fe_params.json"))
 
 fun_export_fe_csv(fe, groups, f_in, grupos = c("A", "C", "D"))
-status <- system2(PY_BIN, c("-I", "01_code/python/harold_xgboost_reg.py", f_in, f_sc, f_se, f_pa))
+status <- system2(PY_BIN, c("-I", "01_code/python/harold_modelo_xgboost_reg_fe_depth_6_rounds_910.py", f_in, f_sc, f_se, f_pa))
 stopifnot(status == 0)
 file.remove(f_in, sub("\\.csv$", "_vars.csv", f_in))
 

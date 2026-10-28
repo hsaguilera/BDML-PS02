@@ -11,7 +11,7 @@ XGBoost: boosting de gradiente con regularización L1/L2 explícita y poda por `
 árboles por niveles (profundidad máxima), histogramas.
 Protocolo: búsqueda aleatoria (lr alto + parada temprana) y reentrenamiento con lr bajo y
 rondas fijas, con los 5 pliegues compartidos; test = promedio de los 5 modelos.
-Uso: python harold_xgboost_reg.py <hogares.csv> <scores.csv> <busqueda.csv> <params.json>
+Uso: python harold_modelo_xgboost_reg_fe_depth_6_rounds_910.py <hogares.csv> <scores.csv> <busqueda.csv> <params.json>
 La puntuación guardada es s = -z_hat (mayor = más probable ser pobre).
 """
 import sys, json, os, time

@@ -1,5 +1,5 @@
 # ==============================================================================
-# 15_harold_same_predictors.R
+# 15_harold_analisis_mismas_variables_40vars.R
 # Los siete algoritmos exigidos por el taller (LPM, Logit, Elastic Net, CART, Random Forest,
 # Boosting y Naive Bayes) con EXACTAMENTE las mismas 40 variables (las del Random Forest, script 08),
 # los mismos 5 pliegues y el mismo criterio de umbral: así las diferencias reflejan el algoritmo y no
@@ -35,7 +35,7 @@ fun_save_scores(fe, oof, p_te, "elastic_net_40vars")
 f_in <- file.path(DIR_PROC, "lgbm40_in.csv")
 fun_export_fe_csv(fe, groups |> filter(variable %in% vars), f_in)
 f_sc <- file.path(DIR_PROC, paste0(AUTOR, "_lightgbm_40vars_scores.csv"))
-status <- system2(PY_BIN, c("-I", "01_code/python/harold_lightgbm_fixed.py", f_in,
+status <- system2(PY_BIN, c("-I", "01_code/python/harold_analisis_lightgbm_hiperparametros_fijos.py", f_in,
                             file.path(DIR_PROC, paste0(AUTOR, "_lightgbm_fe_params.json")), f_sc))
 stopifnot(status == 0); file.remove(f_in, sub("\\.csv$", "_vars.csv", f_in))
 

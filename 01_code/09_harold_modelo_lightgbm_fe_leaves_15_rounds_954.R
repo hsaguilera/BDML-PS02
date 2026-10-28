@@ -1,9 +1,9 @@
 # ==============================================================================
-# 09_harold_lightgbm_fe.R
+# 09_harold_modelo_lightgbm_fe_leaves_15_rounds_954.R
 # Modelo 3 (externo a la clase): LightGBM -- boosting de árboles con histogramas.
 # Usa TODAS las variables (grupos A+B+C+D). Imbalance: `scale_pos_weight` hace parte de la
 # búsqueda de hiperparámetros y el umbral de decisión se elige para maximizar F1.
-# El entrenamiento se hace en Python (01_code/python/harold_lightgbm.py); este script arma la
+# El entrenamiento se hace en Python (01_code/python/harold_modelo_lightgbm_fe_leaves_15_rounds_954.py); este script arma la
 # entrada, evalúa con las mismas funciones que los modelos en R y escribe el envío.
 # Entradas : 00_data/processed/hogares_fe.rds, hogares_fe_grupos.rds
 # Salidas  : predictions/harold_lightgbm_fe_*.csv, tables/harold_lightgbm_fe_{search,cv}.{csv,tex},
@@ -21,7 +21,7 @@ f_se   <- file.path(DIR_TAB,  paste0(AUTOR, "_lightgbm_fe_search.csv"))
 f_pa   <- file.path(DIR_PROC, paste0(AUTOR, "_lightgbm_fe_params.json"))
 
 fun_export_fe_csv(fe, groups, f_in)
-status <- system2(PY_BIN, c("-I", "01_code/python/harold_lightgbm.py", f_in, f_sc, f_se, f_pa))
+status <- system2(PY_BIN, c("-I", "01_code/python/harold_modelo_lightgbm_fe_leaves_15_rounds_954.py", f_in, f_sc, f_se, f_pa))
 stopifnot(status == 0)
 file.remove(f_in, sub("\\.csv$", "_vars.csv", f_in))
 

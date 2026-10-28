@@ -1,5 +1,5 @@
 # ==============================================================================
-# 06_harold_feature_diagnostics.R
+# 06_harold_analisis_diagnostico_variables_ablacion.R
 # Objetivo: evaluar la importancia REAL de las variables antes de modelar:
 #   (i) relación univariada lineal y no lineal con la pobreza;
 #   (ii) importancia de un LightGBM con todas las variables (ganancia y |SHAP|);
@@ -35,7 +35,7 @@ fwrite(fe[c("id", "sample", "poor", "fold", "bogota", groups$variable)], f_csv)
 fwrite(groups, file.path(DIR_PROC, "hogares_fe_grupos.csv"))
 
 # --- Python ---------------------------------------------------------------------------
-status <- system2(PY_BIN, c("-I", "01_code/python/harold_feature_diagnostics.py", f_csv,
+status <- system2(PY_BIN, c("-I", "01_code/python/harold_analisis_diagnostico_variables.py", f_csv,
                             file.path(DIR_PROC, "hogares_fe_grupos.csv"), DIR_TAB))
 stopifnot(status == 0)
 file.remove(f_csv)

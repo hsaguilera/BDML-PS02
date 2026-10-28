@@ -9,7 +9,7 @@ Salidas (CSV en <out_dir>):
   harold_fe_ablation.csv   : F1 (umbral óptimo en OOF), AUC y PR-AUC fuera de muestra por
                              conjunto de variables (A base, A+B, A+C, A+D, A+B+C+D). Se
                              evalúa SIN Bogotá (no existe en test).
-Uso: python harold_feature_diagnostics.py <hogares_fe.csv> <grupos.csv> <out_dir>
+Uso: python harold_analisis_diagnostico_variables.py <hogares_fe.csv> <grupos.csv> <out_dir>
 """
 import sys, os
 import numpy as np, pandas as pd, lightgbm as lgb

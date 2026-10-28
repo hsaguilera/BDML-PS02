@@ -1,5 +1,5 @@
 # ==============================================================================
-# 17_harold_slide_assets.R
+# 17_harold_diapositivas_figuras_y_cifras.R
 # Figuras y tablas de las diapositivas (03_slides/). No entrena nada: lee las bases y los puntajes
 # fuera de muestra (OOF) de los modelos ya entrenados y arma
 #   - figuras de tamaño de diapositiva  -> 02_outputs/figures/harold_slide_*.png
@@ -372,6 +372,6 @@ rfcv <- read_csv(file.path(DIR_TAB, "harold_random_forest_fe_cv.csv"), show_col_
 mac("MtryRF", rfcv$mtry); mac("NodeRF", rfcv$min_node)
 
 # --- numbers.tex -------------------------------------------------------------------------------------------------------------
-writeLines(c("% Generado por 01_code/17_harold_slide_assets.R; no editar a mano.",
+writeLines(c("% Generado por 01_code/17_harold_diapositivas_figuras_y_cifras.R; no editar a mano.",
              unlist(imap(num_macros, \(v, k) sprintf("\\newcommand{\\n%s}{%s}", k, v)))), "03_slides/numbers.tex")
 message("Figuras y tablas de las diapositivas listas.")

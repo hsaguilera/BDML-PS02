@@ -1,5 +1,5 @@
 # ==============================================================================
-# 03_characterize_data.R
+# 03_harold_analisis_caracterizar_train_test.R
 # Objetivo: caracterizar los datos con gráficos antes de modelar.
 #   (a) ¿train y test son comparables?   (b) ¿qué falta y por qué?
 #   (c) ¿cómo varía la pobreza con composición, ciclo de vida, educación,

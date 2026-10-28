@@ -1,5 +1,5 @@
 # ==============================================================================
-# 02_exploratory_analysis.R
+# 02_harold_analisis_exploratorio_desbalance.R
 # Objetivo: entender el resultado (pobreza), el desbalance de clases y la relación
 #           de los predictores candidatos con la pobreza. Solo usa TRAIN.
 # Salidas: 02_outputs/figures/eda_*.png ; 02_outputs/tables/eda_*.tex

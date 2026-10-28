@@ -1,9 +1,9 @@
 """Importancia de variables del LightGBM final (interpretación, no genera envíos).
 
-Reentrena el LightGBM con los hiperparámetros elegidos en `harold_lightgbm.py` sobre TODO el
+Reentrena el LightGBM con los hiperparámetros elegidos en `harold_modelo_lightgbm_fe_leaves_15_rounds_954.py` sobre TODO el
 train, y calcula (i) la importancia por ganancia y (ii) los valores SHAP (contribuciones por
 árbol de LightGBM, `pred_contrib`, en escala log-odds) sobre una muestra aleatoria de hogares.
-Uso: python harold_lightgbm_shap.py <hogares.csv> <params.json> <salida_importancia.csv> <salida_shap_muestra.csv>
+Uso: python harold_analisis_shap_lightgbm_leaves_15_rounds_954.py <hogares.csv> <params.json> <salida_importancia.csv> <salida_shap_muestra.csv>
 """
 import sys, json, os
 import numpy as np, pandas as pd, lightgbm as lgb

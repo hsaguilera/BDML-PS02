@@ -1,5 +1,5 @@
 # ==============================================================================
-# 01_build_household_dataset.R
+# 01_harold_datos_construir_base_hogares.R
 # Objetivo: limpiar, unir hogares y personas y construir variables a nivel de
 #           hogar. Produce 00_data/processed/hogares_modelo.rds
 # Reglas (complementaria del 19 de septiembre):

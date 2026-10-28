@@ -1,5 +1,5 @@
 # ==============================================================================
-# 16_harold_short_survey.R
+# 16_harold_analisis_encuesta_corta.R
 # ¿Se puede focalizar con una encuesta corta y barata? LightGBM (hiperparámetros del script 09) con
 # conjuntos de variables cada vez más fáciles de recolectar y verificar en campo:
 #   S1  vivienda, composición del hogar, edades y educación (sin preguntas de empleo ni de ingresos);
@@ -37,7 +37,7 @@ res <- map_dfr(names(conjuntos), function(n) {
   f_in <- file.path(DIR_PROC, "lgbm_short_in.csv")
   fun_export_fe_csv(fe, groups |> filter(variable %in% conjuntos[[n]]), f_in)
   f_sc <- file.path(DIR_PROC, paste0(AUTOR, "_lightgbm_", tolower(n), "_scores.csv"))
-  stopifnot(system2(PY_BIN, c("-I", "01_code/python/harold_lightgbm_fixed.py", f_in, f_pa, f_sc)) == 0)
+  stopifnot(system2(PY_BIN, c("-I", "01_code/python/harold_analisis_lightgbm_hiperparametros_fijos.py", f_in, f_pa, f_sc)) == 0)
   file.remove(f_in, sub("\\.csv$", "_vars.csv", f_in))
   sc <- fread(f_sc) |> as_tibble(); s <- sc$score[match(trn$id, sc$id)]
   ev <- fun_eval_oof(y, s, trn$fold, trn$bogota)$resumen

@@ -1,5 +1,5 @@
 # ==============================================================================
-# 12_harold_robust_logit.R
+# 12_harold_modelo_logit_robusto_alpha_1_lambda_0_00047_probit_59vars.R
 # Logit y probit REGULARIZADOS y diseñados para generalizar (no para ganar en train):
 #   1. Se descartan variables casi duplicadas (|correlación| >= 0,95) conservando la que más
 #      se asocia con la pobreza (AUC univariado no lineal del script 06).
@@ -155,7 +155,7 @@ for (k in 1:N_FOLDS) { ik <- gf == k
 groups_all <- groups
 f_in <- file.path(DIR_PROC, "gcv_in.csv"); f_out <- file.path(DIR_PROC, "gcv_out.csv")
 fun_export_fe_csv(fe, groups_all, f_in, extra = list(gfold = c(gf, rep(0L, nrow(tst)))[order(c(which(fe$sample == "train"), which(fe$sample == "test")))]))
-st <- system2(PY_BIN, c("-I", "01_code/python/harold_grouped_cv_lightgbm.py", f_in, file.path(DIR_PROC, paste0(AUTOR, "_lightgbm_fe_params.json")), f_out))
+st <- system2(PY_BIN, c("-I", "01_code/python/harold_analisis_cv_agrupada_lightgbm_leaves_15_rounds_954.py", f_in, file.path(DIR_PROC, paste0(AUTOR, "_lightgbm_fe_params.json")), f_out))
 stopifnot(st == 0); file.remove(f_in, sub("\\.csv$", "_vars.csv", f_in))
 oof_lg <- fread(f_out)$score[match(trn$id, fread(f_out)$id)]; file.remove(f_out)
 

@@ -1,5 +1,5 @@
 # ==============================================================================
-# 05_harold_feature_engineering.R
+# 05_harold_datos_ingenieria_variables_ingreso_imputado.R
 # Objetivo: construir la base de modelado con ingeniería de variables
 #           (00_data/processed/hogares_fe.rds) en tres pasos:
 #   1. variables de estructura de la regla de pobreza, vivienda, composición,
@@ -39,7 +39,7 @@ if (RERUN_PY || !file.exists(f_out)) {
   message("Personas de la UG: ", nrow(tab))
   rm(tp, ep, per, tab); invisible(gc())
 
-  status <- system2(PY_BIN, c("-I", "01_code/python/harold_person_income.py", f_in, f_out))
+  status <- system2(PY_BIN, c("-I", "01_code/python/harold_datos_ingreso_imputado_persona.py", f_in, f_out))
   stopifnot(status == 0)
 }
 pred <- fread(f_out) |> as_tibble()

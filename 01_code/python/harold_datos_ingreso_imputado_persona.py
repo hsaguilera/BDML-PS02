@@ -13,7 +13,7 @@ el promedio de los 5 modelos.
 Tres cabezas:  p_pos   = P(Ingtot > 0)                      (clasificación)
                mu_log  = E[log(Ingtot) | Ingtot > 0]        (regresión)
                mean_raw = E[Ingtot]                          (regresión L2, ingreso recortado)
-Uso: python harold_person_income.py <entrada.csv> <salida.csv>
+Uso: python harold_datos_ingreso_imputado_persona.py <entrada.csv> <salida.csv>
 """
 import sys
 import numpy as np

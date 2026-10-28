@@ -1,5 +1,5 @@
 # ==============================================================================
-# 07_harold_elastic_net_fe.R
+# 07_harold_modelo_elastic_net_fe_alpha_0_7_lambda_0_00004.R
 # Modelo 1 (visto en clase): Elastic Net (logit penalizado) con ingeniería de variables.
 # Variaciones respecto a la réplica de la complementaria (script 04):
 #   * variables: base + ratios/interacciones + estructura de la regla + ingreso imputado

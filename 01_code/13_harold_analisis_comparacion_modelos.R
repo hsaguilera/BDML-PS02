@@ -1,5 +1,5 @@
 # ==============================================================================
-# 13_harold_model_comparison.R
+# 13_harold_analisis_comparacion_modelos.R
 # Comparación de TODOS los modelos de Harold con el mismo protocolo de validación
 # (5 pliegues compartidos, hogares fuera de Bogotá, umbral que maximiza F1 en OOF) y
 # comparación de sus predicciones sobre test.

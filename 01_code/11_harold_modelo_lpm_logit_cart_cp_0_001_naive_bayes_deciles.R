@@ -1,12 +1,12 @@
 # ==============================================================================
-# 11_harold_classical_fe.R
+# 11_harold_modelo_lpm_logit_cart_cp_0_001_naive_bayes_deciles.R
 # Modelos 5 a 8 (algoritmos exigidos por el taller): Modelo de Probabilidad Lineal (LPM),
 # Logit, CART y Naive Bayes, con las MISMAS 40 variables del Random Forest (script 08) para
 # que la comparación sea de algoritmos y no de predictores ("level playing field").
 # Misma validación (5 pliegues compartidos), mismo criterio (F1 con umbral óptimo en OOF,
 # sin Bogotá). Los modelos finales se reajustan con todo train; el umbral viene del OOF.
 # Entradas : 00_data/processed/hogares_fe.rds, tables/harold_random_forest_fe_vars.csv
-# Salidas  : predictions/harold_{lpm,logit,cart,naive_bayes}_fe_*.csv,
+# Salidas  : predictions/harold_no_enviado_{lpm,logit,cart,naive_bayes}_fe_*.csv (no se enviaron a Kaggle),
 #            tables/harold_classical_fe_cv.{csv,tex}, processed/harold_*_fe_scores.csv
 # ==============================================================================
 AUTOR <- "harold"
@@ -40,13 +40,13 @@ fit_lpm <- function(X, yy) { f <- lm.fit(X, yy); b <- f$coefficients; b[is.na(b)
 oof <- numeric(nrow(Xtr))
 for (k in 1:N_FOLDS) { ik <- fold == k; oof[ik] <- as.numeric(Xtr[ik, ] %*% fit_lpm(Xtr[!ik, ], y[!ik])) }
 b <- fit_lpm(Xtr, y)
-registrar("lpm", oof, as.numeric(Xte %*% b), sprintf("%s_lpm_fe_%dvars.csv", AUTOR, length(vars)), "MCO sobre 0/1; sin penalización")
+registrar("lpm", oof, as.numeric(Xte %*% b), sprintf("%s_no_enviado_lpm_fe_%dvars.csv", AUTOR, length(vars)), "MCO sobre 0/1; sin penalización")
 
 fit_logit <- function(X, yy) { f <- glm.fit(X, yy, family = binomial(), control = list(maxit = 50)); b <- f$coefficients; b[is.na(b)] <- 0; b }
 oof <- numeric(nrow(Xtr))
 for (k in 1:N_FOLDS) { ik <- fold == k; oof[ik] <- plogis(as.numeric(Xtr[ik, ] %*% fit_logit(Xtr[!ik, ], y[!ik]))) }
 b <- fit_logit(Xtr, y)
-registrar("logit", oof, plogis(as.numeric(Xte %*% b)), sprintf("%s_logit_fe_%dvars.csv", AUTOR, length(vars)), "Máxima verosimilitud; sin penalización")
+registrar("logit", oof, plogis(as.numeric(Xte %*% b)), sprintf("%s_no_enviado_logit_fe_%dvars.csv", AUTOR, length(vars)), "Máxima verosimilitud; sin penalización")
 rm(Xtr, Xte, M); invisible(gc())
 
 # --- CART: malla de cp y minsplit, selección por F1 en OOF ---------------------------------------------------------
@@ -69,7 +69,7 @@ cart_tab <- bind_rows(cart_res); ib <- which.max(cart_tab$f1)
 write_csv(cart_tab, file.path(DIR_TAB, paste0(AUTOR, "_cart_fe_search.csv")))
 m <- rpart(y ~ ., data = d_tr, method = "class", control = rpart.control(cp = mallas$cp[ib], minsplit = mallas$minsplit[ib], maxdepth = 12, xval = 0))
 registrar("cart", cart_oof[[ib]], predict(m, d_te, type = "prob")[, "Si"],
-          sprintf("%s_cart_fe_cp_%s.csv", AUTOR, gsub("\\.", "_", format(mallas$cp[ib], scientific = FALSE))),
+          sprintf("%s_no_enviado_cart_fe_cp_%s.csv", AUTOR, gsub("\\.", "_", format(mallas$cp[ib], scientific = FALSE))),
           sprintf("cp = %s; minsplit = %d; profundidad máxima 12", mallas$cp[ib], mallas$minsplit[ib]))
 
 # --- Naive Bayes: variables discretizadas en deciles (cortes aprendidos con train), suavizado de Laplace -------------
@@ -84,7 +84,7 @@ for (k in 1:N_FOLDS) {
   oof[ik] <- predict(m, nb_tr[ik, ], type = "raw")[, "Si"]
 }
 m <- naiveBayes(x = nb_tr, y = yf, laplace = 1)
-registrar("naive_bayes", oof, predict(m, nb_te, type = "raw")[, "Si"], sprintf("%s_naive_bayes_fe_deciles.csv", AUTOR), "Variables en deciles; Laplace = 1")
+registrar("naive_bayes", oof, predict(m, nb_te, type = "raw")[, "Si"], sprintf("%s_no_enviado_naive_bayes_fe_deciles.csv", AUTOR), "Variables en deciles; Laplace = 1")
 
 # --- Tabla resumen ---------------------------------------------------------------------------------------------------
 tab <- bind_rows(resumen)

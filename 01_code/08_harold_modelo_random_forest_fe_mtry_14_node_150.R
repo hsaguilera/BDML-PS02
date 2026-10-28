@@ -1,5 +1,5 @@
 # ==============================================================================
-# 08_harold_random_forest_fe.R
+# 08_harold_modelo_random_forest_fe_mtry_14_node_150.R
 # Modelo 2 (visto en clase): Random Forest (ranger, bosque de probabilidad) con ingeniería de
 # variables y SELECCIÓN de variables: las 40 con mayor |SHAP| medio del diagnóstico del script 06
 # (hay muchas variables muy correlacionadas y `mtry` se diluye si se incluyen todas).

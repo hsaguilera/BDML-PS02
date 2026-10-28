@@ -1,9 +1,9 @@
-"""LightGBM con hiperparámetros fijos (los elegidos en `harold_lightgbm.py`) sobre cualquier conjunto de variables.
+"""LightGBM con hiperparámetros fijos (los elegidos en `harold_modelo_lightgbm_fe_leaves_15_rounds_954.py`) sobre cualquier conjunto de variables.
 
 Sirve para comparar algoritmos con los MISMOS predictores y para medir cuánto se pierde con encuestas
 más cortas: no hay búsqueda, solo 5 pliegues compartidos (`fold`), el número de rondas del modelo final y
 el promedio de los 5 modelos sobre test.
-Uso: python harold_lightgbm_fixed.py <hogares.csv> <params.json> <salida_scores.csv>
+Uso: python harold_analisis_lightgbm_hiperparametros_fijos.py <hogares.csv> <params.json> <salida_scores.csv>
 """
 import sys, json, os
 import numpy as np, pandas as pd, lightgbm as lgb

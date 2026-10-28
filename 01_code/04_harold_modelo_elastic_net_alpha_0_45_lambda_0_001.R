@@ -1,5 +1,5 @@
 # ==============================================================================
-# 04_harold_elastic_net.R
+# 04_harold_modelo_elastic_net_alpha_0_45_lambda_0_001.R
 # Objetivo: replicar, sin cambios de fondo, el modelo de ejemplo de la
 #           complementaria del 19 de septiembre (logit con Elastic Net en caret,
 #           5 particiones estratificadas, selección por accuracy) y generar el

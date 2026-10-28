@@ -1,8 +1,8 @@
 # ==============================================================================
-# 14_harold_lightgbm_importance.R
+# 14_harold_analisis_importancia_lightgbm_leaves_15_rounds_954.R
 # Interpretación del mejor modelo (LightGBM): qué variables mueven la probabilidad de ser
 # pobre y cómo (efecto SHAP promedio por tramos de cada variable).
-# El modelo se reentrena en Python (01_code/python/harold_lightgbm_shap.py) con los
+# El modelo se reentrena en Python (01_code/python/harold_analisis_shap_lightgbm_leaves_15_rounds_954.py) con los
 # hiperparámetros ya elegidos en el script 09; es solo para interpretar, no cambia los envíos.
 # Entradas : 00_data/processed/hogares_fe.rds, hogares_fe_grupos.rds, harold_lightgbm_fe_params.json
 # Salidas  : tables/harold_lightgbm_fe_importance.{csv,tex}, figures/harold_lightgbm_fe_{importance,effects}.png
@@ -19,7 +19,7 @@ f_imp  <- file.path(DIR_TAB,  paste0(AUTOR, "_lightgbm_fe_importance.csv"))
 f_shap <- file.path(DIR_PROC, paste0(AUTOR, "_lightgbm_fe_shap_sample.csv"))
 
 fun_export_fe_csv(fe, groups, f_in)
-status <- system2(PY_BIN, c("-I", "01_code/python/harold_lightgbm_shap.py", f_in, f_pa, f_imp, f_shap))
+status <- system2(PY_BIN, c("-I", "01_code/python/harold_analisis_shap_lightgbm_leaves_15_rounds_954.py", f_in, f_pa, f_imp, f_shap))
 stopifnot(status == 0)
 file.remove(f_in, sub("\\.csv$", "_vars.csv", f_in))
 
