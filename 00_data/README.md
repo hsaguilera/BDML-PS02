@@ -24,13 +24,13 @@ Diccionario de variables: `ddi-documentation-spanish-608.pdf` (documento del cur
 | `harold_<modelo>_scores.csv` | scripts 07 a 12 | Puntajes fuera de muestra (train) y de test de cada modelo (`id`, `sample`, `fold`, `score`); los usan los scripts 13 y 14 |
 | `harold_*_params.json`, `harold_*_resumen.rds`, `*_cache.rds` | scripts 07 a 12 | Hiperparámetros elegidos y cachés para retomar búsquedas largas |
 
-### Bases de Jhon (scripts 26–37; las crea `01_code/python/jhon_datos.py`)
+### Bases de los scripts 26–37 (las crea `01_code/python/datos_cadena.py`)
 | Archivo | Lo crea | Contenido |
 |---|---|---|
 | `raw_*.parquet` | el primer script que lee los CSV | Copia tipada de los cuatro CSV crudos (lectura rápida) |
-| `pliegues.csv`, `modelo_{train,test}.parquet`, `conjuntos_variables.json` | `jhon_datos/02_teoria_y_variables.py` | 5 pliegues por Pobre × Dominio (semilla 20262), base de hogar y conjuntos de variables |
-| `modelo_{train,test}_v4.parquet`, `variables_busqueda.json` | `jhon_datos/09_busqueda_variables.py` | Base con las variables de la búsqueda |
-| `modelo_{train,test}_v5.parquet`, `conjuntos_variables_v5.json` | `jhon_datos/02b_primera_etapa_v5.py` | Base v5 con la primera etapa (ingreso esperado fuera de pliegue) y listas S1, S2 y encuesta corta |
-| `modelo_{train,test}_v7.parquet`, `conjuntos_variables_v7.json`, `pliegues_v7.csv` | `jhon_datos/02d_variables_v7.py` y el primer modelo v7 | Base v7 (1.152 variables, sin primera etapa), mapa variable → pregunta y 4 particiones repetidas |
+| `pliegues.csv`, `modelo_{train,test}.parquet`, `conjuntos_variables.json` | `datos_02_teoria_y_variables.py` | 5 pliegues por Pobre × Dominio (semilla 20262), base de hogar y conjuntos de variables |
+| `modelo_{train,test}_v4.parquet`, `variables_busqueda.json` | `datos_09_busqueda_variables.py` | Base con las variables de la búsqueda |
+| `modelo_{train,test}_v5.parquet`, `conjuntos_variables_v5.json` | `datos_02b_primera_etapa_v5.py` | Base v5 con la primera etapa (ingreso esperado fuera de pliegue) y listas S1, S2 y encuesta corta |
+| `modelo_{train,test}_v7.parquet`, `conjuntos_variables_v7.json`, `pliegues_v7.csv` | `datos_02d_variables_v7.py` y el primer modelo v7 | Base v7 (1.152 variables, sin primera etapa), mapa variable → pregunta y 4 particiones repetidas |
 | `modelos/`, `cache_v7/`, `cache_v5/`, `cache_02d/`, `progreso_*.log` | scripts 26–36 | Predicciones fuera de pliegue y de test de cada modelo (las lee el 37), cachés para retomar búsquedas y registros de avance |
 
