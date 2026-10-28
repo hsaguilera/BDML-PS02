@@ -1,0 +1,2 @@
+config,perdida_media,perdida_EE,F1_medio_particiones,F1_r1,iter_mediana,params,tiempo_s,elegido
+config 0,0.21313697273592816,0.0014948358491464865,0.7711788031723144,0.7711788031723144,592.0,"{""colsample_bylevel"": 0.9961331262, ""colsample_bytree"": 0.3810992138, ""gamma"": 0.427444675, ""learning_rate"": 0.05, ""max_depth"": 7, ""min_child_weight"": 86.40347225, ""reg_alpha"": 0.0260586526, ""reg_lambda"": 0.002703855889, ""subsample"": 0.944581375}",0.7985625267028809,True
