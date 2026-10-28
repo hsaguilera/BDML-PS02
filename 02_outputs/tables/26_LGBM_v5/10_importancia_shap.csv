@@ -1,0 +1,9 @@
+variable,SHAP_media_abs,bloque,SHAP_acumulado
+v5_prob_pobre_hogar,1.2602165605128617,G. Variable generada (1.ª etapa),0.35899144970728614
+v5_prob_pobre_fw,0.9649717869332685,G. Variable generada (1.ª etapa),0.6338780299763359
+v5_gap_hogar,0.7998012548634276,G. Variable generada (1.ª etapa),0.861713325081711
+v5_gap_fw,0.2998482311314777,G. Variable generada (1.ª etapa),0.9471295579411235
+v5_zhat_hogar,0.08720881357908217,G. Variable generada (1.ª etapa),0.9719722868775424
+v5_mu_log,0.04128529676800497,G. Variable generada (1.ª etapa),0.9837330183285797
+v5_sigma_hogar,0.03460634750598881,G. Variable generada (1.ª etapa),0.9935911516443277
+v5_sd_log,0.022497852910478486,G. Variable generada (1.ª etapa),1.0000000000000002
