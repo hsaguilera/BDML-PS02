@@ -68,18 +68,18 @@ menor que la línea de pobreza de su dominio; en train lo es el 20 %. Tres hecho
 * *Bogotá no está en test.* Sus 10.567 hogares (6,4 % de train, 9,8 % de pobreza) se usan para entrenar, pero toda
   métrica y todo umbral se calculan fuera de Bogotá, que es la población del test.
 
-**Modelos (Etapa 2).** Tres líneas de trabajo con el mismo objetivo y distintas estrategias:
-* *Harold (R + Python, scripts 01–17).* 72 variables construidas desde la teoría y un ingreso imputado por persona
+**Modelos (Etapa 2).** Tres bloques de scripts con el mismo objetivo y distintas estrategias:
+* *Scripts 01–17 (R + Python).* 72 variables construidas desde la teoría y un ingreso imputado por persona
   (LightGBM fuera de muestra con variables de test) agregado al hogar; diez modelos con mallas o búsquedas aleatorias,
   pruebas de robustez y una comparación en igualdad de condiciones con las mismas 40 variables (`15_harold_…`).
-* *César (R, scripts 20–25).* Scripts autónomos que construyen la base, eligen variables dentro del pliegue, buscan
+* *Scripts 20–25 (R).* Scripts autónomos que construyen la base, eligen variables dentro del pliegue, buscan
   hiperparámetros y eligen el umbral fuera del pliegue; seis algoritmos sin ingreso imputado.
-* *Protocolo v7 (Python, scripts 26–37).* Primero con ingreso esperado como variable (v5, 26–28); luego, sin ningún
+* *Scripts 26–37 (Python, protocolo v7).* Primero con ingreso esperado como variable (v5, 26–28); luego, sin ningún
   modelo de ingreso, 1.152 variables candidatas de 64 preguntas para los siete algoritmos (29–36), cada uno con su
   método de selección, búsqueda bayesiana de hiperparámetros, validación cruzada repetida y re-evaluación en una
   partición nueva; la comparación (37) usa pruebas pareadas y un conjunto de confianza de modelos.
 
-**El mejor modelo (Etapa 3).** El LightGBM de Harold gana porque su variable más fuerte, la razón entre el ingreso
+**El mejor modelo (Etapa 3).** El LightGBM del script 09 gana porque su variable más fuerte, la razón entre el ingreso
 imputado y la línea, resume casi toda la regla de pobreza: con las variables base el F1 es 0,748 y al agregar el
 ingreso imputado sube a 0,776 (figura de la izquierda). Su ventaja sobre un logit penalizado es de 0,006 y se reduce
 al validar por regiones completas (`12_harold_…`). Sin ese ingreso, el mismo algoritmo alcanza 0,773 cuando las
@@ -98,11 +98,11 @@ que no lo necesita (filtración). Para el LightGBM v7, por cada 1.000 hogares (2
 Un gobierno que valore más no excluir a los pobres que ahorrar cupos debería usar un umbral más bajo que el que premia
 el F1. En cuanto al despliegue, el modelo completo usa preguntas ya presentes en la encuesta, pero una versión corta de
 19 preguntas, más barata de levantar y verificar, baja el F1 de 0,773 a 0,706 y aumenta los dos errores (filtración
-del 34 % y subcobertura del 24 %); la de Harold con sólo vivienda y hogar (S1) baja a 0,585. La encuesta corta sirve
+del 34 % y subcobertura del 24 %); la del script 16 con sólo vivienda y hogar (S1) baja a 0,585. La encuesta corta sirve
 para un primer filtro, no para reemplazar la focalización completa.
 
 <details>
-<summary>Comparación de los diez modelos de Harold con el mismo protocolo (<code>13_harold_analisis_comparacion_modelos.R</code>)</summary>
+<summary>Comparación de los diez modelos de los scripts 04–12 con el mismo protocolo (<code>13_harold_analisis_comparacion_modelos.R</code>)</summary>
 
 Validación cruzada de 5 pliegues compartidos, hogares fuera de Bogotá y umbral que maximiza el F1; entre paréntesis, la
 desviación estándar del F1 entre pliegues.
@@ -133,12 +133,13 @@ Gráficos: `harold_comparison_f1.png`, `harold_comparison_precision_recall.png`,
   Elastic Net y LPM quedan entre 0,770 y 0,777.
 * **No se puede afirmar** que 0,78 sea mejor que 0,77 en Kaggle: el tablero público usa el 20 % del test (unos 13.000
   hogares; error estándar del F1 ≈ 0,006) y los puntajes se muestran con dos decimales. El tablero privado reordenó a
-  los mejores: los v5 pasaron de 0,77 a 0,78 y el LightGBM de Harold de 0,78 a 0,77.
-* **Los F1 de validación cruzada no son comparables entre autores**: cada línea de trabajo usó su protocolo (umbral
-  elegido en todo el OOF o anidado por pliegue, distintos pliegues). Entre autores, compare los puntajes de Kaggle.
+  los mejores: los v5 (26–28) pasaron de 0,77 a 0,78 y el LightGBM del script 09 de 0,78 a 0,77.
+* **Los F1 de validación cruzada no son comparables entre bloques de scripts**: cada bloque (01–17, 20–25 y 26–37)
+  usó su protocolo (umbral elegido en todo el OOF o anidado por pliegue, distintos pliegues). Entre bloques, compare
+  los puntajes de Kaggle.
 * **Primera etapa (zona gris).** El ingreso imputado se estima con un modelo entrenado en train y entra como variable de
   un clasificador; el equipo lo considera dentro de la ruta de clasificación del enunciado (§3), pero lo documenta
-  aparte. El XGBoost de regresión de Harold (`10_harold_…`) sí predice el ingreso y aplica la línea: es la ruta de
+  aparte. El XGBoost de regresión del script 10 (`10_harold_…`) sí predice el ingreso y aplica la línea: es la ruta de
   ingreso y no se cuenta entre los algoritmos de clasificación.
 * **Limitaciones.** Por plazo, algunos modelos v7 usaron presupuestos de búsqueda menores (Elastic Net, Random Forest
   y XGBoost); CatBoost no se corrió; los datos no se versionan y hay que descargarlos de Kaggle.
@@ -153,7 +154,7 @@ Gráficos: `harold_comparison_f1.png`, `harold_comparison_precision_recall.png`,
 |---|---|
 | Limpieza, unión de personas y hogares y análisis exploratorio | `01_code/01_harold_datos_…`, `02_harold_analisis_…`, `03_harold_analisis_…`; `01_code/python/datos_00_…`, `datos_01_…`; figuras `eda_*`, `desc_*` y `02_outputs/figures/cadena_datos/` |
 | Construcción de variables e ingreso imputado | `05_harold_datos_ingenieria_variables_ingreso_imputado.R`, `06_harold_…_ablacion.R`; `python/datos_02_…`, `datos_09_…`, `datos_02b_…` (primera etapa) y `datos_02d_variables_v7.py` |
-| Cada modelo enviado a Kaggle | un script por modelo, con el modelo y los hiperparámetros en el nombre: Harold `04`–`12`, César `20`–`25`, protocolo v7 `26`–`36` (sección 8) |
+| Cada modelo enviado a Kaggle | un script por modelo, con el modelo y los hiperparámetros en el nombre: `04`–`12`, `20`–`25` y `26`–`36` (sección 8) |
 | El mejor modelo y su interpretación | `09_harold_modelo_lightgbm_…`, `14_harold_analisis_importancia_…` (SHAP y efectos) |
 | Comparación de algoritmos en igualdad de condiciones | `13_harold_analisis_comparacion_modelos.R`, `15_harold_analisis_mismas_variables_40vars.R`, `37_comparacion_modelos_v7.R` (`02_outputs/tables/37_comparacion_modelos_v7/resultados_modelos_v7.xlsx`) |
 | Errores de política y encuesta corta | `13_harold_…`, `16_harold_analisis_encuesta_corta.R`; `02_outputs/tables/37_comparacion_modelos_v7/39_politica.csv` |
@@ -162,8 +163,8 @@ Gráficos: `harold_comparison_f1.png`, `harold_comparison_precision_recall.png`,
 
 ```
 00_data/        raw/ (CSV de Kaggle, no versionados) y processed/ (bases intermedias que regeneran los scripts)
-01_code/        00_rundirectory.R (maestro) · 01–17 Harold · 20–25 César · 26–37 protocolo v7 · functions/ · python/
-02_outputs/     figures/ y tables/ (de Harold en la raíz; de los scripts 26–37 en una subcarpeta por script) · predictions/
+01_code/        00_rundirectory.R (maestro) · 01–17 · 20–25 · 26–37 (protocolo v7) · functions/ · python/
+02_outputs/     figures/ y tables/ (scripts 01–17 en la raíz; 26–37 en una subcarpeta por script) · predictions/
 03_slides/      diapositivas en LaTeX (Beamer) y sus PDF
 ```
 
@@ -178,42 +179,43 @@ Gráficos: `harold_comparison_f1.png`, `harold_comparison_precision_recall.png`,
 ```r
 source("01_code/00_rundirectory.R")
 ```
-El maestro corre en orden todos los scripts numerados. Tiempos aproximados: Harold 01–17, unas 4 horas en 2 núcleos;
-César 20–25, cada script por separado con su búsqueda (`USAR_PARAMETROS_GANADORES = TRUE` entrena sólo la
+El maestro corre en orden todos los scripts numerados. Tiempos aproximados: scripts 01–17, unas 4 horas en 2 núcleos;
+20–25, cada script por separado con su búsqueda (`USAR_PARAMETROS_GANADORES = TRUE` entrena sólo la
 configuración ganadora); 26–37, más de 30 horas en 12 hilos la primera vez (cada uno construye la base que necesita y
 deja cachés para retomar una corrida interrumpida). Cada script también se puede correr solo, desde la raíz.
 
 ## 6. Registro de envíos a Kaggle
 
 Puntaje público: 20 % del test (tablero durante la competencia); privado: 80 % (clasificación final). F1 de validación
-cruzada según el protocolo de cada autor (no comparable entre autores). Las predicciones de Harold y de los scripts
-26–36 están en `02_outputs/predictions/` con el mismo nombre; César guarda las suyas en `salidas/` al correr sus scripts.
+cruzada según el protocolo de cada bloque de scripts (no comparable entre bloques). Las predicciones de los scripts
+04–12 y 26–36 están en `02_outputs/predictions/` con el mismo nombre; las de 20–25 se guardan en `salidas/` al
+correr esos scripts.
 
-| Autor | Archivo enviado | Algoritmo | Script | F1 CV | Público | Privado |
-|---|---|---|---|---|---|---|
-| Harold | `harold_lightgbm_fe_leaves_15_rounds_954.csv` | Boosting | 09 | 0,777 | **0,78** | 0,77 |
-| Harold | `harold_elastic_net_fe_alpha_0_7_lambda_0_00004.csv` | Elastic Net | 07 | 0,772 | 0,77 | 0,77 |
-| Harold | `harold_random_forest_fe_mtry_14_node_150.csv` | Random Forest | 08 | 0,774 | 0,77 | 0,77 |
-| Harold | `harold_logit_robust_fe_alpha_1_lambda_0_00047.csv` | Logit | 12 | 0,771 | 0,77 | 0,77 |
-| Harold | `harold_probit_robust_fe_59vars.csv` | Logit (probit) | 12 | 0,771 | 0,77 | 0,77 |
-| Harold | `harold_xgboost_reg_fe_depth_6_rounds_910.csv` | Regresión de ingreso + umbral | 10 | 0,775 | 0,77 | 0,77 |
-| Harold | `harold_elastic_net_lambda_0_001_alpha_0_45.csv` | Elastic Net (réplica de la complementaria) | 04 | 0,445 | 0,44 | 0,45 |
-| Jhon | `LGBM_leaves_10_lr_0_0253_mcs_22_ff_0_442_l2_0_00326_n_8.csv` | Boosting (v5) | 26 | 0,777 | 0,77 | **0,78** |
-| Jhon | `XGB_depth_3_eta_0_0473_mcw_1_68_sub_0_561_col_0_876_n_8_bog0_5.csv` | Boosting (v5) | 27 | 0,777 | 0,77 | **0,78** |
-| Jhon | `RF_mtry_0_292_minleaf_156_ms_0_443_depth_None_cw_none_trees_360_n_20_pars_bog0_5.csv` | Random Forest (v5) | 28 | 0,778 | 0,77 | **0,78** |
-| Jhon | `LGBM_hojas_40_lr_0_02_mcs_15_ff_0_336_l2_0_14_n1152_lb1_s10_v7.csv` | Boosting | 29 | 0,773 | 0,77 | 0,77 |
-| Jhon | `XGB_prof_7_lr_0_05_mcw_86_4_sub_0_945_col_0_381_l2_0_0027_n1152_lb1_s3_v7.csv` | Boosting | 34 | 0,770 | 0,77 | 0,77 |
-| Jhon | `LOGIT_spl_T_n348_lb1_s1_v7.csv` | Logit | 30 | 0,763 | 0,76 | 0,76 |
-| Jhon | `EN_a_1_lam_0_00022_n414_lb1_s1_v7.csv` | Elastic Net | 32 | 0,763 | 0,76 | 0,76 |
-| Jhon | `RF_mtry_0_109_hoja_16_ms_0_67_crit_log_loss_arb_1000_n1152_lb1_s1000_v7.csv` | Random Forest | 33 | 0,752 | 0,74 | 0,75 |
-| Jhon | `LPM_spl_T_n1152_lb0_s1_v7.csv` | Linear Probability Model | 31 | 0,750 | 0,74 | 0,75 |
-| César | `LGBM_fe_cat_leaves_15_lr_005_nr_924_umbral_0360.csv` | Boosting | 20 | 0,731 | 0,73 | 0,73 |
-| César | `XGB_fe_depth_6_eta_005_nr_541_umbral_0515.csv` | Boosting | 23 | 0,729 | 0,72 | 0,73 |
-| César | `RF_fe_pb0_Ktodas_mtry_0_3_leaf_40_ss_0_472_extratrees_spw_3_13_nt_600_umbral_0_36.csv.csv` | Random Forest | 22 | 0,720 | 0,71 | 0,72 |
-| César | `LOGIT_ingpred_fe_Ktodas_pb1_umbral_0350.csv` | Logit | 25* | 0,712 | 0,71 | 0,71 |
-| César | `S00_EN_lambda_1e-04_alpha_01_umbral_033.csv` | Elastic Net | 24 | 0,687 | 0,68 | 0,69 |
-| César | `NB_fe_cat_Ktodas_pb1_bins_8_lap_0137_umbral_0949.csv` | Naive Bayes | 21 | 0,657 | 0,64 | 0,65 |
-| César | `EN_lambda_0001_alpha_045.csv` | Elastic Net (réplica de la complementaria) | — | — | 0,44 | 0,45 |
+| Archivo enviado | Algoritmo | Script | F1 CV | Público | Privado |
+|---|---|---|---|---|---|
+| `harold_lightgbm_fe_leaves_15_rounds_954.csv` | Boosting | 09 | 0,777 | **0,78** | 0,77 |
+| `harold_elastic_net_fe_alpha_0_7_lambda_0_00004.csv` | Elastic Net | 07 | 0,772 | 0,77 | 0,77 |
+| `harold_random_forest_fe_mtry_14_node_150.csv` | Random Forest | 08 | 0,774 | 0,77 | 0,77 |
+| `harold_logit_robust_fe_alpha_1_lambda_0_00047.csv` | Logit | 12 | 0,771 | 0,77 | 0,77 |
+| `harold_probit_robust_fe_59vars.csv` | Logit (probit) | 12 | 0,771 | 0,77 | 0,77 |
+| `harold_xgboost_reg_fe_depth_6_rounds_910.csv` | Regresión de ingreso + umbral | 10 | 0,775 | 0,77 | 0,77 |
+| `harold_elastic_net_lambda_0_001_alpha_0_45.csv` | Elastic Net (réplica de la complementaria) | 04 | 0,445 | 0,44 | 0,45 |
+| `LGBM_leaves_10_lr_0_0253_mcs_22_ff_0_442_l2_0_00326_n_8.csv` | Boosting (v5) | 26 | 0,777 | 0,77 | **0,78** |
+| `XGB_depth_3_eta_0_0473_mcw_1_68_sub_0_561_col_0_876_n_8_bog0_5.csv` | Boosting (v5) | 27 | 0,777 | 0,77 | **0,78** |
+| `RF_mtry_0_292_minleaf_156_ms_0_443_depth_None_cw_none_trees_360_n_20_pars_bog0_5.csv` | Random Forest (v5) | 28 | 0,778 | 0,77 | **0,78** |
+| `LGBM_hojas_40_lr_0_02_mcs_15_ff_0_336_l2_0_14_n1152_lb1_s10_v7.csv` | Boosting | 29 | 0,773 | 0,77 | 0,77 |
+| `XGB_prof_7_lr_0_05_mcw_86_4_sub_0_945_col_0_381_l2_0_0027_n1152_lb1_s3_v7.csv` | Boosting | 34 | 0,770 | 0,77 | 0,77 |
+| `LOGIT_spl_T_n348_lb1_s1_v7.csv` | Logit | 30 | 0,763 | 0,76 | 0,76 |
+| `EN_a_1_lam_0_00022_n414_lb1_s1_v7.csv` | Elastic Net | 32 | 0,763 | 0,76 | 0,76 |
+| `RF_mtry_0_109_hoja_16_ms_0_67_crit_log_loss_arb_1000_n1152_lb1_s1000_v7.csv` | Random Forest | 33 | 0,752 | 0,74 | 0,75 |
+| `LPM_spl_T_n1152_lb0_s1_v7.csv` | Linear Probability Model | 31 | 0,750 | 0,74 | 0,75 |
+| `LGBM_fe_cat_leaves_15_lr_005_nr_924_umbral_0360.csv` | Boosting | 20 | 0,731 | 0,73 | 0,73 |
+| `XGB_fe_depth_6_eta_005_nr_541_umbral_0515.csv` | Boosting | 23 | 0,729 | 0,72 | 0,73 |
+| `RF_fe_pb0_Ktodas_mtry_0_3_leaf_40_ss_0_472_extratrees_spw_3_13_nt_600_umbral_0_36.csv.csv` | Random Forest | 22 | 0,720 | 0,71 | 0,72 |
+| `LOGIT_ingpred_fe_Ktodas_pb1_umbral_0350.csv` | Logit | 25* | 0,712 | 0,71 | 0,71 |
+| `S00_EN_lambda_1e-04_alpha_01_umbral_033.csv` | Elastic Net | 24 | 0,687 | 0,68 | 0,69 |
+| `NB_fe_cat_Ktodas_pb1_bins_8_lap_0137_umbral_0949.csv` | Naive Bayes | 21 | 0,657 | 0,64 | 0,65 |
+| `EN_lambda_0001_alpha_045.csv` | Elastic Net (réplica de la complementaria) | — | — | 0,44 | 0,45 |
 
 \* El script 25 del repositorio genera la variante `base` (sin ingreso predicho); el envío es la variante `ingpred`.
 
@@ -241,7 +243,7 @@ cruzada según el protocolo de cada autor (no comparable entre autores). Las pre
 
 ## 7. Decisiones metodológicas
 1. **Mismo preprocesamiento en train y test:** las bases se apilan y se procesan con las mismas funciones. Las variables
-   de ingreso, que sólo existen en train, no se usan como predictores (Harold las guarda con prefijo `eda_`).
+   de ingreso, que sólo existen en train, no se usan como predictores (en 01–17 se guardan con prefijo `eda_`).
 2. **Unidad de gasto (UG):** el DANE calcula la pobreza sobre la UG, que excluye empleados domésticos, pensionistas y
    trabajadores (`P6050` = 6, 7, 8). Las variables del hogar se agregan sólo sobre la UG (su tamaño coincide con
    `Npersug`) y `n_outside_ug` registra cuántas personas quedan fuera.
@@ -262,7 +264,7 @@ cruzada según el protocolo de cada autor (no comparable entre autores). Las pre
 ## 8. Detalle de los scripts
 
 <details>
-<summary>Harold (01–17, R; los que entrenan modelos de Python llaman a <code>01_code/python/harold_*.py</code>)</summary>
+<summary>Scripts 01–17 (R; los que entrenan modelos de Python llaman a <code>01_code/python/harold_*.py</code>)</summary>
 
 | Script | Responsabilidad | Salidas |
 |---|---|---|
@@ -292,7 +294,7 @@ filtración, subcobertura, umbral, pliegues) y `fun_python_modelos.R` (llama a l
 </details>
 
 <details>
-<summary>César (20–25, R autónomos)</summary>
+<summary>Scripts 20–25 (R autónomos)</summary>
 
 Cada script lee `00_data/raw/`, construye la base de hogares, elige variables dentro del pliegue, busca
 hiperparámetros, elige el umbral fuera del pliegue y escribe el envío y sus tablas en `salidas/` (y el modelo en
@@ -309,7 +311,7 @@ hiperparámetros, elige el umbral fuera del pliegue y escribe el envío y sus ta
 </details>
 
 <details>
-<summary>Protocolo v7 (26–37, Python; cada <code>.R</code> llama a su <code>01_code/python/NN_….py</code>)</summary>
+<summary>Scripts 26–37 (Python, protocolo v7; cada <code>.R</code> llama a su <code>01_code/python/NN_….py</code>)</summary>
 
 Los scripts llevan el nombre del archivo de envío tal como se subió a Kaggle y siguen el orden de subida (26–34); CART
 y Naive Bayes v7, que no se subieron, son 35 y 36, y la comparación es 37. El paquete `01_code/python/pobreza/`
@@ -334,12 +336,11 @@ y conservan el prefijo del cuaderno con que se produjeron (p. ej. `35_umbral_pr.
 </details>
 
 ## 9. Trabajo en equipo y convenciones
-* **Un script por modelo**, con el algoritmo y los hiperparámetros en el nombre del archivo (Harold además antepone
-  `harold_` a sus salidas). Numeración única que define el orden de ejecución: 01–17 Harold, 20–25 César, 26–37
-  protocolo v7.
-* **Cada script es autónomo:** define `AUTOR`, fija sus semillas, lee sus insumos de `00_data/` y escribe en
-  `02_outputs/` (César, en `salidas/`). Las funciones comunes van en `01_code/functions/`; no se edita el script de otra
-  persona sin avisarle.
+* **Un script por modelo**, con el algoritmo y los hiperparámetros en el nombre del archivo (los scripts 01–17
+  anteponen además `harold_` a sus salidas). Numeración única que define el orden de ejecución: 01–17, 20–25 y 26–37.
+* **Cada script es autónomo:** fija sus semillas, lee sus insumos de `00_data/` y escribe en `02_outputs/` (20–25, en
+  `salidas/`). Las funciones comunes van en `01_code/functions/`; los cambios a scripts compartidos se acuerdan en
+  equipo.
 * **Las salidas las generan los scripts**, nunca se editan a mano. Sin rutas absolutas; semilla global 2026 en R y 20262
   en los scripts 26–37.
 * **Git:** commits pequeños con mensaje claro en `main`; el historial de `main` es la evidencia de las contribuciones de
@@ -350,8 +351,8 @@ y conservan el prefijo del cuaderno con que se produjeron (p. ej. `35_umbral_pr.
 data.table, glmnet, caret, rpart, ranger, gbm, e1071, ragg, pROC, xtable, jsonlite, ggrepel, scales y here (más los que
 cargan los scripts 20–25).
 
-**Python** ≥ 3.10 (Harold) y 3.13.5 (scripts 26–37), con los paquetes de `requirements.txt`. El maestro llama a Python
-con `system2()`; variables de entorno opcionales: `PYTHON_BIN`, `PY_THREADS` y `RERUN_PY=1` (scripts de Harold),
+**Python** ≥ 3.10 (desarrollado con 3.13.5), con los paquetes de `requirements.txt`. El maestro llama a Python
+con `system2()`; variables de entorno opcionales: `PYTHON_BIN`, `PY_THREADS` y `RERUN_PY=1` (scripts 05–16),
 `PY_HILOS` (26–37). El archivo vacío `.here` marca la raíz del proyecto.
 
 **Diapositivas:** `cd 03_slides && latexmk -pdf best_equipo_02.tex compare_equipo_02.tex`; las cifras se leen de
