@@ -16,6 +16,7 @@
 # ==============================================================================
 
 # Autor del script: se usa como prefijo de los archivos de salida (<autor>_<modelo>_...).
+if (!exists("DIR_PROC")) source(file.path(if (requireNamespace("here", quietly = TRUE)) here::here() else getwd(), "01_code", "00_setup.R"), encoding = "UTF-8")   # corre solo: carga el entorno común
 AUTOR <- "harold"
 
 suppressPackageStartupMessages({library(data.table); library(tidyverse); library(caret); library(glmnet); library(xtable)})

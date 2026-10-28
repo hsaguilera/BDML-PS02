@@ -11,6 +11,7 @@
 # Salidas  : predictions/harold_elastic_net_fe_*.csv, tables/harold_elastic_net_fe_cv.{csv,tex},
 #            figures/harold_elastic_net_fe_*.png, processed/harold_elastic_net_fe_scores.csv
 # ==============================================================================
+if (!exists("DIR_PROC")) source(file.path(if (requireNamespace("here", quietly = TRUE)) here::here() else getwd(), "01_code", "00_setup.R"), encoding = "UTF-8")   # corre solo: carga el entorno común
 AUTOR <- "harold"
 suppressPackageStartupMessages({library(glmnet); library(tidyverse); library(xtable); library(splines)})
 

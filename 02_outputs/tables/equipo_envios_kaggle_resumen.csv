@@ -1,0 +1,7 @@
+algoritmo,version_referencia,f1_cv,envios,max_publico,max_privado
+Boosting,"LightGBM, 149 var.",0.7771750531962717,7,0.78,0.78
+Random Forest,"ranger, 40 var.",0.7737113869009875,4,0.77,0.78
+Elastic Net,"glmnet, splines",0.7721407106240057,5,0.77,0.77
+Logit,"regularizado, 59 var.",0.7713495327102805,4,0.77,0.77
+LPM,"MCO, 40 var.",0.7695211691318516,1,0.74,0.75
+Naive Bayes,"deciles, 40 var.",0.7577138800141995,1,0.64,0.65

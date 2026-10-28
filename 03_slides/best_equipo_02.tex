@@ -9,11 +9,45 @@
 \graphicspath{{../../02_outputs/figures/}{02_outputs/figures/}}   % figuras del proyecto (desde 03_slides o desde la raíz)
 \newcommand{\lineaLeyenda}[2]{\textcolor{#1}{\rule[0.45ex]{1.3em}{1.4pt}}\,#2}   % leyenda de una línea (diapositiva de la matriz)
 
+% --- Puntajes de Kaggle usados en el PDF (públicos 0,78; privado 0,77) ------------------------
+% Se fijan aquí para que este archivo reproduzca el PDF sin depender de kaggle_scores.tex.
+\renewcommand{\kgLGBM}{0,78}
+\def\kgpLGBM{0,77}
+
+% --- Pie de página del PDF: sin "MECA 4107" ----------------------------------------------------
+\setbeamertemplate{footline}{%
+  \leavevmode\hbox{\hspace{7mm}%
+    \begin{beamercolorbox}[wd=.80\paperwidth,ht=3.5ex,dp=1.2ex,left]{footline}
+      {\color{gris}\scriptsize Equipo 02 · \deckname}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.14\paperwidth,ht=3.5ex,dp=1.2ex,right]{footline}
+      {\color{gris}\scriptsize\insertframenumber\,/\,\inserttotalframenumber}
+    \end{beamercolorbox}}\vspace{1.5mm}}
+
 \begin{document}
 
 % ------------------------------------------------------------------------------
 % 1. Resumen del mejor modelo (diapositiva obligatoria)
 % ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% 0. Portada
+% ------------------------------------------------------------------------------
+{\setbeamercolor{background canvas}{bg=azul}
+\begin{frame}[plain]
+  \color{white}
+  \vspace*{7.5mm}
+  {\bfseries\fontsize{24}{28}\selectfont Problem Set 2: Predicting Poverty\par}
+  \vspace{0.9mm}{\color{naranja}\rule{22mm}{1.8pt}}\par
+  \vspace{4.5mm}
+  {\fontsize{13}{15.7}\selectfont Best Model Deep Dive: por qué gana el LightGBM y qué implica para la focalización\par}
+  \vspace{9.7mm}
+  {\bfseries\normalsize Equipo 02\par}
+  \vspace{1.3mm}
+  {\small Jhon Sebastián Vela Salcedo \ \,·\ \, Cesar Augusto Vallejo Quiroga \ \,·\ \, Harold Santiago Aguilera Mulfo\par}
+  \vspace{3.85mm}
+  {\footnotesize Big Data y Machine Learning para Economía Aplicada · 2026-20 · Universidad de los Andes\par}
+\end{frame}}
+
 \begin{frame}{Best Model Overview: LightGBM clasifica bien porque imputamos el ingreso que el test no trae}
   \begin{columns}[T]
     \column{.50\textwidth}
@@ -48,6 +82,21 @@
 % ------------------------------------------------------------------------------
 % DATOS
 % ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% Contenido
+% ------------------------------------------------------------------------------
+\begin{frame}{Contenido: de los datos al modelo y de ahí a la política}
+  \vspace{0.1mm}
+  \normalsize
+  \setlength{\tabcolsep}{0pt}
+  \begin{tabular}{@{}l@{\hspace{11pt}}p{110pt}p{272pt}@{}}
+    \makebox[25pt][r]{\resaltar{2}} & \textbf{Resumen} & Qué modelo ganó, cuánto puntúa en Kaggle y qué mensajes se llevan\\\noalign{\vskip3.2mm}
+    \makebox[25pt][r]{\resaltar{4--7}} & \textbf{Datos} & Qué predice la pobreza, por qué imputamos el ingreso y qué variables elegimos\\\noalign{\vskip3.2mm}
+    \makebox[25pt][r]{\resaltar{8--12}} & \textbf{Mejor modelo} & Cómo funciona el LightGBM, cómo se ajustó, qué variables pesan y si generaliza\\\noalign{\vskip3.2mm}
+    \makebox[25pt][r]{\resaltar{13--15}} & \textbf{Política} & Qué errores comete, quiénes quedan fuera y si se despliega con una encuesta corta\\
+  \end{tabular}
+\end{frame}
+
 \begin{frame}{Datos: la pobreza crece con el tamaño del hogar, el hacinamiento y la baja educación}
   \begin{columns}[T]
     \column{.66\textwidth}
@@ -79,7 +128,10 @@
       Correlación con el ingreso del hogar: \nCorrIng; AUC de la razón sola: \resaltar{\nAUCRazon}, frente a \nAUCHacin{} del hacinamiento.
     \end{block}
     \column{.54\textwidth}
-    \figura{harold_slide_ratio_density.png}
+    \figura{harold_slide_ratio_density.png}\\[1mm]
+    \footnotesize\raggedright
+    \textbf{Variables que construyen el ingreso imputado:}\\
+    horas trabajadas, tamaño de la empresa, cotización a pensión, afiliación a salud, subsidios y bonificaciones, edad y educación.
   \end{columns}
 \end{frame}
 

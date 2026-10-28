@@ -6,8 +6,13 @@
 % ==============================================================================
 \def\deckname{Algorithm Comparison}
 \input{preamble.tex}
+\input{numbers_equipo.tex}   % cifras de los envíos de todo el equipo (script 18)
 
 \begin{document}
+
+\ifportada
+\portada{Problem Set 2: Predicting Poverty}{Algorithm Comparison: qu\'e diferencia a los algoritmos y cu\'al recomendar\'iamos}
+\fi
 
 % ------------------------------------------------------------------------------
 % 1. Resumen del mejor modelo (diapositiva obligatoria)
@@ -29,24 +34,41 @@
     \vspace{2mm}
     \estadistica{\nFoneLGBM}{F1 en validación\\cruzada}
     \column{.22\textwidth}
-    \estadistica{\nAUCLGBM}{AUC}
+    \estadistica{\KgPrivMax}{F1 privado, mejor\\del equipo}
     \vspace{2mm}
-    \estadistica{\nSPRange}{rango de F1 de seis\\algoritmos, mismas variables}
+    \estadistica{\SPRangeCinco}{rango de F1 de cinco\\algoritmos, mismas variables}
   \end{columns}
   \begin{block}{Mensajes principales}
     \footnotesize
     \begin{enumerate}\setlength{\itemsep}{1pt}
-      \item Con las \resaltar{mismas 40 variables}, seis de los siete algoritmos exigidos quedan a \nSPRange{} de F1; solo Naive Bayes se aleja (\nSPNaiveBayes{}).
+      \item Con las \resaltar{mismas 40 variables}, cinco de los seis algoritmos quedan a \SPRangeCinco{} de F1; solo Naive Bayes se aleja (\nSPNaiveBayes{}).
       \item Lo que más mueve el F1 es el ingreso imputado (+\nGainIncome{}), no el algoritmo (+\nGainAlgo{} de Logit a LightGBM).
-      \item Los dos contendientes más cercanos en validación cruzada, Random Forest y Elastic Net, pierden menos de 0,006, dentro del ruido de la muestra pública.
+      \item Random Forest y Elastic Net, los contendientes más cercanos, pierden menos de 0,006. El mejor privado (\KgPrivMax) lo logran modelos con \resaltar{8 a 20 variables} y la misma idea de ingreso imputado: todo cabe en el ruido de la muestra pública.
     \end{enumerate}
   \end{block}
 \end{frame}
 
 % ------------------------------------------------------------------------------
+% Contenido (después de la diapositiva obligatoria de resumen)
+% ------------------------------------------------------------------------------
+\ifportada
+\begin{frame}{Contenido: de lo que dicen los datos a qué modelo recomendar}
+  \renewcommand{\arraystretch}{1.9}
+  \centering\normalsize
+  \begin{tabular}{@{}r@{\hspace{4mm}}p{3.4cm}p{9.6cm}@{}}
+    {\color{naranja}\bfseries 2} & \textbf{Resumen} & Cuál es el mejor modelo y qué dice la comparación en tres mensajes\\
+    {\color{naranja}\bfseries \getpagerefnumber{p:datos}--\the\numexpr\getpagerefnumber{p:comp}-1\relax} & \textbf{Datos} & Por qué un modelo lineal puede competir con los árboles y cómo se compara de forma justa\\
+    {\color{naranja}\bfseries \getpagerefnumber{p:comp}--\the\numexpr\getpagerefnumber{p:concl}-1\relax} & \textbf{Comparación} & Los algoritmos exigidos, los dos contendientes más cercanos y qué explica la brecha\\
+    {\color{naranja}\bfseries \getpagerefnumber{p:concl}} & \textbf{Conclusión} & Complejidad, interpretabilidad y desempeño: qué modelo recomendaríamos a una agencia
+  \end{tabular}
+\end{frame}
+\fi
+
+% ------------------------------------------------------------------------------
 % DATOS
 % ------------------------------------------------------------------------------
 \begin{frame}{Datos: la variable clave es casi logística, por eso un modelo lineal compite con los árboles}
+  \label{p:datos}
   \begin{columns}[T]
     \column{.64\textwidth}
     \figura{harold_slide_nonlinearity.png}
@@ -66,7 +88,7 @@
     \column{.50\textwidth}
     \small
     \begin{itemize}\setlength{\itemsep}{4pt}
-      \item \textbf{Mismas 40 variables} para los siete algoritmos, las de mayor importancia SHAP (selección con un modelo auxiliar).
+      \item \textbf{Mismas 40 variables} para los seis algoritmos, las de mayor importancia SHAP (selección con un modelo auxiliar).
       \item \textbf{Mismos 5 pliegues} de hogares y la misma métrica: F1 de la clase pobre, sin Bogotá (no existe en test).
       \item \textbf{Mismo umbral:} el que maximiza el F1 con las predicciones fuera de muestra; cada algoritmo ajusta su umbral, no el puntaje de Kaggle.
       \item \textbf{Mismo preprocesamiento:} los modelos lineales usan log1p, winsorización y dummies; los árboles, las variables sin transformar.
@@ -74,28 +96,29 @@
     \column{.46\textwidth}
     \begin{block}{Qué cambia entre algoritmos}
       \footnotesize
-      Solo la forma funcional y la regularización: lineal sin penalizar (LPM, Logit), penalizado (Elastic Net), árbol único (CART), promedio de árboles (Random Forest), árboles en secuencia (LightGBM) y probabilidades condicionales independientes (Naive Bayes).
+      Solo la forma funcional y la regularización: lineal sin penalizar (LPM, Logit), penalizado (Elastic Net), promedio de árboles (Random Forest), árboles en secuencia (LightGBM) y probabilidades condicionales independientes (Naive Bayes).
     \end{block}
     \vspace{1mm}
-    \fuente{Las versiones enviadas a Kaggle usan más variables (LightGBM, 149; Elastic Net, 102 columnas con splines; Logit, 59); por eso se comparan también aparte.}
+    \fuente{Las versiones enviadas a Kaggle usan más variables (LightGBM, 149; Elastic Net, 102 columnas con splines; Logit, 59). Entre versiones de distinto protocolo solo se compara el puntaje de Kaggle.}
   \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
 % COMPARACIÓN
 % ------------------------------------------------------------------------------
-\begin{frame}{Resumen: la mejor versión de cada uno de los siete algoritmos}
+\begin{frame}{Resumen: la mejor versión de cada uno de los seis algoritmos}
+  \label{p:comp}
   \centering
   \small
-  \resizebox{.97\linewidth}{!}{\input{tables/best_versions.tex}}\\[3mm]
+  \resizebox{.97\linewidth}{!}{\input{tables/best_versions_equipo.tex}}\\[3mm]
   \footnotesize\raggedright
-  F1 (CV): validación cruzada de 5 pliegues, sin Bogotá, con el umbral que maximiza el F1. Precisión y cobertura, con ese umbral. F1 Kaggle: puntaje público; ``--'' indica que ese modelo no se envió.
+  Validación cruzada de la versión de referencia: 5 pliegues, sin Bogotá, umbral que maximiza el F1. Kaggle: mejor puntaje público y mejor privado entre los envíos de cada algoritmo.
 \end{frame}
 
-\begin{frame}{Con cada algoritmo en su mejor versión, nueve de diez modelos quedan a menos de un punto}
+\begin{frame}{Con cada algoritmo en su mejor versión, \NModelosCerca{} de \NModelosTotal{} modelos quedan a menos de un punto}
   \begin{columns}[T]
     \column{.64\textwidth}
-    \figura{harold_slide_model_f1.png}
+    \figura{harold_slide_model_f1_compare.png}
     \column{.34\textwidth}
     \small
     \begin{itemize}\setlength{\itemsep}{3pt}
@@ -106,39 +129,49 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Con las mismas variables, seis de siete algoritmos quedan a menos de un punto de F1}
+\begin{frame}{Con las mismas variables, cinco de seis algoritmos quedan a menos de un punto de F1}
   \begin{columns}[T]
     \column{.64\textwidth}
-    \figura{harold_slide_same_predictors.png}
+    \figura{harold_slide_same_predictors_compare.png}
     \column{.34\textwidth}
     \small
     \begin{itemize}\setlength{\itemsep}{3pt}
       \item El Elastic Net con 40 variables queda en \nSPElasticNet{}: la penalización casi no actúa porque hay 165 mil hogares para pocos parámetros.
-      \item Un solo árbol (CART) llega a \nSPCART{} pero con un AUC de 0,87: clasifica bien en el umbral y mal en todo el orden.
       \item \textbf{Naive Bayes} rinde menos: supone independencia entre variables que están muy correlacionadas.
     \end{itemize}
   \end{columns}
 \end{frame}
 
-\begin{frame}{Contendiente 1, Random Forest: promedia árboles y pierde 0,003 frente a LightGBM}
+\begin{frame}{Contendiente 1, Random Forest: promedia árboles y, con 20 variables, llega a \KgPrivMax{} privado}
   \begin{columns}[T]
-    \column{.46\textwidth}
+    \column{.41\textwidth}
     \small
     \begin{itemize}\setlength{\itemsep}{3pt}
-      \item \textbf{Bosque:} 500 árboles profundos y decorrelacionados (\textit{mtry} \nMtryRF, nodo mínimo \nNodeRF) promedian el ruido.
+      \item \textbf{Bosque:} cientos de árboles profundos y decorrelacionados promedian el ruido.
       \item \textbf{Boosting:} cada árbol corrige el residuo del anterior y reduce el sesgo.
       \item Ambos priorizan la razón ingreso imputado / línea y variantes de ella.
     \end{itemize}
     \vspace{1mm}
-    \begin{block}{Resultado}
-      \footnotesize
-      F1 \nSPRandomForest{} frente a \nSPBoostingLightGBM{}. El RF tiene precisión \nPrecRF{} y cobertura \nRecRF{}; el LightGBM, \nPrecLGBM{} y \nRecLGBM{}: cubre más pobres.
+    \begin{block}{Dos versiones del mismo algoritmo}
+      \footnotesize\centering
+      \resizebox{\linewidth}{!}{\begin{tabular}{lcc}
+        \toprule
+         & \textbf{Versión A} & \textbf{Versión B} \\
+        \midrule
+        Variables & 40 & 20 \\
+        Árboles; hoja mínima & 500; \nNodeRF & 360; 156 \\
+        F1 (validación cruzada) & \nSPRandomForest & \JhFoneRFveinte \\
+        Precisión / cobertura & \nPrecRF{} / \nRecRF & \JhPrecRFveinte{} / \JhRecRFveinte \\
+        Kaggle público / privado & \kgRF{} / \kgpRF & 0,77 / 0,78 \\
+        \bottomrule
+      \end{tabular}}\\[1mm]
+      \raggedright Referencia, LightGBM de 149 variables: F1 \nSPBoostingLightGBM{}, precisión \nPrecLGBM{}, cobertura \nRecLGBM.
     \end{block}
-    \column{.50\textwidth}
+    \column{.57\textwidth}
     \centering\small\textbf{Posición de cada variable en la importancia}\\[2mm]
     \footnotesize
-    \input{tables/importance_rank.tex}\\[2mm]
-    \fuente{LightGBM y Random Forest: valor SHAP absoluto medio; Elastic Net: mayor coeficiente estandarizado en valor absoluto. ``--'': fuera del modelo.}
+    \resizebox{\linewidth}{!}{\input{tables/importance_rank.tex}}\\[2mm]
+    \fuente{LightGBM y Random Forest: valor SHAP absoluto medio; Elastic Net: mayor coeficiente estandarizado en valor absoluto. ``--'': fuera del modelo. El F1 de las dos versiones viene de protocolos de validación distintos.}
   \end{columns}
 \end{frame}
 
@@ -168,6 +201,7 @@
       \item Pasar de las variables base a las de ingreso imputado vale \nGainIncome{}: cuatro veces más que cambiar de algoritmo.
       \item Elegir el \resaltar{umbral} sobre las probabilidades vale más que el algoritmo.
       \item Afinar los hiperparámetros mueve el F1 \nGainHyper{} entre la mejor y la peor de 11 configuraciones.
+      \item {\footnotesize\textbf{Lo replica otro modelo del equipo:} sin las variables de la primera etapa su F1 baja de $\approx$0,777 a \JhFoneLGBMsin{} (LightGBM), \JhFoneXGBsin{} (XGBoost) y \JhFoneRFsin{} (RF); con 1.152 variables de persona y sin primera etapa llega a \JhFoneLGBMmil.}
     \end{itemize}
   \end{columns}
 \end{frame}
@@ -193,6 +227,7 @@
 % CONCLUSIÓN
 % ------------------------------------------------------------------------------
 \begin{frame}{Conclusión: el mejor puntaje público no tiene por qué ser el modelo que recomendaríamos}
+  \label{p:concl}
   \small
   \centering
   \resizebox{.95\linewidth}{!}{%
@@ -201,16 +236,18 @@
     \textbf{Modelo} & \textbf{F1 (CV)} & \textbf{Variables} & \textbf{Interpretación} & \textbf{Caída, regiones nuevas} \\
     \midrule
     LightGBM & \nFoneLGBM & \nNVarsLGBM & SHAP, no coeficientes & cae \nDropLGBMRegions \\
+    LightGBM, 8 variables & \JhFoneLGBMocho\textsuperscript{*} & 8 & SHAP; pocas variables & no medida \\
     Random Forest & \nFoneRF & 40 & importancia global & no medida \\
     Logit regularizado & \nFoneLogitRob & 59 & coeficientes y signos & cae \nDropLogitRegions \\
     \bottomrule
-  \end{tabular}}
-  \vspace{3mm}
+  \end{tabular}}\\[0.5mm]
+  {\scriptsize\color{gris} * Validación propia de este modelo (anidada, sin Bogotá); no es comparable con las demás filas.}
+  \vspace{2mm}
   \begin{columns}[T]
     \column{.48\textwidth}
     \begin{block}{Qué dice la comparación}
       \small
-      La complejidad compra \resaltar{menos de un punto de F1}. La información (el ingreso imputado) explica casi todo el desempeño, y es la parte difícil de desplegar: necesita el módulo laboral de cada persona.
+      La complejidad compra \resaltar{menos de un punto de F1}: con 8 variables, un modelo logra el mejor privado (\KgPrivMax). La información (el ingreso imputado) explica casi todo y es lo difícil de desplegar: necesita el módulo laboral de cada persona.
     \end{block}
     \column{.48\textwidth}
     \begin{block}{Recomendación}

@@ -10,6 +10,7 @@
 #      prefijo `eda_` para exploración y nunca como predictores.
 # ==============================================================================
 
+if (!exists("DIR_PROC")) source(file.path(if (requireNamespace("here", quietly = TRUE)) here::here() else getwd(), "01_code", "00_setup.R"), encoding = "UTF-8")   # corre solo: carga el entorno común
 suppressPackageStartupMessages({library(data.table); library(tidyverse)})
 
 # --- 1. Lectura -----------------------------------------------------------------

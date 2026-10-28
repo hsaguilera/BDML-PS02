@@ -59,7 +59,7 @@ Harold Santiago Aguilera Mulfo y Cesar Augusto Vallejo Quiroga.
 
 **Datos (Etapa 1).** Encuesta MESE/DANE: 164.960 hogares en train y 66.168 en test, con información de hogar y de
 personas. Un hogar es pobre si el ingreso per cápita de su unidad de gasto (con arriendo imputado a propietarios) es
-menor que la línea de pobreza de su dominio; en train lo es el 20 %. Tres hechos guían todo lo demás:
+menor que la línea de pobreza de su dominio; en train lo es el 20 % (20,7 % fuera de Bogotá, que es la población sobre la que se mide). Tres hechos guían todo lo demás:
 * *El ingreso sólo está en train.* Los modelos no pueden usarlo; sí pueden usar la estructura de la regla: el número de
   personas de la unidad de gasto, la línea del dominio, el arriendo y la capacidad de generar ingreso (ocupados,
   educación, formalidad). `02_harold_…`, `03_harold_…` y `datos_01_EDA_completo.py` confirman estos gradientes.
@@ -87,7 +87,7 @@ variables observables se construyen a partir de la regla (v7): el modelo de ingr
 
 **De la predicción a la política (Etapa 4).** El F1 equilibra precisión y cobertura, pero los dos errores no cuestan lo
 mismo: un falso negativo deja a un hogar pobre sin el programa (subcobertura) y un falso positivo gasta en un hogar
-que no lo necesita (filtración). Para el LightGBM v7, por cada 1.000 hogares (207 pobres):
+que no lo necesita (filtración). Los números siguientes son del LightGBM v7 (script 29, sin ingreso imputado), por cada 1.000 hogares (207 pobres). Las diapositivas `best_equipo_02` presentan en cambio el LightGBM de 149 variables del script 09 (el de mayor puntaje público): con su umbral que maximiza el F1 deja por fuera al 18,9 % de los pobres y la filtración es del 25,4 %. Son dos modelos distintos y la lectura de política es la misma:
 
 | Regla de decisión | Pobres atendidos | No pobres incluidos (filtración) | Pobres excluidos (subcobertura) | Cupos | Costo implícito de excluir a un pobre |
 |---|---|---|---|---|---|
@@ -134,7 +134,7 @@ Gráficos: `harold_comparison_f1.png`, `harold_comparison_precision_recall.png`,
 * **No se puede afirmar** que 0,78 sea mejor que 0,77 en Kaggle: el tablero público usa el 20 % del test (unos 13.000
   hogares; error estándar del F1 ≈ 0,006) y los puntajes se muestran con dos decimales. El tablero privado reordenó a
   los mejores: los v5 (26–28) pasaron de 0,77 a 0,78 y el LightGBM del script 09 de 0,78 a 0,77.
-* **Los F1 de validación cruzada no son comparables entre bloques de scripts**: cada bloque (01–17, 20–25 y 26–37)
+* **Los F1 de validación cruzada no son comparables entre bloques de scripts**: cada bloque (01–18, 20–25 y 26–37)
   usó su protocolo (umbral elegido en todo el OOF o anidado por pliegue, distintos pliegues). Entre bloques, compare
   los puntajes de Kaggle.
 * **Primera etapa (zona gris).** El ingreso imputado se estima con un modelo entrenado en train y entra como variable de
@@ -162,9 +162,9 @@ Gráficos: `harold_comparison_f1.png`, `harold_comparison_precision_recall.png`,
 | Diapositivas | `03_slides/best_equipo_02.pdf`, `03_slides/compare_equipo_02.pdf` |
 
 ```
-00_data/        raw/ (CSV de Kaggle, no versionados) y processed/ (bases intermedias que regeneran los scripts)
-01_code/        00_rundirectory.R (maestro) · 01–17 · 20–25 · 26–37 (protocolo v7) · functions/ · python/
-02_outputs/     figures/ y tables/ (scripts 01–17 en la raíz; 26–37 en una subcarpeta por script) · predictions/
+00_data/        raw/ (CSV de Kaggle, no versionados), processed/ (bases intermedias que regeneran los scripts) y docs/ (enunciado y diccionario, no versionados)
+01_code/        00_rundirectory.R (maestro) · 00_setup.R (entorno común) · 01–18 · 20–25 · 26–37 (protocolo v7; el 19 no se usa) · functions/ · python/
+02_outputs/     figures/ y tables/ (scripts 01–18 en la raíz; 26–37 en una subcarpeta por script) · predictions/
 03_slides/      diapositivas en LaTeX (Beamer) y sus PDF
 ```
 
@@ -174,15 +174,23 @@ Gráficos: `harold_comparison_f1.png`, `harold_comparison_precision_recall.png`,
    archivos `train_hogares.csv`, `train_personas.csv`, `test_hogares.csv`, `test_personas.csv` y
    `sample_submission.csv` (no se versionan: `train_personas.csv` pesa 242 MB; ver `00_data/README.md`).
 2. Instale Python ≥ 3.10 y sus paquetes: `pip install -r requirements.txt` (opcional: `PYTHON_BIN` con la ruta del
-   intérprete).
+   intérprete). Los paquetes de R se instalan solos; `requirements_R.txt` fija las versiones con las que se produjeron los
+   resultados (`Sys.setenv(PS2_INSTALAR_VERSIONES = "1")` antes del maestro instala exactamente esas; si una versión
+   difiere, el entorno avisa).
 3. Desde la raíz del repositorio, en R:
 ```r
 source("01_code/00_rundirectory.R")
 ```
-El maestro corre en orden todos los scripts numerados. Tiempos aproximados: scripts 01–17, unas 4 horas en 2 núcleos;
+El maestro corre en orden todos los scripts numerados. Tiempos aproximados: scripts 01–18, unas 4 horas en 2 núcleos;
 20–25, cada script por separado con su búsqueda (`USAR_PARAMETROS_GANADORES = TRUE` entrena sólo la
 configuración ganadora); 26–37, más de 30 horas en 12 hilos la primera vez (cada uno construye la base que necesita y
-deja cachés para retomar una corrida interrumpida). Cada script también se puede correr solo, desde la raíz.
+deja cachés para retomar una corrida interrumpida). Cada script también se puede correr solo, desde la raíz: los 01–18 cargan
+solos el entorno común (`01_code/00_setup.R`) y necesitan que existan sus insumos en `00_data/processed` (los crea el script
+anterior de la cadena: 01 → 05 → 06 → 07–12 → 13–18); los 20–37 construyen su propio entorno.
+
+**Camino corto (opcional).** Por defecto el maestro corre todo. Para acotarlo, antes de `source(...)`:
+`Sys.setenv(PS2_HASTA = "19")` corre solo 01–18 (omite los modelos 20–37) y `Sys.setenv(PS2_DESDE = "13")` retoma desde el 13
+si los insumos ya existen. Las diapositivas se recompilan con los resultados guardados en `02_outputs/`.
 
 ## 6. Registro de envíos a Kaggle
 
@@ -264,7 +272,7 @@ correr esos scripts.
 ## 8. Detalle de los scripts
 
 <details>
-<summary>Scripts 01–17 (R; los que entrenan modelos de Python llaman a <code>01_code/python/harold_*.py</code>)</summary>
+<summary>Scripts 01–18 (R; los que entrenan modelos de Python llaman a <code>01_code/python/harold_*.py</code>)</summary>
 
 | Script | Responsabilidad | Salidas |
 |---|---|---|
@@ -286,6 +294,20 @@ correr esos scripts.
 | `15_harold_analisis_mismas_variables_40vars.R` | Elastic Net y LightGBM con las mismas 40 variables (igualdad de condiciones) | `harold_same_predictors_cv.*` |
 | `16_harold_analisis_encuesta_corta.R` | LightGBM con una encuesta corta (S1: hogar y vivienda; S2: S1 más composición y educación) | `harold_short_survey_*` |
 | `17_harold_diapositivas_figuras_y_cifras.R` | Figuras `harold_slide_*`, tablas de `03_slides/tables/` y cifras de `03_slides/numbers.tex` | — |
+| `18_harold_diapositivas_envios_equipo.R` | Cifras y figuras de las diapositivas que usan los envíos de todo el equipo: resumen por algoritmo, F1 de los modelos y de los algoritmos con las mismas variables (sin CART ni XGBoost de regresión) y matriz de confusión con porcentajes; revisa que cada envío registrado tenga su archivo en `02_outputs/predictions/` | `harold_slide_*_compare.png`, `03_slides/tables/best_versions_equipo.tex`, `confusion_lgbm_pct.tex`, `numbers_equipo.tex`, `equipo_envios_kaggle_resumen.csv` |
+
+**Resumen de los envíos a Kaggle por algoritmo** (lo genera `18_…` en `02_outputs/tables/equipo_envios_kaggle_resumen.csv` a partir del registro de los 23 envíos, `equipo_envios_kaggle.csv`; los puntajes se leen del tablero de Kaggle y se transcriben una vez). F1 de validación cruzada de la versión de referencia; mejor puntaje público y privado entre todos los envíos del algoritmo; el XGBoost de regresión no se cuenta.
+
+| Algoritmo | Versión de referencia | F1 CV | Envíos | Máx. público | Máx. privado |
+|---|---|---|---|---|---|
+| Boosting | LightGBM, 149 var. | 0,777 | 7 | 0,78 | 0,78 |
+| Random Forest | ranger, 40 var. | 0,774 | 4 | 0,77 | 0,78 |
+| Elastic Net | glmnet, splines | 0,772 | 5 | 0,77 | 0,77 |
+| Logit | regularizado, 59 var. | 0,771 | 4 | 0,77 | 0,77 |
+| LPM | MCO, 40 var. | 0,770 | 1 | 0,74 | 0,75 |
+| Naive Bayes | deciles, 40 var. | 0,758 | 1 | 0,64 | 0,65 |
+
+CART no se envió a Kaggle.
 
 Funciones (`01_code/functions/`): `fun_data_prep.R` (preparación de personas y hogares), `fun_plot_helpers.R` (tema y
 guardado de figuras), `fun_comp19.R` (ejemplo de la complementaria), `fun_features_fe.R` (arriendo e ingreso
@@ -336,10 +358,10 @@ y conservan el prefijo del cuaderno con que se produjeron (p. ej. `35_umbral_pr.
 </details>
 
 ## 9. Trabajo en equipo y convenciones
-* **Un script por modelo**, con el algoritmo y los hiperparámetros en el nombre del archivo (los scripts 01–17
-  anteponen además `harold_` a sus salidas). Numeración única que define el orden de ejecución: 01–17, 20–25 y 26–37.
-* **Cada script es autónomo:** fija sus semillas, lee sus insumos de `00_data/` y escribe en `02_outputs/` (20–25, en
-  `salidas/`). Las funciones comunes van en `01_code/functions/`; los cambios a scripts compartidos se acuerdan en
+* **Un script por modelo**, con el algoritmo y los hiperparámetros en el nombre del archivo (los scripts 01–18
+  anteponen además `harold_` a sus salidas). Numeración única que define el orden de ejecución: 01–18, 20–25 y 26–37 (el 19 no se usa).
+* **Cada script se puede correr por separado:** fija sus semillas, lee sus insumos de `00_data/` y escribe en `02_outputs/` (20–25, en
+  `salidas/`); los 01–18 comparten el entorno de `00_setup.R`, que cargan solos. Las funciones comunes van en `01_code/functions/`; los cambios a scripts compartidos se acuerdan en
   equipo.
 * **Las salidas las generan los scripts**, nunca se editan a mano. Sin rutas absolutas; semilla global 2026 en R y 20262
   en los scripts 26–37.
@@ -347,7 +369,7 @@ y conservan el prefijo del cuaderno con que se produjeron (p. ej. `35_umbral_pr.
   cada integrante.
 
 ## 10. Entorno
-**R** ≥ 4.3 (desarrollado con 4.3.3 y 4.5.1). Paquetes, instalados y cargados con `pacman::p_load()`: tidyverse,
+**R** ≥ 4.3 (desarrollado con 4.3.3 y 4.5.1). Paquetes (versiones en `requirements_R.txt`), instalados y cargados con `pacman::p_load()`: tidyverse,
 data.table, glmnet, caret, rpart, ranger, gbm, e1071, ragg, pROC, xtable, jsonlite, ggrepel, scales y here (más los que
 cargan los scripts 20–25).
 
@@ -356,7 +378,7 @@ con `system2()`; variables de entorno opcionales: `PYTHON_BIN`, `PY_THREADS` y `
 `PY_HILOS` (26–37). El archivo vacío `.here` marca la raíz del proyecto.
 
 **Diapositivas:** `cd 03_slides && latexmk -pdf best_equipo_02.tex compare_equipo_02.tex`; las cifras se leen de
-`numbers.tex` (script 17).
+`numbers.tex` (script 17) y `numbers_equipo.tex` (script 18).
 
 **Nota sobre `04_harold_…`:** el ejemplo pide `metric = "Accuracy"`, pero `twoClassSummary` no calcula accuracy; `caret`
 avisa y selecciona por ROC. Se replicó así; además se recorre la grilla sin guardar todas las predicciones (unos 8 GB de

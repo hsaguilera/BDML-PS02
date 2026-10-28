@@ -13,7 +13,7 @@ del concurso de Kaggle del curso. Las carpetas `raw/` y `processed/` solo conser
 | `test_personas.csv` | Personas de los hogares de prueba | 51 MB |
 | `sample_submission.csv` | Formato del envío (`id`, `pobre`); los scripts validan cada envío contra este archivo | 2 MB |
 
-Diccionario de variables: `ddi-documentation-spanish-608.pdf` (documento del curso; no se versiona).
+Documentos de apoyo (no se versionan; descárguelos de Bloque Neón y guárdelos en `00_data/docs/`, carpeta ignorada por git): el enunciado `Problem_Set_2.pdf` y el diccionario de variables `ddi-documentation-spanish-608.pdf`.
 
 ## `processed/` (los genera el pipeline; se pueden borrar y regenerar)
 | Archivo | Lo crea | Contenido |

@@ -6,6 +6,9 @@
 # Archivos sueltos en la raíz (datos y documentos del enunciado)
 /*.csv
 /*.pdf
+# Documentos de apoyo (enunciado y diccionario)
+00_data/docs/*
+!00_data/docs/.gitkeep
 # R
 .Rhistory
 .Rapp.history

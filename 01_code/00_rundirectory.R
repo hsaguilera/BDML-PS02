@@ -2,34 +2,23 @@
 # 00_rundirectory.R  --  Script maestro (PS2: Predicting Poverty)
 # Uso:  source("01_code/00_rundirectory.R")   (desde la raíz del repositorio)
 # Ejecuta, en orden, todos los scripts numerados y reproduce las salidas.
+#
+# Camino corto (opcional): por defecto corre TODO (01-37, más de 30 horas). Con variables de entorno
+# se puede acotar el rango de scripts, p. ej. solo la cadena de R y las diapositivas (01-18):
+#   Sys.setenv(PS2_HASTA = "19")    # corre 01-18 (omite los modelos 20-37)
+#   Sys.setenv(PS2_DESDE = "13")    # corre desde el 13 (si ya existen los insumos de 00_data/processed)
 # ==============================================================================
 
-# --- Raíz del proyecto: sin rutas absolutas -----------------------------------
+# --- Entorno común: raíz, paquetes (con versiones), parámetros y funciones -----
 if (!requireNamespace("here", quietly = TRUE)) install.packages("here")
-ROOT <- here::here()
-setwd(ROOT)
-
-# --- Paquetes (pacman instala los que falten) ---------------------------------
-if (!requireNamespace("pacman", quietly = TRUE)) install.packages("pacman")
-pacman::p_load(tidyverse, data.table, glmnet, caret, rpart, ranger, gbm, e1071, ragg,
-               pROC, xtable, jsonlite, ggrepel, scales, here)
-
-# --- Parámetros globales -------------------------------------------------------
-SEED      <- 2026
-N_FOLDS   <- 5
-DIR_RAW   <- "00_data/raw"
-DIR_PROC  <- "00_data/processed"
-DIR_FIG   <- "02_outputs/figures"
-DIR_TAB   <- "02_outputs/tables"
-DIR_PRED  <- "02_outputs/predictions"
-set.seed(SEED)
-
-# --- Funciones reutilizables ----------------------------------------------------
-for (f in list.files("01_code/functions", pattern = "\\.R$", full.names = TRUE)) source(f, encoding = "UTF-8")
+source(file.path(here::here(), "01_code", "00_setup.R"), encoding = "UTF-8")
 
 # --- Pipeline -------------------------------------------------------------------
 scripts <- sort(list.files("01_code", pattern = "^[0-9]{2}_.*\\.R$", full.names = TRUE))
-scripts <- scripts[!grepl("00_rundirectory", scripts)]
+scripts <- scripts[!grepl("^01_code/00_", scripts)]
+num     <- as.integer(substr(basename(scripts), 1, 2))
+desde   <- as.integer(Sys.getenv("PS2_DESDE", "0")); hasta <- as.integer(Sys.getenv("PS2_HASTA", "99"))
+scripts <- scripts[num >= desde & num <= hasta]
 for (s in scripts) {
   message("\n>>> Ejecutando ", s)
   source(s, local = new.env(parent = globalenv()), encoding = "UTF-8")

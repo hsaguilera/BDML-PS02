@@ -11,6 +11,7 @@
 # Salidas  : predictions/harold_random_forest_fe_*.csv, tables/harold_random_forest_fe_{search,cv,vars}.{csv,tex},
 #            figures/harold_random_forest_fe_*.png
 # ==============================================================================
+if (!exists("DIR_PROC")) source(file.path(if (requireNamespace("here", quietly = TRUE)) here::here() else getwd(), "01_code", "00_setup.R"), encoding = "UTF-8")   # corre solo: carga el entorno común
 AUTOR <- "harold"
 suppressPackageStartupMessages({library(ranger); library(tidyverse); library(xtable); library(data.table)})
 

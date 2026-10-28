@@ -8,6 +8,7 @@
 # Así, ninguna cifra de las diapositivas se escribe a mano.
 # Entradas : hogares_fe.rds, harold_*_scores.csv, tables/harold_*.csv
 # ==============================================================================
+if (!exists("DIR_PROC")) source(file.path(if (requireNamespace("here", quietly = TRUE)) here::here() else getwd(), "01_code", "00_setup.R"), encoding = "UTF-8")   # corre solo: carga el entorno común
 AUTOR <- "harold"
 suppressPackageStartupMessages({library(data.table); library(tidyverse)})
 options(OutDec = ",")   # decimales con coma en los ejes
@@ -78,7 +79,7 @@ d2 <- d1 |> transmute(poor = factor(poor, 0:1, c("No pobre", "Pobre")), x = pmin
 p2 <- ggplot(d2, aes(x, fill = poor, colour = poor)) + geom_density(alpha = 0.35, linewidth = 0.8, adjust = 1.2) +
   geom_vline(xintercept = 0, linetype = 2) + annotate("text", x = 0.05, y = Inf, label = "ingreso imputado = línea", hjust = 0, vjust = 1.6, size = 4.2) +
   scale_fill_manual(values = c("No pobre" = PAL[["azul"]], "Pobre" = PAL[["naranja"]])) + scale_colour_manual(values = c("No pobre" = PAL[["azul"]], "Pobre" = PAL[["naranja"]])) +
-  labs(x = "Log de la razón (ingreso imputado + arriendo imputado) / línea de pobreza del hogar", y = "Densidad", fill = NULL, colour = NULL,
+  labs(x = "Log de la razón: (ingreso + arriendo imputados) / línea de pobreza", y = "Densidad", fill = NULL, colour = NULL,
        title = "El ingreso imputado separa a los pobres de los no pobres",
        subtitle = "Ingreso por persona predicho fuera de muestra con variables que existen en test") + theme_slide()
 guardar(p2, "ratio_density", 9, 5)
@@ -113,7 +114,7 @@ bs$etiqueta <- factor(bs$etiqueta, levels = bs$etiqueta[order(bs$f1)])
 p4 <- ggplot(bs, aes(f1, etiqueta, colour = elegida)) + geom_segment(aes(x = 0.772, xend = f1, yend = etiqueta), linewidth = 0.9) + geom_point(size = 3.8) +
   scale_colour_manual(values = c(`FALSE` = PAL[["gris"]], `TRUE` = PAL[["naranja"]]), guide = "none") +
   scale_x_continuous(limits = c(0.772, 0.7785)) +
-  labs(x = "F1 en validación cruzada (tasa de aprendizaje 0,08 con parada temprana)", y = NULL,
+  labs(x = "F1 en validación cruzada\n(tasa de aprendizaje 0,08, parada temprana)", y = NULL,
        title = "11 configuraciones aleatorias: el F1 casi no depende de los hiperparámetros",
        subtitle = "Hojas, mínimo de hogares por hoja, fracción de columnas, penalización L2 y peso de la clase pobre") + theme_slide() + theme(axis.text.y = element_text(size = 10.5))
 guardar(p4, "hyper_search", 10, 5.2)
@@ -126,7 +127,7 @@ gnom <- c(A = "Variables base", B = "Razones e interacciones", C = "Regla de pob
 pi_ <- imp |> slice_head(n = 12) |> mutate(lab = fct_reorder(lab, shap_media_abs), g = gnom[grupo])
 p5 <- ggplot(pi_, aes(shap_media_abs, lab, fill = g)) + geom_col(width = 0.75) +
   scale_fill_manual(values = c("Ingreso imputado" = PAL[["naranja"]], "Regla de pobreza y arriendo" = PAL[["verde"]], "Variables base" = PAL[["azul"]], "Razones e interacciones" = PAL[["gris"]]), name = NULL) +
-  labs(x = "Valor SHAP absoluto medio (log-odds de ser pobre)", y = NULL, title = "Las variables de ingreso imputado concentran la importancia",
+  labs(x = "Valor SHAP absoluto medio (log-odds)", y = NULL, title = "Las variables de ingreso imputado concentran la importancia",
        subtitle = "12 variables más importantes del LightGBM; 15.000 hogares de train") + theme_slide() + guides(fill = guide_legend(nrow = 2))
 guardar(p5, "importance", 9.5, 5.5)
 sh_g <- imp |> mutate(top3 = rank(-shap_media_abs) <= 3) ; tot <- sum(imp$shap_media_abs)
@@ -140,7 +141,7 @@ ef <- sh |> group_by(variable) |> mutate(tramo = if (n_distinct(valor) > 12) cut
   mutate(panel = factor(et(variable), levels = et(c("fe_log_ratio_hat_cond", "fe_gap_hat_cond", "n_subsidy", "fe_arr_share"))))
 p6 <- ggplot(ef, aes(x, shap)) + geom_hline(yintercept = 0, colour = "grey60") + geom_line(colour = PAL["azul"], linewidth = 1) + geom_point(colour = PAL["azul"], size = 2) +
   facet_wrap(~panel, scales = "free_x") +
-  labs(x = "Valor de la variable (mediana de cada vigintil)", y = "Efecto SHAP medio (log-odds de ser pobre)",
+  labs(x = "Valor de la variable (mediana de cada vigintil)", y = "Efecto SHAP medio\n(log-odds)",
        title = "Efecto de las variables principales sobre la probabilidad de pobreza", subtitle = "Sobre cero aumenta la probabilidad de ser pobre") + theme_slide()
 guardar(p6, "effects", 10, 5.8)
 

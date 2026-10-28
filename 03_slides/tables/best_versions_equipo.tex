@@ -1,0 +1,14 @@
+\begin{tabular}{llcccccc}
+\toprule
+ & & \multicolumn{3}{c}{\textbf{Validación cruzada}} & \multicolumn{3}{c}{\textbf{Kaggle}} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}
+\textbf{Algoritmo} & \textbf{Versión de referencia} & \textbf{F1} & \textbf{Prec.} & \textbf{Cob.} & \textbf{Envíos} & \textbf{Máx. público} & \textbf{Máx. privado} \\
+\midrule
+Boosting & LightGBM, 149 var. & 0,777 & 0,746 & 0,811 & 7 & 0,78 & 0,78 \\
+Random Forest & ranger, 40 var. & 0,774 & 0,748 & 0,801 & 4 & 0,77 & 0,78 \\
+Elastic Net & glmnet, splines & 0,772 & 0,730 & 0,819 & 5 & 0,77 & 0,77 \\
+Logit & regularizado, 59 var. & 0,771 & 0,739 & 0,806 & 4 & 0,77 & 0,77 \\
+LPM & MCO, 40 var. & 0,770 & 0,728 & 0,816 & 1 & 0,74 & 0,75 \\
+Naive Bayes & deciles, 40 var. & 0,758 & 0,694 & 0,834 & 1 & 0,64 & 0,65 \\
+\bottomrule
+\end{tabular}

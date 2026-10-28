@@ -7,6 +7,7 @@
 # Entradas : 00_data/processed/hogares_fe.rds, hogares_fe_grupos.rds, harold_lightgbm_fe_params.json
 # Salidas  : tables/harold_lightgbm_fe_importance.{csv,tex}, figures/harold_lightgbm_fe_{importance,effects}.png
 # ==============================================================================
+if (!exists("DIR_PROC")) source(file.path(if (requireNamespace("here", quietly = TRUE)) here::here() else getwd(), "01_code", "00_setup.R"), encoding = "UTF-8")   # corre solo: carga el entorno común
 AUTOR <- "harold"
 suppressPackageStartupMessages({library(data.table); library(tidyverse); library(xtable)})
 PY_BIN <- Sys.getenv("PYTHON_BIN", "python3")

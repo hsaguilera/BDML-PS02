@@ -9,6 +9,7 @@
 # Salidas  : predictions/harold_no_enviado_{lpm,logit,cart,naive_bayes}_fe_*.csv (no se enviaron a Kaggle),
 #            tables/harold_classical_fe_cv.{csv,tex}, processed/harold_*_fe_scores.csv
 # ==============================================================================
+if (!exists("DIR_PROC")) source(file.path(if (requireNamespace("here", quietly = TRUE)) here::here() else getwd(), "01_code", "00_setup.R"), encoding = "UTF-8")   # corre solo: carga el entorno común
 AUTOR <- "harold"
 suppressPackageStartupMessages({library(tidyverse); library(rpart); library(e1071); library(xtable); library(splines)})
 

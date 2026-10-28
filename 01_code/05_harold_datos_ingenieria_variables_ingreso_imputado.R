@@ -12,6 +12,7 @@
 # Salidas  : 00_data/processed/hogares_fe.rds, personas_ingreso_{in,out}.csv,
 #            02_outputs/tables/harold_person_income_quality.tex
 # ==============================================================================
+if (!exists("DIR_PROC")) source(file.path(if (requireNamespace("here", quietly = TRUE)) here::here() else getwd(), "01_code", "00_setup.R"), encoding = "UTF-8")   # corre solo: carga el entorno común
 AUTOR <- "harold"
 suppressPackageStartupMessages({library(data.table); library(tidyverse); library(xtable)})
 

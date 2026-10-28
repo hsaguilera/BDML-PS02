@@ -4,6 +4,7 @@
 #           de los predictores candidatos con la pobreza. Solo usa TRAIN.
 # Salidas: 02_outputs/figures/eda_*.png ; 02_outputs/tables/eda_*.tex
 # ==============================================================================
+if (!exists("DIR_PROC")) source(file.path(if (requireNamespace("here", quietly = TRUE)) here::here() else getwd(), "01_code", "00_setup.R"), encoding = "UTF-8")   # corre solo: carga el entorno común
 suppressPackageStartupMessages({library(tidyverse); library(xtable)})
 
 d  <- readRDS(file.path(DIR_PROC, "hogares_modelo.rds"))

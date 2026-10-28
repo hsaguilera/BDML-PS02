@@ -9,6 +9,7 @@
 # Salidas  : predictions/harold_xgboost_reg_fe_*.csv, tables/harold_xgboost_reg_fe_{search,cv}.{csv,tex},
 #            figures/harold_xgboost_reg_fe_*.png
 # ==============================================================================
+if (!exists("DIR_PROC")) source(file.path(if (requireNamespace("here", quietly = TRUE)) here::here() else getwd(), "01_code", "00_setup.R"), encoding = "UTF-8")   # corre solo: carga el entorno común
 AUTOR <- "harold"
 suppressPackageStartupMessages({library(data.table); library(tidyverse); library(xtable)})
 PY_BIN <- Sys.getenv("PYTHON_BIN", "python3")

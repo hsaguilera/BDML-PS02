@@ -9,6 +9,7 @@
 # Entradas : hogares_fe.rds, hogares_fe_grupos.rds, tables/harold_random_forest_fe_vars.csv, harold_*_scores.csv
 # Salidas  : tables/harold_same_predictors_cv.{csv,tex}, processed/harold_{elastic_net,lightgbm}_40vars_scores.csv
 # ==============================================================================
+if (!exists("DIR_PROC")) source(file.path(if (requireNamespace("here", quietly = TRUE)) here::here() else getwd(), "01_code", "00_setup.R"), encoding = "UTF-8")   # corre solo: carga el entorno común
 AUTOR <- "harold"
 suppressPackageStartupMessages({library(data.table); library(tidyverse); library(glmnet); library(xtable)})
 PY_BIN <- Sys.getenv("PYTHON_BIN", "python3")

@@ -10,6 +10,7 @@
 #       desempeño suele diferir entre zona urbana y rural, así que se muestra por zona.
 # Salidas: 02_outputs/figures/desc_*.png ; 02_outputs/tables/desc_*.tex
 # ==============================================================================
+if (!exists("DIR_PROC")) source(file.path(if (requireNamespace("here", quietly = TRUE)) here::here() else getwd(), "01_code", "00_setup.R"), encoding = "UTF-8")   # corre solo: carga el entorno común
 suppressPackageStartupMessages({library(tidyverse); library(data.table); library(xtable)})
 theme_set(theme_pobreza())
 
