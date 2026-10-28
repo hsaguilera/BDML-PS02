@@ -1,0 +1,205 @@
+variable,tipo,origen,usa_generadas,monotona_univariada,rho_residuo,abs_rho,pct_na
+x_lz_ingreso_esperado__sobre__arriendo_imputado_mese,cociente,par SHAP,True,False,-0.2594421437959019,0.2594421437959019,0.0
+x_ind_requerido_no_positivo,indicador,indicador de umbral,False,False,0.2402560336832161,0.2402560336832161,0.0
+x_lz_ingreso_esperado__sobre__n_n_beneficios,cociente,par SHAP,True,False,-0.2165318088684926,0.2165318088684926,0.0
+x_brecha_esperada__por__lz_ingreso_esperado,producto,par SHAP,True,False,0.21542040961505368,0.21542040961505368,0.0
+x_brecha_esperada__cuad,cuadrado,transformación monótona,True,True,0.21115725966495658,0.21115725966495658,0.0
+x_brecha_esperada__sobre__asalariados_formales_pc,cociente,par SHAP,True,False,-0.20822616844937814,0.20822616844937814,0.0
+x_lz_ingreso_esperado__cuad,cuadrado,transformación monótona,True,True,0.19980889199945043,0.19980889199945043,0.0
+x_brecha_esperada__sobre__n_n_beneficios,cociente,par SHAP,True,False,-0.19783932224229736,0.19783932224229736,0.0
+x_lz_ingreso_esperado__sobre__n_asalariado,cociente,par SHAP,True,False,-0.18298003304290497,0.18298003304290497,0.0
+x_brecha_esperada__sobre__n_asalariado,cociente,par SHAP,True,False,-0.1670031711895299,0.1670031711895299,0.0
+x_arriendo_imputado_mese__pc,per_capita,per cápita,False,False,0.15959699823797538,0.15959699823797538,0.0
+x_raiz_share_arriendo_imputado,raiz,transformación monótona,False,True,0.15656642207662974,0.15656642207662974,0.0
+x_share_arriendo_imputado__cuad,cuadrado,transformación monótona,False,True,0.15656640959681156,0.15656640959681156,0.0
+x_log_share_arriendo_imputado,log,transformación monótona,False,True,0.156566409589167,0.156566409589167,0.0
+x_requerido_sobre_linea__rango_Depto,rango_grupo,posición relativa en Depto,False,False,-0.15476352119093645,0.15476352119093645,0.0
+x_raiz_arriendo_imputado_mese,raiz,transformación monótona,False,True,0.15407187821484536,0.15407187821484536,0.0
+x_log_arriendo_imputado_mese,log,transformación monótona,False,True,0.15407187821484536,0.15407187821484536,0.0
+x_arriendo_imputado_mese__cuad,cuadrado,transformación monótona,False,True,0.15407187821484536,0.15407187821484536,0.0
+x_requerido_sobre_linea__rango_Dominio,rango_grupo,posición relativa en Dominio,False,False,-0.1518194406405063,0.1518194406405063,0.0
+x_arriendo_imputado_mese__rango_Depto,rango_grupo,posición relativa en Depto,False,False,0.14522574653283396,0.14522574653283396,0.0
+x_lz_ingreso_esperado__sobre__n_pos_obrero_particular,cociente,par SHAP,True,False,-0.14495806165520658,0.14495806165520658,0.0
+x_arriendo_imputado_mese__desv_Depto,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.14385410752283487,0.14385410752283487,0.0
+x_requerido_sobre_linea__desv_Depto,desv_mediana_grupo,desviación de la mediana de Depto,False,False,-0.13897490349224756,0.13897490349224756,0.0
+x_share_arriendo_imputado__desv_Depto,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.13897490349224756,0.13897490349224756,0.0
+x_share_arriendo_imputado__rango_Depto,rango_grupo,posición relativa en Depto,False,False,0.13591292155593437,0.13591292155593437,0.0
+x_arriendo_imputado_mese__desv_Dominio,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.13589796791634906,0.13589796791634906,0.0
+x_log_mincer_pc_linea__cuad,cuadrado,transformación monótona,False,True,0.13392719563865843,0.13392719563865843,0.0
+x_share_arriendo_imputado__desv_Dominio,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.13265989390105418,0.13265989390105418,0.0
+x_requerido_sobre_linea__desv_Dominio,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,-0.13265989390105418,0.13265989390105418,0.0
+x_brecha_esperada__sobre__n_recibe_pension_jubilacion,cociente,par SHAP,True,False,-0.13041654894098198,0.13041654894098198,0.0
+x_brecha_esperada__sobre__n_pos_obrero_particular,cociente,par SHAP,True,False,-0.12964632017772965,0.12964632017772965,0.0
+x_lz_ingreso_esperado__sobre__n_subsidio_transporte,cociente,par SHAP,True,False,-0.1246487112840705,0.1246487112840705,0.0
+x_arriendo_imputado_mese__rango_Dominio,rango_grupo,posición relativa en Dominio,False,False,0.12336159730012385,0.12336159730012385,0.0
+x_mincer_sobre_requerido__cuad,cuadrado,transformación monótona,False,True,0.12053550205683954,0.12053550205683954,0.0
+x_brecha_esperada__por__n_recibe_pension_jubilacion,producto,par SHAP,True,False,0.12047336086958234,0.12047336086958234,0.0
+x_share_arriendo_imputado__rango_Dominio,rango_grupo,posición relativa en Dominio,False,False,0.11928952556669034,0.11928952556669034,0.0
+x_n_recibe_pension_jubilacion__sobre__log_ingreso_requerido,cociente,par SHAP,False,False,0.11850475721735772,0.11850475721735772,0.0
+x_brecha_esperada__sobre__n_subsidio_transporte,cociente,par SHAP,True,False,-0.10801547819146821,0.10801547819146821,0.0
+x_ind_todos_subsidiados,indicador,indicador de umbral,False,False,-0.10657747090140046,0.10657747090140046,0.0
+x_ind_mincer_bajo_requerido,indicador,indicador de umbral,False,False,0.10290461502322563,0.10290461502322563,0.0
+x_n_recibe_pension_jubilacion__por__log_ingreso_requerido,producto,par SHAP,False,False,0.09979158028679073,0.09979158028679073,0.0
+x_asalariados_formales_pc__rango_Depto,rango_grupo,posición relativa en Depto,False,False,0.0980698417791097,0.0980698417791097,0.0
+x_horas_pc__rango_Dominio,rango_grupo,posición relativa en Dominio,False,False,-0.0929133730480335,0.0929133730480335,0.0
+x_ind_arriendo_bajo_linea,indicador,indicador de umbral,False,False,0.09187619652486065,0.09187619652486065,0.0
+x_horas_pc__rango_Depto,rango_grupo,posición relativa en Depto,False,False,-0.09081504114081139,0.09081504114081139,0.0
+x_asalariados_formales_pc__cuad,cuadrado,transformación monótona,False,True,0.0904653550941893,0.0904653550941893,0.0
+x_log_asalariados_formales_pc,log,transformación monótona,False,True,0.0904653550941893,0.0904653550941893,0.0
+x_raiz_asalariados_formales_pc,raiz,transformación monótona,False,True,0.0904653550941893,0.0904653550941893,0.0
+x_log_arriendo__rango_Depto,rango_grupo,posición relativa en Depto,False,False,0.09023947002152594,0.09023947002152594,0.0
+x_log_arriendo__desv_Depto,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.08957794445422602,0.08957794445422602,0.0
+x_raiz_log_arriendo,raiz,transformación monótona,False,True,0.08895444301628186,0.08895444301628186,0.0
+x_log_arriendo__cuad,cuadrado,transformación monótona,False,True,0.08895444301628186,0.08895444301628186,0.0
+x_log_log_arriendo,log,transformación monótona,False,True,0.08895444301628186,0.08895444301628186,0.0
+x_horas_pc__desv_Dominio,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,-0.08781710033881925,0.08781710033881925,0.0
+x_raiz_horas_pc,raiz,transformación monótona,False,True,-0.08685349886684925,0.08685349886684925,0.0
+x_log_horas_pc,log,transformación monótona,False,True,-0.08685349886684925,0.08685349886684925,0.0
+x_horas_pc__cuad,cuadrado,transformación monótona,False,True,-0.08685349886684925,0.08685349886684925,0.0
+x_ind_un_ocupado_hogar_grande,indicador,indicador de umbral,False,False,0.08563729468082082,0.08563729468082082,0.0
+x_asalariados_formales_pc__desv_Depto,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.08557639864134807,0.08557639864134807,0.0
+x_horas_pc__desv_Depto,desv_mediana_grupo,desviación de la mediana de Depto,False,False,-0.08526268016658485,0.08526268016658485,0.0
+x_brecha_esperada__por__asalariados_formales_pc,producto,par SHAP,True,False,0.084770872839265,0.084770872839265,0.0
+x_raiz_formales_pc,raiz,transformación monótona,False,True,0.08327622085378487,0.08327622085378487,0.0
+x_log_formales_pc,log,transformación monótona,False,True,0.08327622085378487,0.08327622085378487,0.0
+x_formales_pc__cuad,cuadrado,transformación monótona,False,True,0.08327622085378487,0.08327622085378487,0.0
+x_ind_sin_cotizantes_con_ocupados,indicador,indicador de umbral,False,False,-0.08236846686893128,0.08236846686893128,0.0
+x_asalariados_formales_pc__desv_Dominio,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.07925825501508596,0.07925825501508596,0.0
+x_asalariados_formales_pc__rango_Dominio,rango_grupo,posición relativa en Dominio,False,False,0.07877787845595421,0.07877787845595421,0.0
+x_brecha_esperada__sobre__share_principal_perceptor,cociente,par SHAP,True,False,0.07868206040671268,0.07868206040671268,0.0
+x_ind_personas_cuarto_gt2,indicador,indicador de umbral,False,False,0.07763312179660026,0.07763312179660026,0.0
+x_log_arriendo__rango_Dominio,rango_grupo,posición relativa en Dominio,False,False,0.07471832079050647,0.07471832079050647,0.0
+x_ocupados_pc__cuad,cuadrado,transformación monótona,False,True,-0.07232320587334282,0.07232320587334282,0.0
+x_log_ocupados_pc,log,transformación monótona,False,True,-0.07232320587334282,0.07232320587334282,0.0
+x_raiz_ocupados_pc,raiz,transformación monótona,False,True,-0.07232320587334282,0.07232320587334282,0.0
+x_log_arriendo__desv_Dominio,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.06962126843861455,0.06962126843861455,0.0
+x_antiguedad_media_oc__rango_Dominio,rango_grupo,posición relativa en Dominio,False,False,0.06907475772916521,0.06907475772916521,0.0
+x_log_educ_max_adultos,log,transformación monótona,False,True,0.06782246082449972,0.06782246082449972,0.0009820562560620694
+x_raiz_educ_max_adultos,raiz,transformación monótona,False,True,0.06782246082449972,0.06782246082449972,0.0009820562560620694
+x_educ_max_adultos__cuad,cuadrado,transformación monótona,False,True,0.06782246082449972,0.06782246082449972,0.0009820562560620694
+x_requerido_sobre_linea__cuad,cuadrado,transformación monótona,False,True,-0.06742660857736833,0.06742660857736833,0.0
+x_log_ingreso_requerido__sobre__n_recibe_pension_jubilacion,cociente,par SHAP,False,False,-0.06737626892333329,0.06737626892333329,0.0
+x_log_dependientes_por_ocupado,log,transformación monótona,False,True,0.06732379195173893,0.06732379195173893,0.0
+x_raiz_dependientes_por_ocupado,raiz,transformación monótona,False,True,0.06732379195173893,0.06732379195173893,0.0
+x_dependientes_por_ocupado__cuad,cuadrado,transformación monótona,False,True,0.06732379195173893,0.06732379195173893,0.0
+x_brecha_esperada__por__log_ing_esp_max,producto,par SHAP,True,False,0.06701374400358343,0.06701374400358343,0.0
+x_log_ingreso_requerido__desv_Depto,desv_mediana_grupo,desviación de la mediana de Depto,False,False,-0.06675021948225274,0.06675021948225274,0.0
+x_log_log_ingreso_requerido,log,transformación monótona,False,True,-0.06608361933002098,0.06608361933002098,0.0
+x_raiz_log_ingreso_requerido,raiz,transformación monótona,False,True,-0.06608351264830405,0.06608351264830405,0.0
+x_log_ingreso_requerido__cuad,cuadrado,transformación monótona,False,True,-0.06608350626294639,0.06608350626294639,0.0
+x_lz_ingreso_esperado__por__arriendo_imputado_mese,producto,par SHAP,True,False,0.06596604731533687,0.06596604731533687,0.0
+x_antiguedad_media_oc__rango_Depto,rango_grupo,posición relativa en Depto,False,False,0.06556919708850996,0.06556919708850996,0.0
+x_log_ingreso_requerido__desv_Dominio,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,-0.06515238668880646,0.06515238668880646,0.0
+x_n_n_beneficios__pc,per_capita,per cápita,False,False,0.06511177816469188,0.06511177816469188,0.0
+x_brecha_esperada__sobre__log_ing_esp_max,cociente,par SHAP,True,False,0.0638651607474277,0.0638651607474277,0.0
+x_log_ingreso_requerido__rango_Depto,rango_grupo,posición relativa en Depto,False,False,-0.06244140137794444,0.06244140137794444,0.0
+x_brecha_esperada__desv_Depto,desv_mediana_grupo,desviación de la mediana de Depto,True,False,0.06134871953301527,0.06134871953301527,0.0
+x_log_ingreso_requerido__rango_Dominio,rango_grupo,posición relativa en Dominio,False,False,-0.0609807369714461,0.0609807369714461,0.0
+x_raiz_log_arriendo_pc,raiz,transformación monótona,False,True,0.05929843318626874,0.05929843318626874,0.0
+x_log_arriendo_pc__cuad,cuadrado,transformación monótona,False,True,0.05929843318626874,0.05929843318626874,0.0
+x_log_log_arriendo_pc,log,transformación monótona,False,True,0.05929843318626874,0.05929843318626874,0.0
+x_brecha_esperada__rango_Depto,rango_grupo,posición relativa en Depto,True,False,0.05908292784539761,0.05908292784539761,0.0
+x_brecha_esperada__por__n_n_beneficios,producto,par SHAP,True,False,0.058803350618515667,0.058803350618515667,0.0
+x_n_n_beneficios__rango_Depto,rango_grupo,posición relativa en Depto,False,False,0.058600085378633114,0.058600085378633114,0.0
+x_pareja_educ__cuad,cuadrado,transformación monótona,False,True,0.05845330514472462,0.05845330514472462,0.4647429679922406
+x_log_pareja_educ,log,transformación monótona,False,True,0.05845330514472462,0.05845330514472462,0.4647429679922406
+x_raiz_pareja_educ,raiz,transformación monótona,False,True,0.05845330514472462,0.05845330514472462,0.4647429679922406
+x_log_log_ing_esp_jefe,log,transformación monótona,True,True,0.05837833178939836,0.05837833178939836,0.0
+x_raiz_log_ing_esp_jefe,raiz,transformación monótona,True,True,0.05837832791500178,0.05837832791500178,0.0
+x_log_ing_esp_jefe__cuad,cuadrado,transformación monótona,True,True,0.058378315681244644,0.058378315681244644,0.0
+x_brecha_esperada__desv_Dominio,desv_mediana_grupo,desviación de la mediana de Dominio,True,False,0.05709265847313752,0.05709265847313752,0.0
+x_log_jefe_anios_educ,log,transformación monótona,False,True,0.0557282889269784,0.0557282889269784,0.0001212415130941169
+x_jefe_anios_educ__cuad,cuadrado,transformación monótona,False,True,0.0557282889269784,0.0557282889269784,0.0001212415130941169
+x_raiz_jefe_anios_educ,raiz,transformación monótona,False,True,0.0557282889269784,0.0557282889269784,0.0001212415130941169
+x_log_log_ing_esp_max,log,transformación monótona,True,True,0.055562944620134676,0.055562944620134676,0.0
+x_raiz_log_ing_esp_max,raiz,transformación monótona,True,True,0.05556294314286504,0.05556294314286504,0.0
+x_log_ing_esp_max__cuad,cuadrado,transformación monótona,True,True,0.05556292876228878,0.05556292876228878,0.0
+x_log_ing_esp_max__rango_Depto,rango_grupo,posición relativa en Depto,True,False,0.05487049324653167,0.05487049324653167,0.0
+x_lz_ingreso_esperado__sobre__log_ingreso_requerido,cociente,par SHAP,True,False,0.05368183148851578,0.05368183148851578,0.0
+x_beneficios_por_ocupado__rango_Depto,rango_grupo,posición relativa en Depto,False,False,0.0533290238900298,0.0533290238900298,0.0
+x_brecha_esperada__rango_Dominio,rango_grupo,posición relativa en Dominio,True,False,0.05292493849146717,0.05292493849146717,0.0
+x_jefe_anios_educ__rango_Depto,rango_grupo,posición relativa en Depto,False,False,0.05142565744018303,0.05142565744018303,0.0
+x_jefe_anios_educ__desv_Depto,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.05115562906394345,0.05115562906394345,0.0001212415130941169
+x_raiz_n_n_beneficios,raiz,transformación monótona,False,True,0.050984425399184984,0.050984425399184984,0.0
+x_log_n_n_beneficios,log,transformación monótona,False,True,0.050984425399184984,0.050984425399184984,0.0
+x_n_n_beneficios__cuad,cuadrado,transformación monótona,False,True,0.050984425399184984,0.050984425399184984,0.0
+x_lz_ingreso_esperado__por__n_n_beneficios,producto,par SHAP,True,False,0.05070740774492448,0.05070740774492448,0.0
+x_log_ing_esp_max__desv_Depto,desv_mediana_grupo,desviación de la mediana de Depto,True,False,0.050071014046073954,0.050071014046073954,0.0
+x_lz_ingreso_esperado__sobre__log_ing_esp_max,cociente,par SHAP,True,False,0.04880994198647602,0.04880994198647602,0.0
+x_raiz_log_ing_esperado_ug,raiz,transformación monótona,True,True,0.048692606093650004,0.048692606093650004,0.0
+x_log_log_ing_esperado_ug,log,transformación monótona,True,True,0.04869260509230327,0.04869260509230327,0.0
+x_log_ing_esperado_ug__cuad,cuadrado,transformación monótona,True,True,0.0486926006810155,0.0486926006810155,0.0
+x_lz_ingreso_esperado__por__log_ing_esp_max,producto,par SHAP,True,False,0.04816748700047008,0.04816748700047008,0.0
+x_n_n_beneficios__desv_Depto,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.047602883780182535,0.047602883780182535,0.0
+x_log_ing_esperado_ug__rango_Depto,rango_grupo,posición relativa en Depto,True,False,0.046823696470530946,0.046823696470530946,0.0
+x_jefe_edad__desv_Depto,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.04659857795875487,0.04659857795875487,0.0
+x_jefe_edad__rango_Depto,rango_grupo,posición relativa en Depto,False,False,0.04617809967922446,0.04617809967922446,0.0
+x_jefe_edad__rango_Dominio,rango_grupo,posición relativa en Dominio,False,False,0.04604799515370151,0.04604799515370151,0.0
+x_jefe_edad__desv_Dominio,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.04598975601352962,0.04598975601352962,0.0
+x_n_n_beneficios__desv_Dominio,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.04588619919244943,0.04588619919244943,0.0
+x_log_ing_esperado_ug__desv_Depto,desv_mediana_grupo,desviación de la mediana de Depto,True,False,0.044276549689529904,0.044276549689529904,0.0
+x_raiz_jefe_edad,raiz,transformación monótona,False,True,0.0439271874929446,0.0439271874929446,0.0
+x_jefe_edad__cuad,cuadrado,transformación monótona,False,True,0.0439271874929446,0.0439271874929446,0.0
+x_log_jefe_edad,log,transformación monótona,False,True,0.0439271874929446,0.0439271874929446,0.0
+x_brecha_esperada__por__n_asalariado,producto,par SHAP,True,False,0.043773690126749885,0.043773690126749885,0.0
+x_raiz_beneficios_por_ocupado,raiz,transformación monótona,False,True,0.04347100896486229,0.04347100896486229,0.0
+x_log_beneficios_por_ocupado,log,transformación monótona,False,True,0.04347100896486229,0.04347100896486229,0.0
+x_beneficios_por_ocupado__cuad,cuadrado,transformación monótona,False,True,0.04347100896486229,0.04347100896486229,0.0
+x_jefe_anios_educ__rango_Dominio,rango_grupo,posición relativa en Dominio,False,False,0.043183789613642054,0.043183789613642054,0.0
+x_conteo_carencias,conteo,conteo de carencias,False,False,-0.042679082580463205,0.042679082580463205,0.0
+x_jefe_anios_educ__desv_Dominio,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.04223752213274398,0.04223752213274398,0.0001212415130941169
+x_lz_ingreso_esperado__rango_Depto,rango_grupo,posición relativa en Depto,True,False,0.0415506489103141,0.0415506489103141,0.0
+x_antiguedad_media_oc__desv_Dominio,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.04101551055251453,0.04101551055251453,0.13471750727449083
+x_n_n_beneficios__rango_Dominio,rango_grupo,posición relativa en Dominio,False,False,0.04097588116031111,0.04097588116031111,0.0
+x_log_mincer_pc_linea__desv_Dominio,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,-0.03994790947952013,0.03994790947952013,0.0
+x_log_ing_esp_max__rango_Dominio,rango_grupo,posición relativa en Dominio,True,False,0.03984529751734551,0.03984529751734551,0.0
+x_log_mincer_pc_linea__rango_Dominio,rango_grupo,posición relativa en Dominio,False,False,-0.038351928926228226,0.038351928926228226,0.0
+x_lz_ingreso_esperado__desv_Depto,desv_mediana_grupo,desviación de la mediana de Depto,True,False,0.03771919841772029,0.03771919841772029,0.0
+x_lz_ingreso_esperado__por__n_asalariado,producto,par SHAP,True,False,0.03678622164940565,0.03678622164940565,0.0
+x_n_perceptores_esp_lp__pc,per_capita,per cápita,True,False,-0.03671108022673591,0.03671108022673591,0.0
+x_beneficios_por_ocupado__desv_Depto,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.036696712952594523,0.036696712952594523,0.0
+x_n_perceptores_esp_lp__desv_Dominio,desv_mediana_grupo,desviación de la mediana de Dominio,True,False,-0.03664779036714436,0.03664779036714436,0.0
+x_n_perceptores_esp_lp__rango_Dominio,rango_grupo,posición relativa en Dominio,True,False,-0.03657740410463697,0.03657740410463697,0.0
+x_log_ing_esp_max__desv_Dominio,desv_mediana_grupo,desviación de la mediana de Dominio,True,False,0.03627445654675337,0.03627445654675337,0.0
+x_log_jefe_antiguedad_meses,log,transformación monótona,False,True,0.03546675258266877,0.03546675258266877,0.2897914645974782
+x_raiz_jefe_antiguedad_meses,raiz,transformación monótona,False,True,0.03546675258266877,0.03546675258266877,0.2897914645974782
+x_jefe_antiguedad_meses__cuad,cuadrado,transformación monótona,False,True,0.03546675258266877,0.03546675258266877,0.2897914645974782
+x_mincer_sobre_requerido__rango_Depto,rango_grupo,posición relativa en Depto,False,False,0.034935654785552765,0.034935654785552765,0.0
+x_mincer_sobre_requerido__desv_Depto,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.034588869536607086,0.034588869536607086,0.0
+x_beneficios_por_ocupado__rango_Dominio,rango_grupo,posición relativa en Dominio,False,False,0.034358170643063686,0.034358170643063686,0.0
+x_lz_ingreso_esperado__rango_Dominio,rango_grupo,posición relativa en Dominio,True,False,0.03429043899013913,0.03429043899013913,0.0
+x_log_ing_esperado_ug__rango_Dominio,rango_grupo,posición relativa en Dominio,True,False,0.033679194706873396,0.033679194706873396,0.0
+x_beneficios_por_ocupado__desv_Dominio,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.03358109650918347,0.03358109650918347,0.0
+x_log_ing_esperado_ug__desv_Dominio,desv_mediana_grupo,desviación de la mediana de Dominio,True,False,0.03333550704196206,0.03333550704196206,0.0
+x_antiguedad_media_oc__desv_Depto,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.03286699374577432,0.03286699374577432,0.13471750727449083
+x_log_n_perceptores_esp_lp,log,transformación monótona,True,True,-0.032135884910561456,0.032135884910561456,0.0
+x_raiz_n_perceptores_esp_lp,raiz,transformación monótona,True,True,-0.032135884910561456,0.032135884910561456,0.0
+x_n_perceptores_esp_lp__cuad,cuadrado,transformación monótona,True,True,-0.032135884910561456,0.032135884910561456,0.0
+x_lz_ingreso_esperado__desv_Dominio,desv_mediana_grupo,desviación de la mediana de Dominio,True,False,0.03170969858193279,0.03170969858193279,0.0
+x_log_mincer_pc_linea__desv_Depto,desv_mediana_grupo,desviación de la mediana de Depto,False,False,-0.031644923681158725,0.031644923681158725,0.0
+x_raiz_antiguedad_media_oc,raiz,transformación monótona,False,True,0.03154280942621527,0.03154280942621527,0.13471750727449083
+x_antiguedad_media_oc__cuad,cuadrado,transformación monótona,False,True,0.03154280942621527,0.03154280942621527,0.13471750727449083
+x_log_antiguedad_media_oc,log,transformación monótona,False,True,0.03154280942621527,0.03154280942621527,0.13471750727449083
+x_log_mincer_pc_linea__rango_Depto,rango_grupo,posición relativa en Depto,False,False,-0.03024851188842842,0.03024851188842842,0.0
+x_n_perceptores_esp_lp__desv_Depto,desv_mediana_grupo,desviación de la mediana de Depto,True,False,-0.02894444847523017,0.02894444847523017,0.0
+x_lz_ingreso_esperado__por__log_ingreso_requerido,producto,par SHAP,True,False,0.02847511877716506,0.02847511877716506,0.0
+x_n_perceptores_esp_lp__rango_Depto,rango_grupo,posición relativa en Depto,True,False,-0.028366750029230284,0.028366750029230284,0.0
+x_arriendo_x_cabecera__cuad,cuadrado,transformación monótona,False,True,0.028314701212704508,0.028314701212704508,0.0
+x_mincer_sobre_requerido__desv_Dominio,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.02749990203723997,0.02749990203723997,0.0
+x_ind_jefe_primaria_o_menos,indicador,indicador de umbral,False,False,-0.02714596746087393,0.02714596746087393,0.0
+x_mincer_sobre_requerido__rango_Dominio,rango_grupo,posición relativa en Dominio,False,False,0.026690145853100318,0.026690145853100318,0.0
+x_log_log_Lp,log,transformación monótona,False,True,0.024626393382578805,0.024626393382578805,0.0
+x_log_Lp__cuad,cuadrado,transformación monótona,False,True,0.0246255163263141,0.0246255163263141,0.0
+x_raiz_log_Lp,raiz,transformación monótona,False,True,0.0246255163263141,0.0246255163263141,0.0
+x_brecha_esperada__por__n_subsidio_transporte,producto,par SHAP,True,False,0.013198922940026208,0.013198922940026208,0.0
+x_share_principal_perceptor__rango_Depto,rango_grupo,posición relativa en Depto,True,False,-0.012370872662390979,0.012370872662390979,0.0
+x_share_principal_perceptor__cuad,cuadrado,transformación monótona,True,True,-0.012013042263101476,0.012013042263101476,0.0
+x_raiz_share_principal_perceptor,raiz,transformación monótona,True,True,-0.01201302869495454,0.01201302869495454,0.0
+x_log_share_principal_perceptor,log,transformación monótona,True,True,-0.012013023297797019,0.012013023297797019,0.0
+x_lz_ingreso_esperado__por__n_subsidio_transporte,producto,par SHAP,True,False,0.011472526666905758,0.011472526666905758,0.0
+x_share_principal_perceptor__rango_Dominio,rango_grupo,posición relativa en Dominio,True,False,-0.010753217434783847,0.010753217434783847,0.0
+x_brecha_esperada__por__share_principal_perceptor,producto,par SHAP,True,False,0.010255950365920318,0.010255950365920318,0.0
+x_lz_ingreso_esperado__por__n_pos_obrero_particular,producto,par SHAP,True,False,-0.010134067057452737,0.010134067057452737,0.0
+x_brecha_esperada__por__n_pos_obrero_particular,producto,par SHAP,True,False,-0.004998373635497902,0.004998373635497902,0.0
+x_share_principal_perceptor__desv_Depto,desv_mediana_grupo,desviación de la mediana de Depto,True,False,-0.0049408784896753455,0.0049408784896753455,0.0
+x_share_principal_perceptor__desv_Dominio,desv_mediana_grupo,desviación de la mediana de Dominio,True,False,0.0014029781846825351,0.0014029781846825351,0.0
