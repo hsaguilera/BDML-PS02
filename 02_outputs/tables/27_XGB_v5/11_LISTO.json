@@ -1,0 +1,82 @@
+{
+ "modelo": "XGBoost",
+ "algoritmo_enunciado": "Boosting",
+ "datos": "v5",
+ "version": "principal",
+ "ruta_csv": "G:\\Mi unidad\\Curso BigData\\Taller2\\submissions\\XGB_depth_3_eta_0_0473_mcw_1_68_sub_0_561_col_0_876_n_8_bog0_5.csv",
+ "archivo": "XGB_depth_3_eta_0_0473_mcw_1_68_sub_0_561_col_0_876_n_8_bog0_5.csv",
+ "descripcion_kaggle": "XGBoost (clasificación, XGB); max_depth=3, learning_rate=0.04726, min_child_weight=1.682, subsample=0.5609, colsample_bytree=0.8763, reg_lambda=0.2587; 8 variables (g. a. Encuesta corta (con generadas) − bloques ABCDEF); peso Bogotá 0.5; desbalance: ninguna (sólo umbral); umbral 0.386 (F1-óptimo OOF sin Bogotá); F1 CV anidado sin Bogotá 0.7771; bolsa de 5 semillas; datos v5",
+ "n_vars": 8,
+ "conjunto": "g. a. Encuesta corta (con generadas) − bloques ABCDEF",
+ "hiperparametros": {
+  "objective": "binary:logistic",
+  "eval_metric": "logloss",
+  "tree_method": "hist",
+  "learning_rate": 0.04725552346178663,
+  "max_depth": 3,
+  "min_child_weight": 1.6823586833935449,
+  "subsample": 0.5609444369284923,
+  "colsample_bytree": 0.8763032518334554,
+  "colsample_bylevel": 0.9024659001651979,
+  "gamma": 0.1443833259960471,
+  "reg_alpha": 0.15130260219535469,
+  "reg_lambda": 0.2587122909133764,
+  "max_bin": 128,
+  "max_cat_to_onehot": 8,
+  "scale_pos_weight": 1.0
+ },
+ "peso_bogota": 0.5,
+ "desbalance": "ninguna (sólo umbral)",
+ "umbral": 0.38626111671328545,
+ "umbral_por_dominio": false,
+ "F1_anidado_sinBOG": 0.7770849221658965,
+ "IC95": [
+  0.7735861854659423,
+  0.7805231145949026
+ ],
+ "F1_segunda_particion": 0.7769164513350559,
+ "optimismo": 0.0005732451804929539,
+ "AUC": 0.9594559046806536,
+ "precision": 0.7449254587155963,
+ "exhaustividad": 0.8121464070265371,
+ "tasa_predicha_test": 0.22609116189094428,
+ "tasa_predicha_oof_sinBOG": 0.2265128600389914,
+ "tasa_pobres_train_sinBOG": 0.20721794381869643,
+ "tasa_coherente": true,
+ "otras_versiones": [
+  {
+   "version": "parsimoniosa",
+   "conjunto": "g. a. Encuesta corta (con generadas) − bloques ABCDEF",
+   "ruta_csv": "G:\\Mi unidad\\Curso BigData\\Taller2\\submissions\\XGB_depth_3_eta_0_0473_mcw_1_68_sub_0_561_col_0_876_n_8_bog0_5.csv",
+   "archivo": "XGB_depth_3_eta_0_0473_mcw_1_68_sub_0_561_col_0_876_n_8_bog0_5.csv",
+   "n_vars": 8,
+   "F1_anidado_sinBOG": 0.7770849221658965,
+   "AUC": 0.9594559046806536,
+   "umbral": 0.38626111671328545,
+   "tasa_predicha_test": 0.22609116189094428
+  },
+  {
+   "version": "sin generadas",
+   "conjunto": "c. S2 / S3 + categóricas (sin generadas)",
+   "ruta_csv": "G:\\Mi unidad\\Curso BigData\\Taller2\\submissions\\XGB_depth_3_eta_0_0473_mcw_1_68_sub_0_561_col_0_876_n_173_singen_bog0_5.csv",
+   "archivo": "XGB_depth_3_eta_0_0473_mcw_1_68_sub_0_561_col_0_876_n_173_singen_bog0_5.csv",
+   "n_vars": 173,
+   "F1_anidado_sinBOG": 0.7613392857142857,
+   "AUC": 0.9538789202291689,
+   "umbral": 0.39671942964196205,
+   "tasa_predicha_test": 0.22349171805102164
+  }
+ ],
+ "verificado": "id,pobre; 66.168 filas; ids y orden de sample_submission; valores 0/1",
+ "submuestra_prueba": null,
+ "tiempos_min": {
+  "seleccion_min": 14.363312391440074,
+  "optuna_min": 3.6615569829940795,
+  "bogota_min": 0.25440002282460533,
+  "desbalance_min": 0.31652321020762125,
+  "segunda_particion_min": 0.12000845273335775,
+  "finales_min": 13.070016189416249,
+  "total_min": 32.120692857106526
+ },
+ "tiempo_total_min": 32.120692857106526
+}
