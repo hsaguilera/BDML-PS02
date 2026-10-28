@@ -1,0 +1,25 @@
+criterio,modelo,p,"en el conjunto (α = 0,10)"
+F1 (pseudo-valores ψ),LightGBM,1.0,True
+F1 (pseudo-valores ψ),XGBoost,0.002,False
+F1 (pseudo-valores ψ),Elastic Net,0.0,False
+F1 (pseudo-valores ψ),Logit,0.0,False
+F1 (pseudo-valores ψ),Random Forest,0.0,False
+F1 (pseudo-valores ψ),LPM,0.0,False
+F1 (pseudo-valores ψ),CART,0.0,False
+F1 (pseudo-valores ψ),Naive Bayes,0.0,False
+log-loss,LightGBM,1.0,True
+log-loss,XGBoost,0.0,False
+log-loss,Elastic Net,0.0,False
+log-loss,Logit,0.0,False
+log-loss,Random Forest,0.0,False
+log-loss,LPM,0.0,False
+log-loss,CART,0.0,False
+log-loss,Naive Bayes,0.0,False
+Brier,LightGBM,1.0,True
+Brier,XGBoost,0.0,False
+Brier,Elastic Net,0.0,False
+Brier,Logit,0.0,False
+Brier,Random Forest,0.0,False
+Brier,LPM,0.0,False
+Brier,CART,0.0,False
+Brier,Naive Bayes,0.0,False

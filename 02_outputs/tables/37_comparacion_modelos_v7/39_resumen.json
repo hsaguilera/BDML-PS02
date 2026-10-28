@@ -1,0 +1,78 @@
+{
+ "generado": "2026-10-27 23:00",
+ "modelos": [
+  "LightGBM",
+  "XGBoost",
+  "Elastic Net",
+  "Logit",
+  "Random Forest",
+  "LPM",
+  "CART",
+  "Naive Bayes"
+ ],
+ "mejor": "LightGBM",
+ "pendientes": [
+  "37 CatBoost"
+ ],
+ "F1": {
+  "LightGBM": 0.7729655255039387,
+  "XGBoost": 0.7702761226348879,
+  "Elastic Net": 0.7628423651110849,
+  "Logit": 0.7626705508159686,
+  "Random Forest": 0.7518489425086333,
+  "LPM": 0.7498438754572219,
+  "CART": 0.720901268115942,
+  "Naive Bayes": 0.6902902103882775
+ },
+ "P_mejor_bootstrap": {
+  "LightGBM": 1.0,
+  "XGBoost": 0.0,
+  "Elastic Net": 0.0,
+  "Logit": 0.0,
+  "Random Forest": 0.0,
+  "LPM": 0.0,
+  "CART": 0.0,
+  "Naive Bayes": 0.0
+ },
+ "indistinguibles_del_mejor_Holm": [],
+ "CVC90": {
+  "F1 (pseudo-valores ψ)": [
+   "LightGBM"
+  ],
+  "log-loss": [
+   "LightGBM"
+  ],
+  "Brier": [
+   "LightGBM"
+  ]
+ },
+ "envios_hoy": [
+  {
+   "modelo": "LightGBM",
+   "ruta": "02_outputs/predictions/LGBM_hojas_40_lr_0_02_mcs_15_ff_0_336_l2_0_14_n1152_lb1_s10_v7.csv",
+   "verificación": "OK",
+   "descripción para Kaggle": "Boosting (LightGBM) v7, sin primera etapa. hojas=40; lr=0,02; 1.425 árboles × 10 semillas; min_child=15; feature_frac=0,34; bagging=0,74; L1=1,10; L2=0,14; 8 monótonas. 1.152 vars (64 preguntas); λ_B=1; umbral 0,378 (tasa igualada). F1 CV sin Bogotá 0,7730 [0,7695–0,7764]"
+  },
+  {
+   "modelo": "Logit",
+   "ruta": "02_outputs/predictions/LOGIT_spl_T_n348_lb1_s1_v7.csv",
+   "verificación": "OK",
+   "descripción para Kaggle": "Logit v7, sin primera etapa. máxima verosimilitud (cresta 1e-5); selección lasso dentro del pliegue; splines en 5 continuas. 348 vars (63 preguntas); λ_B=1; umbral 0,380 (fijo, tasa verificada). F1 CV sin Bogotá 0,7627 [0,7592–0,7662]"
+  },
+  {
+   "modelo": "LPM",
+   "ruta": "02_outputs/predictions/LPM_spl_T_n1152_lb0_s1_v7.csv",
+   "verificación": "OK",
+   "descripción para Kaggle": "Linear Probability Model v7, sin primera etapa. MCO; splines en 5 continuas. 1.152 vars (64 preguntas); λ_B=0; umbral 0,390 (fijo, tasa verificada). F1 CV sin Bogotá 0,7498 [0,7463–0,7534]"
+  }
+ ],
+ "figuras": [
+  "02_outputs/figures/37_comparacion_modelos_v7/39_f1_modelos.png",
+  "02_outputs/figures/37_comparacion_modelos_v7/39_diferencias_vs_mejor.png",
+  "02_outputs/figures/37_comparacion_modelos_v7/39_matriz_pareada.png",
+  "02_outputs/figures/37_comparacion_modelos_v7/39_igualdad_condiciones.png",
+  "02_outputs/figures/37_comparacion_modelos_v7/39_disyuntiva_politica.png"
+ ],
+ "excel": "02_outputs/tables/37_comparacion_modelos_v7/resultados_modelos_v7.xlsx",
+ "minutos": 11.172801725069682
+}
