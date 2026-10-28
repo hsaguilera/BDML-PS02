@@ -78,8 +78,8 @@ class Rutas:
             self.tablas_base = self.raiz / "reports" / "tables"
             self.submissions = self.raiz / "submissions"
             self.modelos = self.raiz / "models"
-        # JHON_CARPETA: subcarpeta de tablas y figuras del script que corre (la fija su script .R)
-        carpeta = os.environ.get("JHON_CARPETA", "")
+        # SALIDAS_CARPETA: subcarpeta de tablas y figuras del script que corre (la fija su script .R)
+        carpeta = os.environ.get("SALIDAS_CARPETA", "")
         self.figuras = self.figuras_base / carpeta if carpeta else self.figuras_base
         self.tablas = self.tablas_base / carpeta if carpeta else self.tablas_base
         for d in [self.raw, self.processed, self.figuras, self.tablas,

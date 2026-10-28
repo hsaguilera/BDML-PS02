@@ -41,8 +41,8 @@ def _sub(raiz: Path, clave: str) -> tuple:
 
 
 def _carpeta() -> tuple:
-    """JHON_CARPETA: subcarpeta de tablas y figuras del script que corre (la fija su script .R)."""
-    c = os.environ.get("JHON_CARPETA", "")
+    """SALIDAS_CARPETA: subcarpeta de tablas y figuras del script que corre (la fija su script .R)."""
+    c = os.environ.get("SALIDAS_CARPETA", "")
     return (c,) if c else ()
 
 # ------------------------------------------------------------------------------ presupuestos
