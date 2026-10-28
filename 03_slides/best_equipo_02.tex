@@ -1,7 +1,7 @@
 % ==============================================================================
 % best_equipo_02.tex -- Best Model Deep Dive (Problem Set 2: Predicting Poverty)
 % Compilar:  cd 03_slides && latexmk -pdf best_equipo_02.tex
-% Las cifras vienen de numbers.tex (generado por 01_code/17_harold_slide_assets.R)
+% Las cifras vienen de numbers.tex (generado por 01_code/17_harold_diapositivas_figuras_y_cifras.R)
 % y el puntaje de Kaggle de kaggle_scores.tex (se completa a mano).
 % ==============================================================================
 \def\deckname{Best Model Deep Dive}
@@ -29,16 +29,16 @@
     \vspace{2mm}
     \estadistica{\nFoneLGBM}{F1 en validación\\cruzada}
     \column{.22\textwidth}
-    \estadistica{\nAUCLGBM}{AUC}
+    \estadistica{\kgpLGBM}{F1 privado\\en Kaggle}
     \vspace{2mm}
-    \estadistica{\nRecLGBM}{cobertura de los\\pobres}
+    \estadistica{\nAUCLGBM}{AUC}
   \end{columns}
   \begin{block}{Mensajes principales}
     \footnotesize
     \begin{enumerate}\setlength{\itemsep}{1pt}
       \item El salto viene de los \resaltar{datos}, no del algoritmo: imputar el ingreso suma \nGainIncome{} de F1; cambiar Logit por LightGBM, \nGainAlgo{}.
-      \item Con ese umbral, \nUnderLGBM{}\,\% de los pobres quedan excluidos y \nLeakLGBM{}\,\% de los beneficiarios no son pobres.
-      \item Sin el ingreso imputado (encuesta corta) el F1 cae a \nFoneSurveyMin{}--\nFoneSurveyShort{}: \resaltar{no se despliega} con pocas preguntas.
+      \item Con ese umbral, \nUnderLGBM{}\,\% de los pobres quedan excluidos y \nLeakLGBM{}\,\% de los beneficiarios no son pobres; sin el ingreso imputado, el F1 cae a \nFoneSurveyMin{}--\nFoneSurveyShort{}.
+      \item Su ventaja pública (\kgLGBM) \resaltar{desaparece} en el puntaje privado (\kgpLGBM), igual al de RF, Elastic Net y logit: la diferencia es ruido.
     \end{enumerate}
   \end{block}
 \end{frame}
@@ -174,7 +174,7 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Diagnóstico: generaliza a hogares nuevos, pero la diferencia en Kaggle puede ser ruido}
+\begin{frame}{Diagnóstico: el LightGBM lidera el puntaje público (\kgLGBM) y empata en el privado (\kgpLGBM)}
   \begin{columns}[T]
     \column{.56\textwidth}
     \centering\small\textbf{F1 con hogares nuevos y con regiones completamente nuevas}\\[2mm]
@@ -184,9 +184,9 @@
     \column{.40\textwidth}
     \small
     \begin{itemize}\setlength{\itemsep}{3pt}
+      \item \textbf{Kaggle:} LightGBM \kgLGBM{} público y \kgpLGBM{} privado; Random Forest, Elastic Net, logit y probit, 0,77 en ambos. El único que cambia es el LightGBM.
+      \item Con la muestra pública (20\,\% del test) el F1 tiene desviación estándar de $\approx$\,\nPublicSD{}: una diferencia de 0,01 no es concluyente, y el privado lo confirmó.
       \item El logit cae \nDropLogitRegions{} al pasar a regiones nuevas; el LightGBM, \nDropLGBMRegions{}: el boosting depende algo más de las regiones vistas.
-      \item Con la muestra pública (20\,\% del test), el F1 tiene desviación estándar de $\approx$\,\nPublicSD{}: diferencias de 0,005 en el \emph{leaderboard} no son concluyentes.
-      \item Por eso elegimos por validación cruzada y no por el puntaje público.
     \end{itemize}
   \end{columns}
 \end{frame}
@@ -227,21 +227,20 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Política: el modelo no se despliega con una encuesta corta y barata}
+\begin{frame}{Política: la encuesta corta depende de cuántas preguntas exige el ingreso imputado}
   \begin{columns}[T]
     \column{.62\textwidth}
     \figura{harold_slide_short_survey.png}
     \column{.36\textwidth}
     \small
     \begin{itemize}\setlength{\itemsep}{3pt}
-      \item El ingreso imputado usa unas 60 variables por persona del módulo de empleo e ingresos.
-      \item Solo con vivienda, composición y educación (\nNVarsSurveyMin{} variables), el F1 es \nFoneSurveyMin{} y se excluye a \nUnderSurveyMin\,\% de los pobres.
-      \item Agregar empleo y salud lo lleva a \nFoneSurveyShort{}.
+      \item Solo con vivienda, composición y educación (\nNVarsSurveyMin{} variables), el F1 es \nFoneSurveyMin{} y se excluye a \nUnderSurveyMin\,\% de los pobres. Agregar empleo y salud lo lleva a \nFoneSurveyShort{}.
+      \item Mi ingreso imputado usa unas 60 variables por persona. Otro modelo del equipo, con 8 variables y una primera etapa de ingreso, llegó a 0,77 público y 0,78 privado: \resaltar{se puede acortar} si esa etapa pide pocas preguntas.
     \end{itemize}
     \vspace{1mm}
     \begin{block}{Recomendación}
       \footnotesize
-      Usar el modelo para \resaltar{priorizar} hogares a verificar con el módulo laboral completo, y probar un cuestionario corto \emph{con} las pocas preguntas de ingreso más informativas, no sin ellas.
+      Cuestionario corto \emph{con} las pocas preguntas de ingreso más informativas, no sin ellas; el modelo sirve para \resaltar{priorizar} hogares a verificar.
     \end{block}
   \end{columns}
 \end{frame}

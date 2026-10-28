@@ -52,5 +52,23 @@
 \newcommand{\figura}[2][.70\textheight]{\includegraphics[width=\linewidth,height=#1,keepaspectratio]{#2}}
 \newcommand{\fuente}[1]{{\color{gris}\tiny #1}}
 \newcommand{\resaltar}[1]{\textcolor{naranja}{\textbf{#1}}}
+
+% --- Portada (se apaga con \portadafalse) ----------------------------------------------------
+\newif\ifportada \portadatrue
+\newcommand{\portada}[2]{%
+  {\setbeamercolor{background canvas}{bg=azul}
+  \begin{frame}[plain]
+    \vspace*{9mm}
+    {\color{white}\bfseries\fontsize{24}{27}\selectfont #1\par}
+    \vspace{2mm}{\color{naranja}\rule{22mm}{2pt}}\par\vspace{4mm}
+    {\color{white!90}\fontsize{13}{16}\selectfont #2\par}
+    \vfill
+    {\color{white}\bfseries\normalsize Equipo 02\par}
+    \vspace{1mm}
+    {\color{white!85}\small Jhon Sebasti\'an Vela Salcedo \ $\cdot$ \ Cesar Augusto Vallejo Quiroga \ $\cdot$ \ Harold Santiago Aguilera Mulfo\par}
+    \vspace{4mm}
+    {\color{white!70}\footnotesize Big Data y Machine Learning para Econom\'ia Aplicada $\cdot$ MECA 4107 $\cdot$ 2026-20 $\cdot$ Universidad de los Andes\par}
+    \vspace{4mm}
+  \end{frame}}}
 \input{numbers.tex}
 \input{kaggle_scores.tex}
