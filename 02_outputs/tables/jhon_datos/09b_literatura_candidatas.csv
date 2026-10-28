@@ -1,0 +1,64 @@
+nombre,familia,motivacion,tipo,expr,a,grupo,usa_generadas,aceptada
+x_escala_ocde,a. Escalas de equivalencia,"Escala OCDE modificada (1; 0,5; 0,3): economías de escala en el consumo del hogar (Deaton, 1997)",expr,"1 + 0.5*np.maximum(Nper - n_menor12 - 1, 0) + 0.3*n_menor12",,,False,False
+x_escala_raiz,a. Escalas de equivalencia,"Escala raíz cuadrada del tamaño (OCDE, 2013)",expr,np.sqrt(Npersug),,,False,False
+x_lz_esp_ocde,a. Escalas de equivalencia,Ingreso esperado (1.ª etapa) por adulto equivalente frente a la línea,expr,log_ing_esperado_ug - np.log(x_escala_ocde) - np.log(Lp),,,True,False
+x_lz_esp_raiz,a. Escalas de equivalencia,Ingreso esperado con escala raíz frente a la línea,expr,log_ing_esperado_ug - 0.5*np.log(Npersug) - np.log(Lp),,,True,False
+x_log_req_ocde,a. Escalas de equivalencia,Ingreso requerido por adulto equivalente,expr,log_ingreso_requerido - np.log(x_escala_ocde),,,False,False
+x_ing_esp_max_linea,a. Escalas de equivalencia,Ingreso esperado del principal perceptor frente a la línea del hogar,expr,"log_ing_esp_max - np.log(Lp*np.maximum(Npersug, 1))",,,True,False
+x_menores_por_adulto,b. Dependencia,"Razón de dependencia juvenil (ciclo de vida; Modigliani y Brumberg, 1954)",expr,"n_menor18/np.maximum(n_edad18_64, 1)",,,False,False
+x_mayores_por_adulto,b. Dependencia,Razón de dependencia de vejez,expr,"n_mayor65/np.maximum(n_edad18_64, 1)",,,False,False
+x_desocupados_por_pet,b. Dependencia,Desempleo dentro del hogar,expr,"n_desocupado/np.maximum(n_pet, 1)",,,False,False
+x_inactivos_por_pet,b. Dependencia,Inactividad dentro del hogar,expr,"n_inactivo/np.maximum(n_pet, 1)",,,False,False
+x_ocupados_por_ae,b. Dependencia,Perceptores por adulto equivalente,expr,n_ocupado/x_escala_ocde,,,False,False
+x_perceptores_esp_pc,b. Dependencia,Perceptores esperados (1.ª etapa) por miembro de la unidad de gasto,expr,"n_perceptores_esp_lp/np.maximum(Npersug, 1)",,,True,False
+x_brecha_educ_jefe_pareja,c. Capital humano,Brecha educativa jefe–pareja (emparejamiento selectivo y poder de negociación),expr,jefe_anios_educ - pareja_educ,,,False,False
+x_educ_max_x_cabecera,c. Capital humano,"Retornos a la educación distintos en zona urbana y rural (Mincer, 1974)",expr,educ_max_adultos*cabecera,,,False,False
+x_educ_jefe_x_cabecera,c. Capital humano,Educación del jefe × urbano,expr,jefe_anios_educ*cabecera,,,False,False
+x_educ_max_x_formal,c. Capital humano,"Educación × formalidad: el retorno educativo se materializa en el empleo formal (Perry et al., 2007)",expr,educ_max_adultos*share_formal_ocupados,,,False,False
+x_exp_pot_jefe,c. Capital humano,"Experiencia potencial del jefe (Mincer, 1974)",expr,"np.maximum(jefe_edad - jefe_anios_educ - 6, 0)",,,False,False
+x_log_mincer_jefe,c. Capital humano,"Log-salario de Mincer del jefe ocupado (escolaridad, experiencia y su cuadrado)",expr,(0.10*jefe_anios_educ + 0.03*x_exp_pot_jefe - 0.0005*x_exp_pot_jefe**2)*jefe_ocupado,,,False,False
+x_educ_ocup_x_ocupados_pc,c. Capital humano,Capital humano de los perceptores × perceptores por miembro,expr,educ_media_ocupados*ocupados_pc,,,False,False
+x_share_contributivo,d. Calidad del empleo,Afiliación contributiva: empleo formal o capacidad de pago,expr,"n_salud_contributivo/np.maximum(Nper, 1)",,,False,False
+x_share_asalariados,d. Calidad del empleo,"Asalariados frente a cuenta propia (Maloney, 2004)",expr,"n_asalariado/np.maximum(n_ocupado, 1)",,,False,False
+x_share_cuenta_propia,d. Calidad del empleo,"Cuenta propia: informalidad e ingresos volátiles (Fields, 2011)",expr,"n_pos_cuenta_propia/np.maximum(n_ocupado, 1)",,,False,False
+x_horas_por_ocupado,d. Calidad del empleo,Horas efectivas por ocupado (intensidad laboral),expr,"n_horas/np.maximum(n_ocupado, 1)",,,False,False
+x_share_subempleo,d. Calidad del empleo,Subempleo por horas,expr,"n_subempleo_horas/np.maximum(n_ocupado, 1)",,,False,False
+x_share_empresa_grande,d. Calidad del empleo,Tamaño de empresa: productividad y formalidad,expr,"n_empresa_grande/np.maximum(n_ocupado, 1)",,,False,False
+x_share_aux_transporte,d. Calidad del empleo,Auxilio de transporte = salario ≤ 2 SMMLV (señal legal del nivel salarial),expr,"n_subsidio_transporte/np.maximum(n_ocupado, 1)",,,False,False
+x_share_prima,d. Calidad del empleo,Prima de servicios: prestaciones de ley (formalidad),expr,"n_prima_servicios/np.maximum(n_ocupado, 1)",,,False,False
+x_formales_por_ae,d. Calidad del empleo,Cotizantes por adulto equivalente,expr,n_cotiza_pension/x_escala_ocde,,,False,False
+x_propia_x_arriendo,e. Vivienda,Tenencia propia × valor de la vivienda (activo),expr,log_arriendo_sobre_linea*ten_propia_pagada,,,False,False
+x_hacinamiento_x_cabecera,e. Vivienda,Hacinamiento urbano vs. rural,expr,personas_por_cuarto*cabecera,,,False,False
+x_dormitorios_por_cuarto,e. Vivienda,Composición de la vivienda (cuartos no dormitorio),expr,"dormitorios/np.maximum(cuartos, 1)",,,False,False
+x_jefa_x_menores,f. Composición,"Jefatura femenina con menores (Buvinić y Gupta, 1997)",expr,jefe_mujer*n_menor18,,,False,False
+x_monoparental,f. Composición,Hogar monoparental,expr,(1 - np.nan_to_num(hay_pareja))*(n_menor18 > 0),,,False,False
+x_jefa_monoparental,f. Composición,Monoparental con jefa,expr,jefe_mujer*(1 - np.nan_to_num(hay_pareja))*(n_menor18 > 0),,,False,False
+x_mayores_sin_pension,f. Composición,Adultos mayores sin pensión (vulnerabilidad de vejez),expr,"np.maximum(n_mayor65 - n_recibe_pension_jubilacion, 0)",,,False,False
+x_unipersonal_mayor,f. Composición,Adulto mayor que vive solo,expr,(Nper == 1)*(n_mayor65 >= 1),,,False,False
+x_menores5_por_adulto,f. Composición,Primera infancia frente a adultos (cuidado),expr,"n_menor5/np.maximum(n_edad18_64, 1)",,,False,False
+x_subsidiado_x_menores,g. Protección social,Régimen subsidiado (proxy del SISBÉN) × menores: focalización de programas,expr,share_subsidiado*n_menor18,,,False,False
+x_subsidiado_x_jefa,g. Protección social,Jefa en régimen subsidiado,expr,jefe_salud_subsidiado*jefe_mujer,,,False,False
+x_transferencias_pc,g. Protección social,"Ayudas institucionales, de otros hogares y remesas por miembro",expr,"(n_recibe_ayuda_instituciones + n_recibe_ayuda_otros_hogares_pais + n_recibe_remesas_exterior)/np.maximum(Npersug, 1)",,,False,False
+x_subsidiado_sin_formales,g. Protección social,Subsidiado y sin cotizantes: exclusión del aseguramiento contributivo,expr,share_subsidiado*(n_cotiza_pension == 0),,,False,False
+x_brecha_esp_x_cabecera,h. Territorio,Brecha esperada × cabecera (mercados laborales urbanos vs. rurales),expr,brecha_esperada*cabecera,,,True,False
+x_ocupados_pc_x_cabecera,h. Territorio,Perceptores × cabecera,expr,ocupados_pc*cabecera,,,False,False
+x_formales_pc_x_cabecera,h. Territorio,Formalidad × cabecera,expr,formales_pc*cabecera,,,False,False
+x_mincer_req_x_cabecera,h. Territorio,Capacidad laboral vs. requerimiento × cabecera,expr,mincer_sobre_requerido*cabecera,,,False,False
+x_brecha_esperada__rango_Dominio,h. Territorio,"Posición del hogar en la distribución de la brecha esperada de su dominio (Elbers, Lanjouw y Lanjouw, 2003)",rango_grupo,,brecha_esperada,Dominio,True,False
+x_brecha_esperada__desv_Dominio,h. Territorio,Brecha esperada frente a la mediana del dominio,desv_mediana_grupo,,brecha_esperada,Dominio,True,False
+x_lz_ingreso_esperado__rango_Dominio,h. Territorio,Rango del ingreso esperado en el dominio,rango_grupo,,lz_ingreso_esperado,Dominio,True,False
+x_educ_max_adultos__desv_Dominio,h. Territorio,Educación relativa al dominio,desv_mediana_grupo,,educ_max_adultos,Dominio,False,False
+x_log_arriendo_sobre_linea__desv_Dominio,h. Territorio,Valor de la vivienda relativo al dominio,desv_mediana_grupo,,log_arriendo_sobre_linea,Dominio,False,False
+x_mincer_sobre_requerido__rango_Dominio,h. Territorio,Capacidad laboral relativa al dominio,rango_grupo,,mincer_sobre_requerido,Dominio,False,False
+x_ocupados_pc__desv_Dominio,h. Territorio,Perceptores relativos al dominio,desv_mediana_grupo,,ocupados_pc,Dominio,False,False
+x_log_arriendo_sobre_linea__desv_Depto,h. Territorio,Valor de la vivienda relativo al departamento,desv_mediana_grupo,,log_arriendo_sobre_linea,Depto,False,False
+x_v5_lz_ocde,a. Escalas de equivalencia,"Ingreso esperado (1.ª etapa v5) por adulto equivalente OCDE frente a la línea (Deaton, 1997)",expr,v5_log_ing_esp - np.log(x_escala_ocde) - np.log(Lp),,,True,False
+x_dependencia_economica,b. Dependencia,Dependencia económica: miembros sin ingreso laboral ni pensión por perceptor,expr,"(Npersug - np.minimum(n_ocupado + n_pensionado, Npersug))/np.maximum(n_ocupado + n_pensionado, 1)",,,False,False
+x_v5_perceptores_por_ae,b. Dependencia,Perceptores esperados (1.ª etapa v5) por adulto equivalente,expr,v5_n_perceptores_esp/x_escala_ocde,,,True,False
+x_superior_por_adulto,c. Capital humano,Proporción de adultos con educación superior (prima de la educación terciaria en Colombia),expr,"n_educ_superior/np.maximum(n_edad18_64 + n_mayor65, 1)",,,False,False
+x_pension_por_mayor,g. Protección social,Cobertura pensional de los adultos mayores,expr,"n_recibe_pension_jubilacion/np.maximum(n_mayor65, 1)",,,False,False
+x_hacinamiento_x_menores,e. Vivienda,Hacinamiento con niños (IPM),expr,personas_por_dormitorio*share_menores,,,False,False
+x_v5_brecha_x_cabecera,h. Territorio,Brecha esperada v5 × cabecera,expr,v5_brecha*cabecera,,,True,False
+x_v5_zhat_hogar__rango_Dominio,h. Territorio,"Posición de ẑ_h en la distribución de su dominio (Elbers, Lanjouw y Lanjouw, 2003)",rango_grupo,,v5_zhat_hogar,Dominio,True,False
+x_v5_zhat_hogar__desv_Dominio,h. Territorio,ẑ_h frente a la mediana del dominio,desv_mediana_grupo,,v5_zhat_hogar,Dominio,True,False
+x_v5_brecha__desv_Depto,h. Territorio,Brecha v5 frente a la mediana del departamento,desv_mediana_grupo,,v5_brecha,Depto,True,False
