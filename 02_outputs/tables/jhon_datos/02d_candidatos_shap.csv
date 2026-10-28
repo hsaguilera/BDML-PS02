@@ -1,0 +1,133 @@
+variable,familia,motivacion,tipo,origen,usa_generadas,monotona_univariada,rho_residuo,abs_rho,pct_na
+x_ind_requerido_no_positivo,,,indicador,indicador de umbral,False,False,0.20569434082245094,0.20569434082245094,0.0
+x_i_prima_servicios_linea__rango_Depto,,,rango_grupo,posición relativa en Depto,False,False,0.14631006296278787,0.14631006296278787,0.0
+x_i_prima_servicios_linea__desv_Depto,,,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.13492467873219202,0.13492467873219202,0.0
+x_i_prima_servicios_linea__desv_Dominio,,,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.13060278310619367,0.13060278310619367,0.0
+x_c_pensionados_linea__por__c_arriendos_linea,,,producto,par SHAP,False,False,0.12620109362365006,0.12620109362365006,0.0
+x_c_pensionados_linea__desv_Depto,,,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.1261271679636253,0.1261271679636253,0.0
+x_c_pensionados_linea__desv_Dominio,,,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.1261271679636253,0.1261271679636253,0.0
+x_i_prima_servicios_linea__rango_Dominio,,,rango_grupo,posición relativa en Dominio,False,False,0.12565373106062047,0.12565373106062047,0.0
+x_c_pensionados_linea__sobre__c_arriendos_linea,,,cociente,par SHAP,False,False,0.12434544587485656,0.12434544587485656,0.0
+x_c_arriendos_linea__desv_Depto,,,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.12139011002379765,0.12139011002379765,0.0
+x_c_arriendos_linea__desv_Dominio,,,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.12139011002379765,0.12139011002379765,0.0
+x_u_requerido_sobre_arriendo__sobre__t_inv_c_hs_linea,,,cociente,par SHAP,False,False,-0.12087006030290286,0.12087006030290286,0.0
+x_i_perceptores_lab_linea__por__u_requerido_sobre_arriendo,,,producto,par SHAP,False,False,-0.12080824730616205,0.12080824730616205,0.0
+x_c_asalariados_linea__rango_Depto,,,rango_grupo,posición relativa en Depto,False,False,0.12017886037116597,0.12017886037116597,0.0
+x_c_pensionados_pc__desv_Depto,,,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.11938634374651674,0.11938634374651674,0.0
+x_c_pensionados_pc__desv_Dominio,,,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.11938634374651674,0.11938634374651674,0.0
+x_c_arriendos_linea__sobre__t_inv_c_hs_linea,,,cociente,par SHAP,False,False,0.11693364197279364,0.11693364197279364,0.0
+x_c_formales_menos_lineas__rango_Depto,,,rango_grupo,posición relativa en Depto,False,False,0.1163485478712785,0.1163485478712785,0.0
+x_ind_todos_subsidiados,,,indicador,indicador de umbral,False,False,-0.11600999812389916,0.11600999812389916,0.0
+x_c_h_tam_linea__por__g_P6100_1_sh,,,producto,par SHAP,False,False,0.11338770608152686,0.11338770608152686,0.0
+x_c_asalariados_menos_lineas__rango_Depto,,,rango_grupo,posición relativa en Depto,False,False,0.1109605006681256,0.1109605006681256,0.0
+x_c_formales_menos_lineas__desv_Depto,,,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.11055962797620306,0.11055962797620306,0.0
+x_c_formales_menos_lineas__rango_Dominio,,,rango_grupo,posición relativa en Dominio,False,False,0.11013744878683768,0.11013744878683768,0.0
+x_c_h_tam_linea__por__c_asalariados_linea,,,producto,par SHAP,False,False,0.11008441496232862,0.11008441496232862,0.0
+x_c_formales_menos_lineas__desv_Dominio,,,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.10688710564060686,0.10688710564060686,0.0
+x_c_asalariados_linea__rango_Dominio,,,rango_grupo,posición relativa en Dominio,False,False,0.10551559794451779,0.10551559794451779,0.0
+x_c_asalariados_menos_lineas__desv_Depto,,,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.10498144732297106,0.10498144732297106,0.0
+x_c_asalariados_menos_lineas__rango_Dominio,,,rango_grupo,posición relativa en Dominio,False,False,0.10456891963386722,0.10456891963386722,0.0
+x_c_asalariados_linea__desv_Depto,,,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.10358674399463805,0.10358674399463805,0.0
+x_c_arriendos_linea__rango_Depto,,,rango_grupo,posición relativa en Depto,False,False,0.10294710902595079,0.10294710902595079,0.0
+x_c_asalariados_linea__desv_Dominio,,,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.10267228616675932,0.10267228616675932,0.0
+x_c_arriendos_linea__sobre__c_pensionados_linea,,,cociente,par SHAP,False,False,0.10240771081537456,0.10240771081537456,0.0
+x_c_asalariados_menos_lineas__desv_Dominio,,,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.10193376173241485,0.10193376173241485,0.0
+x_c_h_tam_linea__por__c_arriendos_linea,,,producto,par SHAP,False,False,0.10101818035105525,0.10101818035105525,0.0
+x_c_h_tam_linea__desv_Depto,,,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.10082908847465764,0.10082908847465764,0.0
+x_c_h_tam_linea__desv_Dominio,,,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.09830993042664322,0.09830993042664322,0.0
+x_i_perceptores_lab_linea__sobre__c_h_tam_linea,,,cociente,par SHAP,False,False,-0.09667668922875935,0.09667668922875935,0.0
+x_beneficios_por_ocupado__por__g_P6100_1_sh,,,producto,par SHAP,False,False,0.09628516602176063,0.09628516602176063,0.0
+x_c_arriendos_linea__por__t_inv_c_hs_linea,,,producto,par SHAP,False,False,0.09550855384388612,0.09550855384388612,0.0
+x_c_arriendos_linea__sobre__c_h_tam_linea,,,cociente,par SHAP,False,False,0.09431222967473438,0.09431222967473438,0.0
+x_n_n_beneficios__pc,,,per_capita,per cápita,False,False,0.09377122537439433,0.09377122537439433,0.0
+x_u_requerido_sobre_arriendo__sobre__c_h_tam_linea,,,cociente,par SHAP,False,False,-0.09249806446060896,0.09249806446060896,0.0
+x_ind_arriendo_bajo_linea,,,indicador,indicador de umbral,False,False,0.09039486251705682,0.09039486251705682,0.0
+x_ind_sin_cotizantes_con_ocupados,,,indicador,indicador de umbral,False,False,-0.0884629849818219,0.0884629849818219,0.0
+x_t_inv_c_hs_linea__sobre__c_arriendos_linea,,,cociente,par SHAP,False,False,-0.08656434673524004,0.08656434673524004,0.0
+x_c_pensionados_linea__rango_Depto,,,rango_grupo,posición relativa en Depto,False,False,0.08568109239261049,0.08568109239261049,0.0
+x_ind_un_ocupado_hogar_grande,,,indicador,indicador de umbral,False,False,0.08553820741810263,0.08553820741810263,0.0
+x_i_perceptores_lab_linea__por__t_inv_c_hs_linea,,,producto,par SHAP,False,False,-0.0834085598154628,0.0834085598154628,0.0
+x_i_perceptores_linea__desv_Depto,,,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.08274734760897107,0.08274734760897107,0.0
+x_t_inv_c_hs_linea__por__u_requerido_sobre_arriendo,,,producto,par SHAP,False,False,-0.08261688601393492,0.08261688601393492,0.0
+x_i_aux_transporte_linea__rango_Depto,,,rango_grupo,posición relativa en Depto,False,False,0.08221485370615589,0.08221485370615589,0.0
+x_c_arriendos_linea__rango_Dominio,,,rango_grupo,posición relativa en Dominio,False,False,0.08200826636164607,0.08200826636164607,0.0
+x_n_n_beneficios__rango_Depto,,,rango_grupo,posición relativa en Depto,False,False,0.08164341016437276,0.08164341016437276,0.0
+x_c_h_tam_linea__sobre__c_asalariados_linea,,,cociente,par SHAP,False,False,-0.08114232487370383,0.08114232487370383,0.0
+x_i_perceptores_linea__desv_Dominio,,,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.07864422370651886,0.07864422370651886,0.0
+x_beneficios_por_ocupado__rango_Depto,,,rango_grupo,posición relativa en Depto,False,False,0.07854726020156721,0.07854726020156721,0.0
+x_c_h_tam_linea__por__u_requerido_sobre_arriendo,,,producto,par SHAP,False,False,-0.07835474176631566,0.07835474176631566,0.0
+x_ind_personas_cuarto_gt2,,,indicador,indicador de umbral,False,False,0.07792596798989597,0.07792596798989597,0.0
+x_i_aux_transporte_linea__desv_Depto,,,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.07626507550397182,0.07626507550397182,0.0
+x_i_aux_transporte_linea__desv_Dominio,,,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.07626507550397182,0.07626507550397182,0.0
+x_c_pensionados_pc__rango_Depto,,,rango_grupo,posición relativa en Depto,False,False,0.07363458202613231,0.07363458202613231,0.0
+x_n_n_beneficios__desv_Depto,,,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.07289993761581824,0.07289993761581824,0.0
+x_t_inv_i_perceptores_linea__sobre__c_h_tam_linea,,,cociente,par SHAP,False,False,-0.07136719001248291,0.07136719001248291,0.0
+x_c_arriendos_linea__por__u_requerido_sobre_arriendo,,,producto,par SHAP,False,False,-0.07102878551038114,0.07102878551038114,0.0
+x_n_n_beneficios__desv_Dominio,,,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.07085122250454824,0.07085122250454824,0.0
+x_c_h_tam_linea__por__x_perceptores_linea_x_educ_oc,,,producto,par SHAP,False,False,0.07019473371065721,0.07019473371065721,0.0
+x_c_h_tam_linea__sobre__t_inv_i_perceptores_linea,,,cociente,par SHAP,False,False,0.06755258609132993,0.06755258609132993,0.0
+x_c_h_tam_linea__sobre__t_inv_c_hs_linea,,,cociente,par SHAP,False,False,0.0673899762585974,0.0673899762585974,0.0
+x_t_inv_c_hs_linea__sobre__c_h_tam_linea,,,cociente,par SHAP,False,False,-0.06642732811496799,0.06642732811496799,0.0
+x_i_perceptores_linea__rango_Depto,,,rango_grupo,posición relativa en Depto,False,False,0.06560380763705842,0.06560380763705842,0.0
+x_u_requerido_sobre_arriendo__sobre__c_arriendos_linea,,,cociente,par SHAP,False,False,-0.06527250112828303,0.06527250112828303,0.0
+x_c_pensionados_linea__rango_Dominio,,,rango_grupo,posición relativa en Dominio,False,False,0.06499155496276454,0.06499155496276454,0.0
+x_x_perceptores_linea_x_educ_oc__desv_Depto,,,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.06377707075762296,0.06377707075762296,0.0
+x_beneficios_por_ocupado__desv_Depto,,,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.0637637722075918,0.0637637722075918,0.0
+x_c_h_tam_linea__rango_Depto,,,rango_grupo,posición relativa en Depto,False,False,0.06372400004051683,0.06372400004051683,0.0
+x_n_n_beneficios__rango_Dominio,,,rango_grupo,posición relativa en Dominio,False,False,0.06370257757314979,0.06370257757314979,0.0
+x_i_perceptores_linea__rango_Dominio,,,rango_grupo,posición relativa en Dominio,False,False,0.061710020603414434,0.061710020603414434,0.0
+x_u_requerido_sobre_arriendo__rango_Depto,,,rango_grupo,posición relativa en Depto,False,False,-0.06154535088532762,0.06154535088532762,0.0
+x_x_perceptores_linea_x_educ_oc__desv_Dominio,,,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.06140879551498437,0.06140879551498437,0.0
+x_beneficios_por_ocupado__desv_Dominio,,,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.060249295937813856,0.060249295937813856,0.0
+x_beneficios_por_ocupado__rango_Dominio,,,rango_grupo,posición relativa en Dominio,False,False,0.059063199103995524,0.059063199103995524,0.0
+x_i_aux_transporte_linea__rango_Dominio,,,rango_grupo,posición relativa en Dominio,False,False,0.05681454426882194,0.05681454426882194,0.0
+x_c_h_tam_linea__rango_Dominio,,,rango_grupo,posición relativa en Dominio,False,False,0.056321807610384494,0.056321807610384494,0.0
+x_u_requerido_sobre_arriendo__sobre__i_perceptores_lab_linea,,,cociente,par SHAP,False,False,-0.05616549525135381,0.05616549525135381,0.0
+x_c_h_tam_linea__sobre__c_arriendos_linea,,,cociente,par SHAP,False,False,-0.055989123992112894,0.055989123992112894,0.0
+x_x_perceptores_linea_x_educ_oc__rango_Depto,,,rango_grupo,posición relativa en Depto,False,False,0.05477688740615743,0.05477688740615743,0.0
+x_c_hs_linea__desv_Depto,,,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.05438176759838778,0.05438176759838778,0.0
+x_x_perceptores_linea_x_educ_oc__sobre__t_inv_c_hs_linea,,,cociente,par SHAP,False,False,0.05342527521531568,0.05342527521531568,0.0
+x_t_inv_c_hs_linea__sobre__x_perceptores_linea_x_educ_oc,,,cociente,par SHAP,False,False,-0.0531098226900461,0.0531098226900461,0.0
+x_x_perceptores_linea_x_educ_oc__sobre__c_h_tam_linea,,,cociente,par SHAP,False,False,-0.05236328248626854,0.05236328248626854,0.0
+x_c_pensionados_pc__rango_Dominio,,,rango_grupo,posición relativa en Dominio,False,False,0.05205407152716801,0.05205407152716801,0.0
+x_u_requerido_sobre_arriendo__rango_Dominio,,,rango_grupo,posición relativa en Dominio,False,False,-0.0520235377108955,0.0520235377108955,0.0
+x_c_hs_linea__desv_Dominio,,,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.05121584854325359,0.05121584854325359,0.0
+x_c_h_tam_linea__por__i_perceptores_lab_linea,,,producto,par SHAP,False,False,0.05109474856438305,0.05109474856438305,0.0
+x_conteo_carencias,,,conteo,conteo de carencias,False,False,-0.04890324364175008,0.04890324364175008,0.0
+x_x_perceptores_linea_x_educ_oc__rango_Dominio,,,rango_grupo,posición relativa en Dominio,False,False,0.04827033961747287,0.04827033961747287,0.0
+x_u_requerido_sobre_arriendo__desv_Depto,,,desv_mediana_grupo,desviación de la mediana de Depto,False,False,-0.04729695535393644,0.04729695535393644,0.0
+x_g_P6100_1_sh__sobre__c_h_tam_linea,,,cociente,par SHAP,False,False,-0.04655200843003933,0.04655200843003933,0.0
+x_t_inv_c_hs_linea__rango_Depto,,,rango_grupo,posición relativa en Depto,False,False,-0.04591078765201303,0.04591078765201303,0.0
+x_c_hs_linea__rango_Depto,,,rango_grupo,posición relativa en Depto,False,False,0.04346173297802227,0.04346173297802227,0.0
+x_t_inv_c_hs_linea__rango_Dominio,,,rango_grupo,posición relativa en Dominio,False,False,-0.03963698918394327,0.03963698918394327,0.0
+x_c_h_tam_linea__por__t_inv_i_perceptores_linea,,,producto,par SHAP,False,False,0.03881625413606976,0.03881625413606976,0.0
+x_t_inv_c_hs_linea__sobre__i_perceptores_linea,,,cociente,par SHAP,False,False,-0.03811822560938919,0.03811822560938919,0.0
+x_c_hs_linea__rango_Dominio,,,rango_grupo,posición relativa en Dominio,False,False,0.03657138526092136,0.03657138526092136,0.0
+x_i_perceptores_linea__sobre__t_inv_c_hs_linea,,,cociente,par SHAP,False,False,0.035360571706337544,0.035360571706337544,0.0
+x_i_fuentes_por_perceptor__desv_Depto,,,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.033569145324228986,0.033569145324228986,0.0
+x_u_requerido_sobre_arriendo__desv_Dominio,,,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,-0.032186931147070275,0.032186931147070275,0.0
+x_i_fuentes_por_perceptor__desv_Dominio,,,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.03185706178499379,0.03185706178499379,0.0
+x_t_inv_c_hs_linea__sobre__i_perceptores_lab_linea,,,cociente,par SHAP,False,False,-0.030331087337358852,0.030331087337358852,0.0
+x_i_perceptores_lab_linea__sobre__t_inv_c_hs_linea,,,cociente,par SHAP,False,False,0.029329178508005448,0.029329178508005448,0.0
+x_beneficios_por_ocupado__sobre__g_P6100_1_sh,,,cociente,par SHAP,False,False,0.028482862645069332,0.028482862645069332,0.0
+x_i_fuentes_por_perceptor__rango_Depto,,,rango_grupo,posición relativa en Depto,False,False,0.027851044503391376,0.027851044503391376,0.0
+x_t_inv_c_hs_linea__desv_Depto,,,desv_mediana_grupo,desviación de la mediana de Depto,False,False,-0.027833174957745316,0.027833174957745316,0.0
+x_arriendo_x_cabecera__desv_Dominio,,,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.027298097884314185,0.027298097884314185,0.0
+x_ind_jefe_primaria_o_menos,,,indicador,indicador de umbral,False,False,-0.02700667754135039,0.02700667754135039,0.0
+x_i_fuentes_por_perceptor__rango_Dominio,,,rango_grupo,posición relativa en Dominio,False,False,0.026549894883015377,0.026549894883015377,0.0
+x_arriendo_x_cabecera__rango_Depto,,,rango_grupo,posición relativa en Depto,False,False,0.02333252565208957,0.02333252565208957,0.0
+x_c_h_tam_linea__sobre__i_perceptores_lab_linea,,,cociente,par SHAP,False,False,0.02258386931196985,0.02258386931196985,0.0
+x_arriendo_x_cabecera__desv_Depto,,,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.022425674820894193,0.022425674820894193,0.0
+x_c_h_tam_linea__sobre__g_P6100_1_sh,,,cociente,par SHAP,False,False,-0.019029524228719074,0.019029524228719074,0.0
+x_c_h_tam_linea__sobre__x_perceptores_linea_x_educ_oc,,,cociente,par SHAP,False,False,-0.016660361676565164,0.016660361676565164,0.0
+x_c_asalariados_linea__sobre__c_h_tam_linea,,,cociente,par SHAP,False,False,0.0157346675599539,0.0157346675599539,0.0
+x_g_P6100_1_sh__sobre__beneficios_por_ocupado,,,cociente,par SHAP,False,False,0.014500444738454044,0.014500444738454044,0.0
+x_i_perceptores_lab_linea__desv_Depto,,,desv_mediana_grupo,desviación de la mediana de Depto,False,False,0.012464623067311838,0.012464623067311838,0.0
+x_x_perceptores_linea_x_educ_oc__por__t_inv_c_hs_linea,,,producto,par SHAP,False,False,0.011326572916250976,0.011326572916250976,0.0
+x_i_perceptores_lab_linea__desv_Dominio,,,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,0.011326353934416687,0.011326353934416687,0.0
+x_t_inv_c_hs_linea__desv_Dominio,,,desv_mediana_grupo,desviación de la mediana de Dominio,False,False,-0.009218186428412106,0.009218186428412106,0.0
+x_c_h_tam_linea__por__t_inv_c_hs_linea,,,producto,par SHAP,False,False,0.004787808687915259,0.004787808687915259,0.0
+x_arriendo_x_cabecera__rango_Dominio,,,rango_grupo,posición relativa en Dominio,False,False,0.0026210049872395806,0.0026210049872395806,0.0
+x_i_perceptores_lab_linea__rango_Dominio,,,rango_grupo,posición relativa en Dominio,False,False,-0.002597599943416396,0.002597599943416396,0.0
+x_t_inv_c_hs_linea__por__i_perceptores_linea,,,producto,par SHAP,False,False,-0.0024973481628524107,0.0024973481628524107,0.0
+x_i_perceptores_lab_linea__rango_Depto,,,rango_grupo,posición relativa en Depto,False,False,4.4530992921064524e-05,4.4530992921064524e-05,0.0
