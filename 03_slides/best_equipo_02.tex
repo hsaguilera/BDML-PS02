@@ -6,6 +6,8 @@
 % ==============================================================================
 \def\deckname{Best Model Deep Dive}
 \input{preamble.tex}
+\graphicspath{{../../02_outputs/figures/}{02_outputs/figures/}}   % figuras del proyecto (desde 03_slides o desde la raíz)
+\newcommand{\lineaLeyenda}[2]{\textcolor{#1}{\rule[0.45ex]{1.3em}{1.4pt}}\,#2}   % leyenda de una línea (diapositiva de la matriz)
 
 \begin{document}
 
@@ -197,19 +199,38 @@
 \begin{frame}{Política: el F1 acepta \nUnderLGBM{}\,\% de pobres excluidos y \nLeakLGBM{}\,\% de filtración}
   \begin{columns}[T]
     \column{.36\textwidth}
-    \centering\small\textbf{Matriz de confusión}\\[1mm]
+    \centering\small\textbf{Matriz de confusión}\\[2mm]
     \footnotesize
-    \resizebox{\linewidth}{!}{\input{tables/confusion_lgbm.tex}}\\[2mm]
-    \small\raggedright
-    \textbf{Precisión} \nPrecLGBM, \textbf{cobertura} \nRecLGBM.\\[2mm]
-    El F1 pesa por igual excluir a un pobre y beneficiar a un no pobre.
+    {\renewcommand{\arraystretch}{1.2}%
+     \resizebox{\linewidth}{!}{\input{tables/confusion_lgbm_pct.tex}}}\\[0.5mm]
+    \fuente{Hogares y \% por fila (sobre la clase real).}\\[1mm]
+    \footnotesize\raggedright
+    \textbf{Precisión} \nPrecLGBM, \textbf{cobertura} \nRecLGBM. El F1 pesa por igual excluir a un pobre y beneficiar a un no pobre.
     \column{.62\textwidth}
-    \figura[.58\textheight]{harold_slide_threshold_tradeoff.png}
+    \centering
+    % PNG a 150 dpi (816 x 408 bp): se recorta el 13 % inferior (leyenda en dos filas) y se redibuja en una línea
+    \includegraphics[width=\linewidth,height=.38\textheight,keepaspectratio,trim=0 53 0 0,clip]{harold_slide_threshold_tradeoff.png}\\[-0.5mm]
+    {\scriptsize \lineaLeyenda{azul}{F1}\quad \lineaLeyenda{verde}{Filtración: beneficiarios no pobres}\quad \lineaLeyenda{naranja}{Subcobertura: pobres excluidos}}
   \end{columns}
-  \vspace{1mm}
+  \vspace{1.5mm}
   \begin{block}{¿Preferiría un gobierno otro balance?}
-    \footnotesize
-    Para dejar fuera a solo 10\,\% de los pobres haría falta un umbral de \nThrUnderTen{}, y la filtración subiría a \nLeakAtUnderTen{}\,\%. El costo fiscal de ese equilibrio lo decide la política, no el F1.
+    \begin{columns}[c]
+      \column{.56\textwidth}
+      \centering\footnotesize\setlength{\tabcolsep}{5pt}
+      \begin{tabular}{lcc}
+        \toprule
+        \textbf{Umbral} & \textbf{Pobres excluidos} & \textbf{Beneficiarios no pobres}\\
+        \midrule
+        0,50 & \nUnderAtHalf\,\% & \nLeakAtHalf\,\%\\
+        \resaltar{\nThrLGBM{} (máx. F1)} & \resaltar{\nUnderLGBM\,\%} & \resaltar{\nLeakLGBM\,\%}\\
+        \nThrUnderTen & 10\,\% & \nLeakAtUnderTen\,\%\\
+        \bottomrule
+      \end{tabular}\\[0.5mm]
+      \fuente{Validación cruzada de 5 pliegues, sin Bogotá.}
+      \column{.42\textwidth}
+      \footnotesize\raggedright
+      Para dejar fuera a solo 10\,\% de los pobres haría falta un umbral de \nThrUnderTen{}, y la filtración subiría a \nLeakAtUnderTen{}\,\%. El costo fiscal de ese equilibrio lo decide la política, no el F1.
+    \end{columns}
   \end{block}
 \end{frame}
 
