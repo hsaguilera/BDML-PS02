@@ -1,0 +1,65 @@
+pregunta,media,ee,etiqueta
+Npersug,0.6212135855109561,0.011001127850212844,Npersug (Número de personas de la unidad de gasto (listado + parentes…)
+P6050,0.6198428032331635,0.010913294407090393,P6050 (Parentesco con el jefe o jefa del hogar)
+P5130,0.5382266660398576,0.008873827560692013,"P5130 (Si tuviera que pagar arriendo por esta vivienda, ¿cuánto est…)"
+P5090,0.5199456039805831,0.008377852090607714,"P5090 (La vivienda ocupada por este hogar es: propia pagada, propia…)"
+P5100,0.5160835971400619,0.008394674028031044,P5100 (¿Cuánto pagan mensualmente por cuota de amortización?)
+Oc,0.45622588276539916,0.0063206389206343335,Oc (Ocupado (derivado del módulo de fuerza de trabajo))
+P6800,0.17776635611096667,0.003058778097653649,P6800 (¿Cuántas horas a la semana trabaja normalmente en ese trabaj…)
+P7045,0.17204735874713015,0.0028557382440482387,P7045 (¿Cuántas horas trabajó la semana pasada en ese segundo traba…)
+P7495,0.1305842508662331,0.0029118097624449267,"P7495 (El mes pasado, ¿recibió pagos por arriendos y/o pensiones? (…)"
+P7500s2,0.09474903336763063,0.0014963589309817658,"P7500s2 (¿Recibió pagos por pensiones o jubilaciones (vejez, invalide…)"
+P7422,0.07912719568766315,0.001946071459372712,P7422 (Desocupados: ¿recibió o ganó el mes pasado ingresos por trab…)
+P6430,0.07573811478975645,0.001462386528799898,P6430 (Posición ocupacional en el trabajo principal)
+P7472,0.07422253366381311,0.001660563112417998,P7472 (Inactivos: ¿recibió o ganó el mes pasado ingresos por trabaj…)
+P7040,0.07377537442706723,0.0016708394446630428,P7040 (¿Tenía la semana pasada otro trabajo o negocio?)
+P5000,0.06584652066960621,0.0031370486864832534,"P5000 (Incluyendo sala-comedor, ¿de cuántos cuartos en total dispon…)"
+P5140,0.06318060576756682,0.0032475406132926243,P5140 (¿Cuánto pagan mensualmente por arriendo?)
+P6210,0.055979806329425466,0.0018402204232508769,P6210 (Nivel educativo más alto alcanzado)
+P7510s1,0.05538376253039011,0.0010860871582738434,P7510s1 (Últimos 12 meses: dinero de otros hogares o personas residen…)
+P6210s1,0.05340077148538308,0.001957485121645883,P6210s1 (Último año o grado aprobado)
+P7500s3,0.04897704293621284,0.0013711719832091634,"P7500s3 (¿Recibió pagos por pensión alimenticia (paternidad, divorcio…)"
+P7510s5,0.04778977604839947,0.0016500498906582225,"P7510s5 (Últimos 12 meses: intereses, CDT, depósitos, utilidades o di…)"
+P7510s2,0.04577597841077782,0.001744505179349949,P7510s2 (Últimos 12 meses: dinero de hogares o personas residentes fu…)
+P7510s3,0.04431059243151039,0.0017327143644625003,P7510s3 (Últimos 12 meses: ayudas en dinero de instituciones del país…)
+P7510s6,0.04390972354673877,0.0017025507569747669,P7510s6 (Últimos 12 meses: cesantías y/o intereses a las cesantías)
+P7510s7,0.04296591540611444,0.0017502379405166472,P7510s7 (Últimos 12 meses: dinero de otras fuentes)
+P6870,0.04100882323374728,0.0016566529095343198,P6870 (¿Cuántas personas en total tiene la empresa donde trabaja?)
+P6630s1,0.01936919895667554,0.001379125150077933,P6630s1 (En los últimos 12 meses recibió prima de servicios)
+P6585s2,0.01781844744254816,0.0012175174724159438,P6585s2 (¿El mes pasado recibió auxilio o subsidio de transporte?)
+P6590,0.012849393731977738,0.0005546494665439497,"P6590 (Además del salario en dinero, ¿recibió alimentos como parte …)"
+P6585s3,0.012404887109717811,0.0005472187698098869,P6585s3 (¿El mes pasado recibió subsidio familiar?)
+P6630s3,0.012259409113543968,0.0008144206373987893,P6630s3 (En los últimos 12 meses recibió prima de vacaciones)
+P6630s2,0.012204872238066888,0.0007698354470508196,P6630s2 (En los últimos 12 meses recibió prima de navidad)
+P6620,0.012158896671389136,0.0006002877487836227,"P6620 (¿Recibió otros ingresos en especie (electrodomésticos, ropa,…)"
+P6510,0.012139347507433373,0.0006447063353757901,P6510 (¿El mes pasado recibió ingresos por concepto de horas extras…)
+P6610,0.012087997176963978,0.0006361378052221877,P6610 (¿Normalmente utiliza transporte de la empresa para ir a su t…)
+P6600,0.012052567453548824,0.0006040409455240472,"P6600 (Además del salario en dinero, ¿recibió vivienda como parte d…)"
+P6580,0.011979275364103393,0.0007423134844207522,P6580 (¿El mes pasado recibió bonificaciones?)
+P6585s1,0.011971159686705823,0.0006514668315422148,P6585s1 (¿El mes pasado recibió auxilio o subsidio de alimentación?)
+P6545,0.011903575150944484,0.0006982267170546302,"P6545 (El mes pasado recibió primas (técnica, de antigüedad, clima,…)"
+P6630s4,0.011789066123221443,0.0006717586987607964,P6630s4 (En los últimos 12 meses recibió viáticos permanentes)
+P6585s4,0.011775621723016888,0.0006706078239963573,P6585s4 (¿El mes pasado recibió subsidio educativo?)
+P6630s6,0.0117720415467855,0.0006664636954779415,P6630s6 (En los últimos 12 meses recibió bonificaciones anuales)
+P6920,0.006751406100137397,0.0010436521754406025,P6920 (¿Está cotizando actualmente a un fondo de pensiones?)
+P6426,0.006693013092361766,0.0008589772128632267,P6426 (¿Cuánto tiempo lleva trabajando en esta empresa de manera co…)
+P6040,0.006236670215659018,0.00036779629505597893,P6040 (¿Cuántos años cumplidos tiene?)
+Nper,0.0060451394742434385,0.0006205749101133296,Nper (Número de personas del hogar (listado de personas))
+Oficio,0.004790703279325259,0.00040186096749166434,"Oficio (¿Qué hace en este trabajo? (oficio, CIUO-68 a 2 dígitos))"
+P6100,0.004444802481607812,0.00025381366555506015,"P6100 (Régimen de seguridad social en salud: contributivo, especial…)"
+P7505,0.0030490183274535176,0.0005254420244445396,"P7505 (Últimos 12 meses: ¿dinero de otros hogares o instituciones, …)"
+P6020,0.0028029382705560824,0.00026425772602514674,P6020 (Sexo)
+P6240,0.002487683500691296,0.0004883341740115539,P6240 (Actividad en la que ocupó la mayor parte del tiempo la seman…)
+P7160,0.0012017102738128727,0.00017069226937307702,P7160 (¿Podría empezar un nuevo trabajo antes de un mes?)
+P7150,0.0007069815720972594,0.00012224034755197754,P7150 (¿Hizo diligencias para cambiar de trabajo?)
+Des,0.00041317451693370644,0.00013801161904415936,Des (Desocupado (derivado del módulo de fuerza de trabajo))
+P5010,0.00041026795831514693,0.00013873447376376826,P5010 (¿En cuántos de esos cuartos duermen las personas de este hog…)
+P7090,0.0003436916675478574,7.991928873423481e-05,P7090 (¿Quiere trabajar más horas?)
+P6090,0.0002981687108420727,9.597441018510641e-05,"P6090 (¿Está afiliado, es cotizante o es beneficiario de alguna ent…)"
+P7050,0.00013791063650449021,8.695220356198658e-05,P7050 (Posición ocupacional en el segundo trabajo)
+P7120,8.503723804010876e-05,2.5936791468991647e-05,P7120 (¿Estaba disponible para trabajar más horas?)
+P7110,6.83323022600324e-05,1.700572554121199e-05,P7110 (¿Hizo diligencias para trabajar más horas?)
+P7310,4.184983251280805e-05,2.0284255010477162e-05,P7310 (¿Buscó trabajo por primera vez o había trabajado antes?)
+P7350,-2.615771966468783e-06,2.7588755048053005e-05,P7350 (Posición ocupacional en el último trabajo (desocupados))
+Ina,-2.9970064032380784e-06,2.4410286233622927e-06,Ina (Inactivo (derivado del módulo de fuerza de trabajo))
+Pet,-2.0103762927542458e-05,1.65035471944715e-05,Pet (Población en edad de trabajar (derivada de la edad y la clas…)
