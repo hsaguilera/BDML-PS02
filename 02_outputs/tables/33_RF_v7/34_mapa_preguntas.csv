@@ -1,0 +1,1153 @@
+variable,preguntas,n_preguntas_costo,regla
+arriendo_sobre_linea,"Dominio, Lp, Npersug, P5000, P5130, P5140",4,fase B
+log_arriendo_sobre_linea,"Dominio, Lp, Npersug, P5000, P5130, P5140",4,fase B
+log_arriendo_pc,"Dominio, Npersug, P5000, P5130, P5140",4,fase B
+dependientes_por_ocupado,"Nper, Oc",2,fase B
+n_salud_subsidiado,P6100,1,fase B
+horas_pc,"Npersug, Oc, P6800, P7045",4,fase B
+n_salud_contributivo,P6100,1,fase B
+log_arriendo,"Dominio, P5000, P5130, P5140",3,fase B
+arriendo,"Dominio, P5000, P5130, P5140",3,fase B
+arriendo_x_cabecera,"Clase, Dominio, Lp, Npersug, P5000, P5130, P5140",4,fase B
+personas_por_cuarto,"Nper, P5000",2,fase B
+ocupados_pc,"Npersug, Oc",2,fase B
+n_menor18,P6040,1,fase B
+share_menores,"Nper, P6040",2,fase B
+ocupados_x_formal,"Npersug, Oc, P6920",3,fase B
+formales_pc,"Npersug, P6920",2,fase B
+horas_formales_pc,"Npersug, Oc, P6800, P6920, P7045",5,fase B
+log_ingreso_requerido,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+educ_media_ocupados,"Oc, P6210, P6210s1",3,fase B
+jefe_salud_subsidiado,"P6050, P6100",2,fase B
+n_cotiza_pension,P6920,1,fase B
+n_horas_formal,"Oc, P6800, P6920, P7045",4,fase B
+jefe_salud_contributivo,"P6050, P6100",2,fase B
+share_subsidiado,"Nper, P6100",2,fase B
+personas_por_dormitorio,"Nper, P5010",2,fase B
+share_formal_ocupados,"Oc, P6920",2,fase B
+log_arriendo_por_cuarto,"Dominio, P5000, P5130, P5140",3,fase B
+n_n_beneficios,"P6510, P6545, P6580, P6585s1, P6585s2, P6585s3, P6585s4, P6590, P6600, P6610, P6620, P6630s1, P6630s2, P6630s3, P6630s4, P6630s6",16,fase B
+educ_media_adultos,"P6040, P6210, P6210s1",3,fase B
+dependencia,P6040,1,fase B
+asalariados_formales_pc,"Npersug, P6430, P6920",3,fase B
+educ_max_adultos,"P6040, P6210, P6210s1",3,fase B
+beneficios_por_ocupado,"Oc, P6510, P6545, P6580, P6585s1, P6585s2, P6585s3, P6585s4, P6590, P6600, P6610, P6620, P6630s1, P6630s2, P6630s3, P6630s4, P6630s6",17,fase B
+n_menor12,P6040,1,fase B
+n_asalariado,P6430,1,fase B
+ocupados_superior_pc,"Npersug, Oc, P6210",3,fase B
+n_asalariado_formal,"P6430, P6920",2,fase B
+edad_media,P6040,1,fase B
+tasa_ocupacion_hogar,"Oc, Pet",2,fase B
+pareja_educ,"P6050, P6210, P6210s1",3,fase B
+n_ocupado_superior,"Oc, P6210",2,fase B
+n_prima_servicios,P6630s1,1,fase B
+Npersug,Npersug,1,fase B
+n_en_ug,P6050,1,fase B
+Nper,Nper,1,fase B
+log_Nper,Nper,1,fase B
+jefe_anios_educ,"P6050, P6210, P6210s1",3,fase B
+educ_min_adultos,"P6040, P6210, P6210s1",3,fase B
+n_educ_superior,P6210,1,fase B
+n_empresa_grande,P6870,1,fase B
+n_pos_obrero_particular,P6430,1,fase B
+share_arriendo_imputado,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+requerido_sobre_linea,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+log_linea_hogar,"Lp, Npersug",1,fase B
+n_mujer,P6020,1,fase B
+n_oficios_hogar,P6240,1,fase B
+arriendo_imputado_mese,"P5090, P5100, P5130",3,fase B
+n_inactivo,Ina,1,fase B
+educ_jefe_x_formal,"P6050, P6210, P6210s1, P6920",4,fase B
+jefe_cotiza_pension,"P6050, P6920",2,fase B
+n_horas,"Oc, P6800, P7045",3,fase B
+n_subsidio_transporte,P6585s2,1,fase B
+n_educ_media_o_mas,P6210,1,fase B
+recibe_transferencias,"P7510s1, P7510s3",2,fase B
+log_ingreso_requerido_pc,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+jefe_n_beneficios,"P6050, P6510, P6545, P6580, P6585s1, P6585s2, P6585s3, P6585s4, P6590, P6600, P6610, P6620, P6630s1, P6630s2, P6630s3, P6630s4, P6630s6",17,fase B
+recibe_capital,"P7495, P7510s5",2,fase B
+n_recibe_arriendos_o_pensiones,P7495,1,fase B
+arriendo_x_inquilino,"Dominio, Lp, Npersug, P5000, P5090, P5130, P5140",5,fase B
+cuartos,P5000,1,fase B
+n_recibe_ayuda_instituciones,P7510s3,1,fase B
+jefe_asalariado,"P6050, P6430",2,fase B
+n_menor5,P6040,1,fase B
+n_ocupado,Oc,1,fase B
+pareja_ocupada,"Oc, P6050",2,fase B
+jefe_empresa_grande,"P6050, P6870",2,fase B
+n_estudiante,P6240,1,fase B
+n_recibe_pension_jubilacion,P7500s2,1,fase B
+recibe_pension,P7500s2,1,fase B
+n_ocupado_informal,"Oc, P6920",2,fase B
+n_pos_cuenta_propia,P6430,1,fase B
+n_pet,Pet,1,fase B
+n_desocupado,Des,1,fase B
+n_prima_navidad,P6630s2,1,fase B
+jefe_edad,"P6040, P6050",2,fase B
+jefe_edad2,"P6040, P6050",2,fase B
+n_trabaja_solo,P6870,1,fase B
+jefe_horas,"Oc, P6050, P6800, P7045",4,fase B
+jefe_trabaja_solo,"P6050, P6870",2,fase B
+ten_propia_pagada,P5090,1,fase B
+log_Lp,Lp,0,fase B
+n_recibe_otros_ingresos,P7505,1,fase B
+n_desocupado_cesante,P7310,1,fase B
+jefe_independiente,"P6050, P6430",2,fase B
+hacinamiento_critico,"Nper, P5010",2,fase B
+n_independiente,P6430,1,fase B
+n_subsidio_familiar,P6585s3,1,fase B
+no_puede_ser_pobre,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+n_sin_educacion,"P6040, P6210",2,fase B
+jefe_oficios_hogar,"P6050, P6240",2,fase B
+n_salud_afiliado,P6090,1,fase B
+n_recibe_ayuda_otros_hogares_pais,P7510s1,1,fase B
+jefe_ocupado,"Oc, P6050",2,fase B
+n_pos_obrero_gobierno,P6430,1,fase B
+ten_posesion_sin_titulo,P5090,1,fase B
+n_recibe_cesantias,P7510s6,1,fase B
+sin_ocupados,Oc,1,fase B
+antiguedad_media_oc,"Oc, P6426",2,fase B
+n_salud_especial,P6100,1,fase B
+jefe_desocupado,"Des, P6050",2,fase B
+n_pago_especie,"P6590, P6600, P6610, P6620",4,fase B
+jefe_antiguedad_meses,"Oc, P6050, P6426",3,fase B
+jefe_mujer,"P6020, P6050",2,fase B
+ten_arriendo,P5090,1,fase B
+cabecera,Clase,0,fase B
+n_busca_cambiar,P7150,1,fase B
+jefe_salud_especial,"P6050, P6100",2,fase B
+n_salud_no_afiliado,P6090,1,fase B
+share_mujeres,"Nper, P6020",2,fase B
+n_recibe_otras_fuentes,P7510s7,1,fase B
+n_mayor65,P6040,1,fase B
+n_horas_extra,P6510,1,fase B
+n_pos_patron,P6430,1,fase B
+jefe_mujer_sin_pareja,"P6020, P6050",2,fase B
+jefe_salud_no_afiliado,"P6050, P6090",2,fase B
+n_edad18_64,P6040,1,fase B
+n_subempleo_horas,P7090,1,fase B
+arriendo_ns,"P5130, P5140",2,fase B
+arriendo_imputado_flag,"P5130, P5140",2,fase B
+n_patron_o_cp_empresa_grande,"P6430, P6870",2,fase B
+n_sin_remuneracion,P6430,1,fase B
+hay_pareja,P6050,1,fase B
+n_pos_familiar_sin_rem,P6430,1,fase B
+n_pensionado,P6920,1,fase B
+jefe_subempleo_horas,"P6050, P7090",2,fase B
+jefe_pensionado,"P6050, P6920",2,fase B
+n_incapacitado,P6240,1,fase B
+ten_propia_pagando,P5090,1,fase B
+log_amortizacion,P5100,1,fase B
+jefe_inactivo,"Ina, P6050",2,fase B
+n_empresa_2_10,P6870,1,fase B
+n_segundo_trabajo,P7040,1,fase B
+n_ug_menos_nper,"Nper, Npersug, P6050",3,fase B
+ten_usufructo,P5090,1,fase B
+n_empleado_domestico_hogar,P6050,1,fase B
+n_recibe_intereses_dividendos,P7510s5,1,fase B
+usufructo_rural,"Clase, P5090",1,fase B
+n_recibe_remesas_exterior,P7510s2,1,fase B
+n_desocupado_con_ingreso,P7422,1,fase B
+n_pos_domestico,P6430,1,fase B
+n_pos_jornalero,P6430,1,fase B
+dormitorios,P5010,1,fase B
+arriendo_estimado_sobre_tope,P5130,1,fase B
+n_pos_sin_rem_otro_hogar,P6430,1,fase B
+jefe_estudiante,"P6050, P6240",2,fase B
+n_pensionista_hogar,P6050,1,fase B
+n_recibe_pension_alimentaria,P7500s3,1,fase B
+ten_otra,P5090,1,fase B
+amortizacion_ns,P5100,1,fase B
+n_inactivo_con_ingreso,P7472,1,fase B
+n_pos_otro,P6430,1,fase B
+Dominio,Dominio,0,fase B
+Depto,Depto,0,fase B
+jefe_oficio,"Oficio, P6050",2,fase B
+jefe_posicion,"P6050, P6430",2,fase B
+jefe_nivel_edu,"P6050, P6210",2,fase B
+jefe_regimen_salud,"P6050, P6100",2,fase B
+jefe_actividad,"P6050, P6240",2,fase B
+jefe_tam_empresa,"P6050, P6870",2,fase B
+tenencia,P5090,1,fase B
+arriendo_pagado,P5140,1,fase B
+arriendo_estimado,P5130,1,fase B
+cuota_amortizacion,P5100,1,fase B
+Lp,Lp,0,fase B
+Li,Li,0,fase B
+ingreso_requerido,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+u_requerido_pc,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+u_n_lineas,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+u_li_sobre_lp,"Li, Lp",0,fase B
+u_arriendo_imp_pc,"Npersug, P5090, P5100, P5130",4,fase B
+u_log_n_lineas,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+u_arriendo_imp_lineas,"Lp, P5090, P5100, P5130",3,fase B
+u_holgura_lineas,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+u_linea_hogar,"Lp, Npersug",1,fase B
+u_lp_menos_li_rel,"Li, Lp",0,fase B
+u_p5140_ns,P5140,1,fase B
+u_p5130_ns,P5130,1,fase B
+u_arriendo_pagado_linea,"Lp, Npersug, P5140",2,fase B
+u_log_arriendo_pagado_linea,"Lp, Npersug, P5140",2,fase B
+u_arriendo_estimado_linea,"Lp, Npersug, P5130",2,fase B
+u_log_arriendo_estimado_linea,"Lp, Npersug, P5130",2,fase B
+u_cuota_linea,"Lp, Npersug, P5100",2,fase B
+u_cuota_sobre_estimado,"P5100, P5130",2,fase B
+u_estimado_menos_cuota_linea,"Lp, Npersug, P5100, P5130",3,fase B
+u_requerido_sobre_arriendo,"Dominio, Lp, Npersug, P5000, P5090, P5100, P5130, P5140",6,fase B
+u_log_req_menos_log_arriendo,"Dominio, Lp, Npersug, P5000, P5090, P5100, P5130, P5140",6,fase B
+u_A_anulado_por_regla,"P5090, P5100, P5130",3,fase B
+u_requerido_sobre_li,"Li, Lp, Npersug, P5090, P5100, P5130",4,fase B
+s_aux_alimentacion,"P6050, P6585s1",2,fase B
+s_subsidio_educativo,"P6050, P6585s4",2,fase B
+s_primas,"P6050, P6545",2,fase B
+s_bonificaciones,"P6050, P6580",2,fase B
+s_prima_vacaciones,"P6050, P6630s3",2,fase B
+s_viaticos,"P6050, P6630s4",2,fase B
+s_bonif_anuales,"P6050, P6630s6",2,fase B
+s_especie_alimentos,"P6050, P6590",2,fase B
+s_especie_vivienda,"P6050, P6600",2,fase B
+s_especie_transporte,"P6050, P6610",2,fase B
+s_especie_otros,"P6050, P6620",2,fase B
+s_formal_sin_aux,"P6050, P6430, P6585s2, P6920",4,fase B
+s_formal_con_aux,"P6050, P6430, P6585s2, P6920",4,fase B
+s_asal_informal,"P6050, P6430, P6920",3,fase B
+s_prestaciones,"P6050, P6630s1, P6630s2, P6630s3",4,fase B
+s_ocup_subsidiado,"Oc, P6050, P6100",3,fase B
+s_ocup_contributivo,"Oc, P6050, P6100",3,fase B
+s_ocup_especial,"Oc, P6050, P6100",3,fase B
+s_subempleo_visible,"P6050, P7090, P7110, P7120",4,fase B
+s_share_aux_asal,"P6050, P6430, P6585s2",3,fase B
+s_share_formal_sin_aux_oc,"Oc, P6050, P6430, P6585s2, P6920",5,fase B
+s_share_ocup_subsidiado,"Oc, P6050, P6100",3,fase B
+s_share_prestaciones_asal,"P6050, P6430, P6630s1, P6630s2, P6630s3",5,fase B
+s_jefe_formal_sin_aux,"P6050, P6430, P6585s2, P6920",4,fase B
+s_jefe_aux_transporte,"P6050, P6585s2",2,fase B
+s_jefe_prestaciones,"P6050, P6630s1, P6630s2, P6630s3",4,fase B
+s_jefe_ocup_subsidiado,"Oc, P6050, P6100",3,fase B
+s_jefe_asal_informal,"P6050, P6430, P6920",3,fase B
+s_formal_sin_aux_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P6430, P6585s2, P6920",8,fase B
+s_prestaciones_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P6630s1, P6630s2, P6630s3",8,fase B
+i_horas_extra_si,"P6050, P6510",2,fase B
+i_horas_extra_ns,"P6050, P6510",2,fase B
+i_horas_extra_resp,"P6050, P6510",2,fase B
+i_horas_extra_tasa,"P6050, P6510",2,fase B
+i_horas_extra_pc,"Npersug, P6050, P6510",3,fase B
+i_horas_extra_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P6510",6,fase B
+i_horas_extra_jefe,"P6050, P6510",2,fase B
+i_primas_ns,"P6050, P6545",2,fase B
+i_primas_tasa,"P6050, P6545",2,fase B
+i_primas_pc,"Npersug, P6050, P6545",3,fase B
+i_primas_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P6545",6,fase B
+i_primas_jefe,"P6050, P6545",2,fase B
+i_bonificaciones_ns,"P6050, P6580",2,fase B
+i_bonificaciones_tasa,"P6050, P6580",2,fase B
+i_bonificaciones_pc,"Npersug, P6050, P6580",3,fase B
+i_bonificaciones_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P6580",6,fase B
+i_bonificaciones_jefe,"P6050, P6580",2,fase B
+i_aux_alimentacion_ns,"P6050, P6585s1",2,fase B
+i_aux_alimentacion_tasa,"P6050, P6585s1",2,fase B
+i_aux_alimentacion_pc,"Npersug, P6050, P6585s1",3,fase B
+i_aux_alimentacion_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P6585s1",6,fase B
+i_aux_alimentacion_jefe,"P6050, P6585s1",2,fase B
+i_aux_transporte_si,"P6050, P6585s2",2,fase B
+i_aux_transporte_ns,"P6050, P6585s2",2,fase B
+i_aux_transporte_tasa,"P6050, P6585s2",2,fase B
+i_aux_transporte_pc,"Npersug, P6050, P6585s2",3,fase B
+i_aux_transporte_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P6585s2",6,fase B
+i_aux_transporte_jefe,"P6050, P6585s2",2,fase B
+i_subsidio_familiar_si,"P6050, P6585s3",2,fase B
+i_subsidio_familiar_ns,"P6050, P6585s3",2,fase B
+i_subsidio_familiar_tasa,"P6050, P6585s3",2,fase B
+i_subsidio_familiar_pc,"Npersug, P6050, P6585s3",3,fase B
+i_subsidio_familiar_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P6585s3",6,fase B
+i_subsidio_familiar_jefe,"P6050, P6585s3",2,fase B
+i_subsidio_educativo_ns,"P6050, P6585s4",2,fase B
+i_subsidio_educativo_tasa,"P6050, P6585s4",2,fase B
+i_subsidio_educativo_pc,"Npersug, P6050, P6585s4",3,fase B
+i_subsidio_educativo_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P6585s4",6,fase B
+i_subsidio_educativo_jefe,"P6050, P6585s4",2,fase B
+i_especie_alimentos_ns,"P6050, P6590",2,fase B
+i_especie_alimentos_tasa,"P6050, P6590",2,fase B
+i_especie_alimentos_pc,"Npersug, P6050, P6590",3,fase B
+i_especie_alimentos_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P6590",6,fase B
+i_especie_alimentos_jefe,"P6050, P6590",2,fase B
+i_especie_vivienda_ns,"P6050, P6600",2,fase B
+i_especie_vivienda_tasa,"P6050, P6600",2,fase B
+i_especie_vivienda_pc,"Npersug, P6050, P6600",3,fase B
+i_especie_vivienda_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P6600",6,fase B
+i_especie_vivienda_jefe,"P6050, P6600",2,fase B
+i_transporte_empresa_ns,"P6050, P6610",2,fase B
+i_transporte_empresa_tasa,"P6050, P6610",2,fase B
+i_transporte_empresa_pc,"Npersug, P6050, P6610",3,fase B
+i_transporte_empresa_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P6610",6,fase B
+i_transporte_empresa_jefe,"P6050, P6610",2,fase B
+i_especie_otros_ns,"P6050, P6620",2,fase B
+i_especie_otros_tasa,"P6050, P6620",2,fase B
+i_especie_otros_pc,"Npersug, P6050, P6620",3,fase B
+i_especie_otros_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P6620",6,fase B
+i_especie_otros_jefe,"P6050, P6620",2,fase B
+i_prima_servicios_si,"P6050, P6630s1",2,fase B
+i_prima_servicios_tasa,"P6050, P6630s1",2,fase B
+i_prima_servicios_pc,"Npersug, P6050, P6630s1",3,fase B
+i_prima_servicios_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P6630s1",6,fase B
+i_prima_servicios_jefe,"P6050, P6630s1",2,fase B
+i_prima_navidad_si,"P6050, P6630s2",2,fase B
+i_prima_navidad_tasa,"P6050, P6630s2",2,fase B
+i_prima_navidad_pc,"Npersug, P6050, P6630s2",3,fase B
+i_prima_navidad_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P6630s2",6,fase B
+i_prima_navidad_jefe,"P6050, P6630s2",2,fase B
+i_prima_vacaciones_tasa,"P6050, P6630s3",2,fase B
+i_prima_vacaciones_pc,"Npersug, P6050, P6630s3",3,fase B
+i_prima_vacaciones_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P6630s3",6,fase B
+i_prima_vacaciones_jefe,"P6050, P6630s3",2,fase B
+i_viaticos_tasa,"P6050, P6630s4",2,fase B
+i_viaticos_pc,"Npersug, P6050, P6630s4",3,fase B
+i_viaticos_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P6630s4",6,fase B
+i_viaticos_jefe,"P6050, P6630s4",2,fase B
+i_bonif_anuales_tasa,"P6050, P6630s6",2,fase B
+i_bonif_anuales_pc,"Npersug, P6050, P6630s6",3,fase B
+i_bonif_anuales_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P6630s6",6,fase B
+i_bonif_anuales_jefe,"P6050, P6630s6",2,fase B
+i_desocupado_ingreso_si,"P6050, P7422",2,fase B
+i_desocupado_ingreso_resp,"P6050, P7422",2,fase B
+i_desocupado_ingreso_tasa,"P6050, P7422",2,fase B
+i_desocupado_ingreso_pc,"Npersug, P6050, P7422",3,fase B
+i_desocupado_ingreso_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P7422",6,fase B
+i_desocupado_ingreso_jefe,"P6050, P7422",2,fase B
+i_inactivo_ingreso_si,"P6050, P7472",2,fase B
+i_inactivo_ingreso_resp,"P6050, P7472",2,fase B
+i_inactivo_ingreso_tasa,"P6050, P7472",2,fase B
+i_inactivo_ingreso_pc,"Npersug, P6050, P7472",3,fase B
+i_inactivo_ingreso_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P7472",6,fase B
+i_inactivo_ingreso_jefe,"P6050, P7472",2,fase B
+i_arriendos_o_pensiones_si,"P6050, P7495",2,fase B
+i_arriendos_o_pensiones_resp,"P6050, P7495",2,fase B
+i_arriendos_o_pensiones_tasa,"P6050, P7495",2,fase B
+i_arriendos_o_pensiones_pc,"Npersug, P6050, P7495",3,fase B
+i_arriendos_o_pensiones_jefe,"P6050, P7495",2,fase B
+i_pension_jubilacion_si,"P6050, P7500s2",2,fase B
+i_pension_jubilacion_ns,"P6050, P7500s2",2,fase B
+i_pension_jubilacion_tasa,"P6050, P7500s2",2,fase B
+i_pension_jubilacion_jefe,"P6050, P7500s2",2,fase B
+i_pension_alimenticia_si,"P6050, P7500s3",2,fase B
+i_pension_alimenticia_ns,"P6050, P7500s3",2,fase B
+i_pension_alimenticia_tasa,"P6050, P7500s3",2,fase B
+i_pension_alimenticia_pc,"Npersug, P6050, P7500s3",3,fase B
+i_pension_alimenticia_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P7500s3",6,fase B
+i_pension_alimenticia_jefe,"P6050, P7500s3",2,fase B
+i_filtro_doce_meses_si,"P6050, P7505",2,fase B
+i_filtro_doce_meses_tasa,"P6050, P7505",2,fase B
+i_filtro_doce_meses_pc,"Npersug, P6050, P7505",3,fase B
+i_filtro_doce_meses_jefe,"P6050, P7505",2,fase B
+i_ayuda_hogares_pais_si,"P6050, P7510s1",2,fase B
+i_ayuda_hogares_pais_ns,"P6050, P7510s1",2,fase B
+i_ayuda_hogares_pais_tasa,"P6050, P7510s1",2,fase B
+i_ayuda_hogares_pais_pc,"Npersug, P6050, P7510s1",3,fase B
+i_ayuda_hogares_pais_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P7510s1",6,fase B
+i_ayuda_hogares_pais_jefe,"P6050, P7510s1",2,fase B
+i_remesas_exterior_si,"P6050, P7510s2",2,fase B
+i_remesas_exterior_ns,"P6050, P7510s2",2,fase B
+i_remesas_exterior_tasa,"P6050, P7510s2",2,fase B
+i_remesas_exterior_pc,"Npersug, P6050, P7510s2",3,fase B
+i_remesas_exterior_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P7510s2",6,fase B
+i_remesas_exterior_jefe,"P6050, P7510s2",2,fase B
+i_ayudas_instituciones_si,"P6050, P7510s3",2,fase B
+i_ayudas_instituciones_ns,"P6050, P7510s3",2,fase B
+i_ayudas_instituciones_tasa,"P6050, P7510s3",2,fase B
+i_ayudas_instituciones_pc,"Npersug, P6050, P7510s3",3,fase B
+i_ayudas_instituciones_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P7510s3",6,fase B
+i_ayudas_instituciones_jefe,"P6050, P7510s3",2,fase B
+i_intereses_dividendos_si,"P6050, P7510s5",2,fase B
+i_intereses_dividendos_ns,"P6050, P7510s5",2,fase B
+i_intereses_dividendos_tasa,"P6050, P7510s5",2,fase B
+i_intereses_dividendos_pc,"Npersug, P6050, P7510s5",3,fase B
+i_intereses_dividendos_jefe,"P6050, P7510s5",2,fase B
+i_cesantias_si,"P6050, P7510s6",2,fase B
+i_cesantias_ns,"P6050, P7510s6",2,fase B
+i_cesantias_tasa,"P6050, P7510s6",2,fase B
+i_cesantias_pc,"Npersug, P6050, P7510s6",3,fase B
+i_cesantias_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P7510s6",6,fase B
+i_cesantias_jefe,"P6050, P7510s6",2,fase B
+i_otras_fuentes_si,"P6050, P7510s7",2,fase B
+i_otras_fuentes_ns,"P6050, P7510s7",2,fase B
+i_otras_fuentes_tasa,"P6050, P7510s7",2,fase B
+i_otras_fuentes_pc,"Npersug, P6050, P7510s7",3,fase B
+i_otras_fuentes_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P7510s7",6,fase B
+i_otras_fuentes_jefe,"P6050, P7510s7",2,fase B
+i_arriendos_inferidos_si,"P6050, P7495, P7500s2, P7500s3",4,fase B
+i_trabajo_remunerado_n,"Oc, P6050, P6430",3,fase B
+i_fuentes_distintas,"Oc, P6050, P6430, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",15,fase B
+i_fuentes_distintas_nolab,"P6050, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",10,fase B
+i_fuentes_total,"Oc, P6050, P6430, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",15,fase B
+i_perceptores,"Oc, P6050, P6430, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",15,fase B
+i_perceptores_lab,"Oc, P6050, P6430, P7040, P7422, P7472",6,fase B
+i_perceptores_nolab,"P6050, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",10,fase B
+i_perceptores_pc,"Npersug, Oc, P6050, P6430, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",16,fase B
+i_perceptores_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6430, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",19,fase B
+i_perceptores_lab_pc,"Npersug, Oc, P6050, P6430, P7040, P7422, P7472",7,fase B
+i_perceptores_lab_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6430, P7040, P7422, P7472",10,fase B
+i_perceptores_nolab_pc,"Npersug, P6050, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",11,fase B
+i_perceptores_nolab_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",14,fase B
+i_fuentes_por_perceptor,"Oc, P6050, P6430, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",15,fase B
+i_lineas_por_perceptor,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6430, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",19,fase B
+i_dependientes_por_perceptor,"Npersug, Oc, P6050, P6430, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",16,fase B
+i_sin_fuentes,"Oc, P6050, P6430, P7040, P7422, P7472, P7495, P7500s2, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",14,fase B
+i_solo_nolab,"Oc, P6050, P6430, P7040, P7422, P7472, P7495, P7500s2, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",14,fase B
+i_transferencias_n,"P6050, P7510s1, P7510s2, P7510s3",4,fase B
+i_capital_n,"P6050, P7495, P7500s2, P7500s3, P7510s5",5,fase B
+i_pension_o_capital,"P6050, P7495, P7500s2, P7500s3, P7510s5",5,fase B
+i_extralegales,"P6050, P6545, P6580, P6585s1, P6585s4, P6630s4, P6630s6",7,fase B
+i_especie,"P6050, P6590, P6600, P6610, P6620",5,fase B
+i_ns_total,"P6050, P6545, P6580, P6585s1, P6585s2, P6585s3, P6585s4, P6590, P6600, P6610, P6620, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",16,fase B
+i_ns_algun,"P6050, P6545, P6580, P6585s1, P6585s2, P6585s3, P6585s4, P6590, P6600, P6610, P6620, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",16,fase B
+i_filtro12m_sin_detalle,"P6050, P7505, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",8,fase B
+i_aux_transporte_por_asal,"P6050, P6430, P6585s2",3,fase B
+i_prima_servicios_por_asal,"P6050, P6430, P6630s1",3,fase B
+c_perceptores_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7505, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",19,fase B
+c_ocupados_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050",6,fase B
+c_asalariados_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P6430",6,fase B
+c_formales_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6920",7,fase B
+c_cuenta_propia_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P6430",6,fase B
+c_patronos_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P6430",6,fase B
+c_pensionados_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P7500s2",6,fase B
+c_ayudas_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P7505, P7510s1, P7510s2, P7510s3",9,fase B
+c_arriendos_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P7495",6,fase B
+c_intereses_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P7510s5",6,fase B
+c_segunda_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P7040",6,fase B
+c_horas_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6800, P7045",8,fase B
+c_horas_formal_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6800, P6920, P7045",9,fase B
+c_hs_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6210, P6210s1, P6800, P7045",10,fase B
+c_hx_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6040, P6050, P6210, P6210s1, P6800, P7045",11,fase B
+c_fuentes_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7505, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",19,fase B
+c_perceptores_pc,"Npersug, Oc, P6050, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7505, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",16,fase B
+c_fuentes_pc,"Npersug, Oc, P6050, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7505, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",16,fase B
+c_hs_pc,"Npersug, Oc, P6050, P6210, P6210s1, P6800, P7045",7,fase B
+c_asalariados_pc,"Npersug, P6050, P6430",3,fase B
+c_cuenta_propia_pc,"Npersug, P6050, P6430",3,fase B
+c_pensionados_pc,"Npersug, P6050, P7500s2",3,fase B
+c_patronos_pc,"Npersug, P6050, P6430",3,fase B
+c_hs,"Oc, P6050, P6210, P6210s1, P6800, P7045",6,fase B
+c_educ_horas,"Oc, P6050, P6210, P6210s1, P6800, P7045",6,fase B
+c_educ_max_oc,"Oc, P6050, P6210, P6210s1",4,fase B
+c_exp_media_oc,"Oc, P6040, P6050, P6210, P6210s1",5,fase B
+c_exp_jefe,"P6040, P6050, P6210, P6210s1",4,fase B
+c_tam_medio_oc,"Oc, P6050, P6870",3,fase B
+c_tam_max_oc,"Oc, P6050, P6870",3,fase B
+c_tam_horas,"Oc, P6050, P6800, P6870, P7045",5,fase B
+c_principal_horas,"Oc, P6050, P6210, P6210s1, P6800, P7045",6,fase B
+c_principal_educ,"Oc, P6050, P6210, P6210s1, P6800, P7045",6,fase B
+c_principal_exp,"Oc, P6040, P6050, P6210, P6210s1, P6800, P7045",7,fase B
+c_principal_formal,"Oc, P6050, P6210, P6210s1, P6800, P6920, P7045",7,fase B
+c_principal_es_jefe,"Oc, P6050, P6210, P6210s1, P6800, P7045",6,fase B
+c_principal_tam,"Oc, P6050, P6210, P6210s1, P6800, P6870, P7045",7,fase B
+c_mujeres_ocupadas_share,"Oc, P6020, P6040, P6050",4,fase B
+c_ocupados_menos_lineas,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050",6,fase B
+c_antig_max_oc,"Oc, P6050, P6426",3,fase B
+c_antig_min_oc,"Oc, P6050, P6426",3,fase B
+c_antig_desv_oc,"Oc, P6050, P6426",3,fase B
+c_horas_por_ocupado,"Oc, P6050, P6800, P7045",4,fase B
+c_horas_segunda,"Oc, P6050, P7045",3,fase B
+c_subempleo_n,"P6050, P7090",2,fase B
+c_busca_cambiar_n,"P6050, P7150",2,fase B
+c_disponible_n,"P6050, P7160",2,fase B
+c_tam_solo_n,"Oc, P6050, P6870",3,fase B
+c_tam_2_10_n,"Oc, P6050, P6870",3,fase B
+c_tam_11_50_n,"Oc, P6050, P6870",3,fase B
+c_tam_51mas_n,"Oc, P6050, P6870",3,fase B
+c_educ_min_oc,"Oc, P6050, P6210, P6210s1",4,fase B
+c_educ_suma_oc,"Oc, P6050, P6210, P6210s1",4,fase B
+c_exp_max_oc,"Oc, P6040, P6050, P6210, P6210s1",5,fase B
+c_exp_jefe2,"P6040, P6050, P6210, P6210s1",4,fase B
+c_hs_formal_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6210, P6210s1, P6800, P6920, P7045",11,fase B
+c_h_tam_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6800, P6870, P7045",9,fase B
+c_hx_pc,"Npersug, Oc, P6040, P6050, P6210, P6210s1, P6800, P7045",8,fase B
+c_formales_menos_lineas,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6920",7,fase B
+c_asalariados_menos_lineas,"Lp, Npersug, P5090, P5100, P5130, P6050, P6430",6,fase B
+c_lineas_por_ocupado,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050",6,fase B
+c_lineas_por_formal,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6920",7,fase B
+c_jefe_horas_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6800, P7045",8,fase B
+c_jefe_y_pareja_ocupados,"Oc, P6050",2,fase B
+principal_oficio,"Oc, Oficio, P6050, P6210, P6210s1, P6800, P7045",7,fase B
+principal_oficio_gg,"Oc, Oficio, P6050, P6210, P6210s1, P6800, P7045",7,fase B
+jefe_oficio_gg,"Oficio, P6050",2,fase B
+principal_posicion,"Oc, P6050, P6210, P6210s1, P6430, P6800, P7045",7,fase B
+c_principal_antig,"Oc, P6050, P6210, P6210s1, P6426, P6800, P7045",7,fase B
+c_principal_edad,"Oc, P6040, P6050, P6210, P6210s1, P6800, P7045",7,fase B
+c_principal_mujer,"Oc, P6020, P6050, P6210, P6210s1, P6800, P7045",7,fase B
+c_principal_cp,"Oc, P6050, P6210, P6210s1, P6430, P6800, P7045",7,fase B
+c_principal_horas_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6210, P6210s1, P6800, P7045",10,fase B
+c_principal_hs_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6210, P6210s1, P6800, P7045",10,fase B
+p_educ_media_15,"P6040, P6050, P6210, P6210s1",4,fase B
+p_share_analfabetismo,"P6040, P6050, P6210",3,fase B
+p_share_inasistencia,"P6040, P6050, P6240",3,fase B
+p_share_rezago,"P6040, P6050, P6210, P6210s1",4,fase B
+p_rezago_holgura,"P6040, P6050, P6210, P6210s1",4,fase B
+p_n_trabajo_infantil,"Oc, P6040, P6050",3,fase B
+p_share_informal_pea,"Des, Oc, P6050, P6920",4,fase B
+p_share_desempleo_pea,"Des, Oc, P6050",3,fase B
+p_share_sin_salud,"P6050, P6090",2,fase B
+p_bajo_logro,"P6040, P6050, P6210, P6210s1",4,fase B
+p_analfabetismo,"P6040, P6050, P6210",3,fase B
+p_inasistencia,"P6040, P6050, P6240",3,fase B
+p_rezago,"P6040, P6050, P6210, P6210s1",4,fase B
+p_trabajo_infantil,"Oc, P6040, P6050",3,fase B
+p_desempleo,"Des, P6050",2,fase B
+p_informal,"Oc, P6050, P6920",3,fase B
+p_sin_salud,"P6050, P6090",2,fase B
+p_dim_educacion,"P6040, P6050, P6210, P6210s1",4,fase B
+p_dim_ninez,"Oc, P6040, P6050, P6210, P6210s1, P6240",6,fase B
+p_dim_trabajo,"Des, Oc, P6050, P6920",4,fase B
+p_n_privaciones,"Des, Nper, Oc, P5010, P6040, P6050, P6090, P6210, P6210s1, P6240, P6920",11,fase B
+p_n_dimensiones,"Des, Nper, Oc, P5010, P6040, P6050, P6090, P6210, P6210s1, P6240, P6920",11,fase B
+p_puntaje,"Des, Nper, Oc, P5010, P6040, P6050, P6090, P6210, P6210s1, P6240, P6920",11,fase B
+p_ipm_pobre,"Des, Nper, Oc, P5010, P6040, P6050, P6090, P6210, P6210s1, P6240, P6920",11,fase B
+p_intensidad,"Des, Nper, Oc, P5010, P6040, P6050, P6090, P6210, P6210s1, P6240, P6920",11,fase B
+p_puntaje_oficial,"Des, Nper, Oc, P5010, P6040, P6050, P6090, P6210, P6210s1, P6240, P6920",11,fase B
+p_ipm_oficial_33,"Des, Nper, Oc, P5010, P6040, P6050, P6090, P6210, P6210s1, P6240, P6920",11,fase B
+Fex_c,Fex_c,0,fase B
+log_fex,Fex_c,0,fase B
+v_cuartos_pc,"Npersug, P5000",2,fase B
+v_dormitorios_por_cuarto,"P5000, P5010",2,fase B
+v_monoparental,"P6040, P6050",2,fase B
+v_jefa_monoparental,"P6020, P6040, P6050",3,fase B
+v_unipersonal_mayor,"Nper, P6040",2,fase B
+v_mayores_sin_pension,"P6040, P7500s2",2,fase B
+v_menores_por_adulto,P6040,1,fase B
+v_mayores_por_adulto,P6040,1,fase B
+v_menores5_por_adulto,P6040,1,fase B
+v_desocupados_por_pet,"Des, Pet",2,fase B
+v_inactivos_por_pet,"Ina, Pet",2,fase B
+v_jefa_x_menores,"P6020, P6040",2,fase B
+v_arriendo_persona_linea,"Dominio, Lp, Nper, P5000, P5130, P5140",4,fase B
+v_arriendo_cuarto_linea,"Dominio, Lp, P5000, P5130, P5140",3,fase B
+v_propia_x_arriendo,"Dominio, Lp, Npersug, P5000, P5090, P5130, P5140",5,fase B
+v_brecha_educ_jefe_pareja,"P6050, P6210, P6210s1",3,fase B
+v_superior_por_adulto,"P6040, P6210",2,fase B
+v_extendido,P6050,1,fase B
+v_no_parientes,P6050,1,fase B
+v_sin_educacion_por_adulto,"P6040, P6210",2,fase B
+v_log_fex_dpto,Fex_dpto,0,fase B
+v_fex_c_sobre_dpto,"Fex_c, Fex_dpto",0,fase B
+v_share_subsidiado_adultos,"P6040, P6050, P6100",3,fase B
+v_share_contributivo,"Npersug, P6050, P6100",3,fase B
+v_share_especial,"Npersug, P6050, P6100",3,fase B
+v_todos_subsidiados,"P6050, P6100",2,fase B
+v_subsidiado_sin_cotizantes,"Oc, P6050, P6100, P6920",4,fase B
+v_jefe_mayor65,"P6040, P6050",2,fase B
+v_jefe_menor25,"P6040, P6050",2,fase B
+v_n_hijos,P6050,1,fase B
+v_n_nietos,P6050,1,fase B
+v_n_otros_parientes,P6050,1,fase B
+v_n_edad_0_5,"P6040, P6050",2,fase B
+v_n_edad_6_9,"P6040, P6050",2,fase B
+v_n_edad_10_14,"P6040, P6050",2,fase B
+v_n_edad_15_17,"P6040, P6050",2,fase B
+v_n_edad_18_24,"P6040, P6050",2,fase B
+v_n_edad_25_44,"P6040, P6050",2,fase B
+v_n_edad_45_64,"P6040, P6050",2,fase B
+v_cuartos_menos_dormitorios,"P5000, P5010",2,fase B
+v_dormitorios_pc,"Nper, P5010",2,fase B
+v_hacinamiento_mitigable,"Nper, P5010",2,fase B
+v_jefa_subsidiada,"P6020, P6100",2,fase B
+v_resto_urbano,Dominio,0,fase B
+v_rural,Dominio,0,fase B
+te_oficio_jefe,"Oficio, P6050",2,fase B
+te_oficio_principal,"Oc, Oficio, P6050, P6210, P6210s1, P6800, P7045",7,fase B
+te_dominio_tenencia,"Dominio, P5090",1,fase B
+te_depto_clase,"Clase, Depto",0,fase B
+te_posicion_jefe,"P6050, P6430",2,fase B
+x_lineas_menos_ocupados_log,"Lp, Npersug, Oc, P5090, P5100, P5130",5,fase B
+x_hs_linea_x_cabecera,"Clase, Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6210, P6210s1, P6800, P7045",10,fase B
+x_formales_linea_x_cabecera,"Clase, Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6920",7,fase B
+x_arriendo_linea_x_propia,"Dominio, Lp, Npersug, P5000, P5090, P5130, P5140",5,fase B
+x_arriendo_linea_x_usufructo,"Dominio, Lp, Npersug, P5000, P5090, P5130, P5140",5,fase B
+x_educmax_x_ocupados_pc,"Npersug, Oc, P6040, P6210, P6210s1",5,fase B
+x_educ_oc_x_horas_pc,"Npersug, Oc, P6210, P6210s1, P6800, P7045",6,fase B
+x_subsidiado_x_lineas,"Lp, Nper, Npersug, P5090, P5100, P5130, P6100",6,fase B
+x_ipm_x_cabecera,"Clase, Des, Nper, Oc, P5010, P6040, P6050, P6090, P6210, P6210s1, P6240, P6920",11,fase B
+x_ipm_x_lineas,"Des, Lp, Nper, Npersug, Oc, P5010, P5090, P5100, P5130, P6040, P6050, P6090, P6210, P6210s1, P6240, P6920",15,fase B
+x_jefa_x_lineas,"Lp, Npersug, P5090, P5100, P5130, P6020",5,fase B
+x_dependencia_x_informal,"Des, Oc, P6040, P6050, P6920",5,fase B
+x_menores_x_subsidiado,"Nper, P6040, P6100",3,fase B
+x_rural_x_jornaleros,"Clase, P6430",1,fase B
+x_aux_transporte_x_formales_pc,"Npersug, P6050, P6430, P6585s2, P6920",5,fase B
+x_perceptores_linea_x_educ_oc,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6210, P6210s1, P6430, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",21,fase B
+x_requerido_pc_x_cabecera,"Clase, Lp, Npersug, P5090, P5100, P5130",4,fase B
+x_hacinamiento_x_cabecera,"Clase, Nper, P5000",2,fase B
+x_share_arriendo_imputado__desv_Depto,"Depto, Lp, Npersug, P5090, P5100, P5130",4,fase B
+x_share_arriendo_imputado__rango_Depto,"Depto, Lp, Npersug, P5090, P5100, P5130",4,fase B
+x_arriendo_imputado_mese__desv_Dominio,"Dominio, P5090, P5100, P5130",3,fase B
+x_share_arriendo_imputado__desv_Dominio,"Dominio, Lp, Npersug, P5090, P5100, P5130",4,fase B
+x_requerido_sobre_linea__desv_Dominio,"Dominio, Lp, Npersug, P5090, P5100, P5130",4,fase B
+x_arriendo_imputado_mese__rango_Dominio,"Dominio, P5090, P5100, P5130",3,fase B
+x_i_prima_servicios_linea__rango_Depto,"Depto, Lp, Npersug, P5090, P5100, P5130, P6050, P6630s1",6,fase B
+x_i_prima_servicios_linea__desv_Depto,"Depto, Lp, Npersug, P5090, P5100, P5130, P6050, P6630s1",6,fase B
+x_i_prima_servicios_linea__desv_Dominio,"Dominio, Lp, Npersug, P5090, P5100, P5130, P6050, P6630s1",6,fase B
+x_c_pensionados_linea__por__c_arriendos_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P7495, P7500s2",7,fase B
+x_i_prima_servicios_linea__rango_Dominio,"Dominio, Lp, Npersug, P5090, P5100, P5130, P6050, P6630s1",6,fase B
+x_c_pensionados_linea__sobre__c_arriendos_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P7495, P7500s2",7,fase B
+x_u_requerido_sobre_arriendo__sobre__t_inv_c_hs_linea,"Dominio, Lp, Npersug, Oc, P5000, P5090, P5100, P5130, P5140, P6050, P6210, P6210s1, P6800, P7045",12,fase B
+x_i_perceptores_lab_linea__por__u_requerido_sobre_arriendo,"Dominio, Lp, Npersug, Oc, P5000, P5090, P5100, P5130, P5140, P6050, P6430, P7040, P7422, P7472",12,fase B
+x_c_asalariados_linea__rango_Depto,"Depto, Lp, Npersug, P5090, P5100, P5130, P6050, P6430",6,fase B
+x_c_arriendos_linea__sobre__t_inv_c_hs_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6210, P6210s1, P6800, P7045, P7495",11,fase B
+x_c_formales_menos_lineas__rango_Depto,"Depto, Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6920",7,fase B
+x_ind_todos_subsidiados,"Nper, P6100",2,fase B
+x_c_h_tam_linea__por__g_P6100_1_sh,"Lp, Nper, Npersug, Oc, P5090, P5100, P5130, P6050, P6100, P6800, P6870, P7045",11,fase B
+x_c_asalariados_menos_lineas__rango_Depto,"Depto, Lp, Npersug, P5090, P5100, P5130, P6050, P6430",6,fase B
+x_c_formales_menos_lineas__desv_Depto,"Depto, Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6920",7,fase B
+x_c_formales_menos_lineas__rango_Dominio,"Dominio, Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6920",7,fase B
+x_c_h_tam_linea__por__c_asalariados_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6430, P6800, P6870, P7045",10,fase B
+x_c_formales_menos_lineas__desv_Dominio,"Dominio, Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6920",7,fase B
+x_c_asalariados_linea__rango_Dominio,"Dominio, Lp, Npersug, P5090, P5100, P5130, P6050, P6430",6,fase B
+x_c_asalariados_menos_lineas__desv_Depto,"Depto, Lp, Npersug, P5090, P5100, P5130, P6050, P6430",6,fase B
+x_c_asalariados_menos_lineas__rango_Dominio,"Dominio, Lp, Npersug, P5090, P5100, P5130, P6050, P6430",6,fase B
+x_c_asalariados_linea__desv_Depto,"Depto, Lp, Npersug, P5090, P5100, P5130, P6050, P6430",6,fase B
+x_c_arriendos_linea__rango_Depto,"Depto, Lp, Npersug, P5090, P5100, P5130, P6050, P7495",6,fase B
+x_c_asalariados_linea__desv_Dominio,"Dominio, Lp, Npersug, P5090, P5100, P5130, P6050, P6430",6,fase B
+x_c_arriendos_linea__sobre__c_pensionados_linea,"Lp, Npersug, P5090, P5100, P5130, P6050, P7495, P7500s2",7,fase B
+x_c_asalariados_menos_lineas__desv_Dominio,"Dominio, Lp, Npersug, P5090, P5100, P5130, P6050, P6430",6,fase B
+x_c_h_tam_linea__por__c_arriendos_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6800, P6870, P7045, P7495",10,fase B
+x_c_h_tam_linea__desv_Depto,"Depto, Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6800, P6870, P7045",9,fase B
+x_c_h_tam_linea__desv_Dominio,"Dominio, Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6800, P6870, P7045",9,fase B
+x_i_perceptores_lab_linea__sobre__c_h_tam_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6430, P6800, P6870, P7040, P7045, P7422, P7472",13,fase B
+x_beneficios_por_ocupado__por__g_P6100_1_sh,"Nper, Oc, P6100, P6510, P6545, P6580, P6585s1, P6585s2, P6585s3, P6585s4, P6590, P6600, P6610, P6620, P6630s1, P6630s2, P6630s3, P6630s4, P6630s6",19,fase B
+x_c_arriendos_linea__por__t_inv_c_hs_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6210, P6210s1, P6800, P7045, P7495",11,fase B
+x_c_arriendos_linea__sobre__c_h_tam_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6800, P6870, P7045, P7495",10,fase B
+x_n_n_beneficios__pc,"Npersug, P6510, P6545, P6580, P6585s1, P6585s2, P6585s3, P6585s4, P6590, P6600, P6610, P6620, P6630s1, P6630s2, P6630s3, P6630s4, P6630s6",17,fase B
+x_u_requerido_sobre_arriendo__sobre__c_h_tam_linea,"Dominio, Lp, Npersug, Oc, P5000, P5090, P5100, P5130, P5140, P6050, P6800, P6870, P7045",11,fase B
+x_t_inv_c_hs_linea__sobre__c_arriendos_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6210, P6210s1, P6800, P7045, P7495",11,fase B
+x_c_pensionados_linea__rango_Depto,"Depto, Lp, Npersug, P5090, P5100, P5130, P6050, P7500s2",6,fase B
+x_i_perceptores_lab_linea__por__t_inv_c_hs_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6210, P6210s1, P6430, P6800, P7040, P7045, P7422, P7472",14,fase B
+x_i_perceptores_linea__desv_Depto,"Depto, Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6430, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",19,fase B
+x_t_inv_c_hs_linea__por__u_requerido_sobre_arriendo,"Dominio, Lp, Npersug, Oc, P5000, P5090, P5100, P5130, P5140, P6050, P6210, P6210s1, P6800, P7045",12,fase B
+g_P6040_suma,P6040,1,fase B
+g_P6040_max,P6040,1,fase B
+g_P6040_min,P6040,1,fase B
+g_P6040_desv,P6040,1,fase B
+g_P6210s1_suma,P6210s1,1,fase B
+g_P6210s1_media,P6210s1,1,fase B
+g_P6210s1_max,P6210s1,1,fase B
+g_P6210s1_min,P6210s1,1,fase B
+g_P6210s1_desv,P6210s1,1,fase B
+g_P6210s1_jefe,"P6050, P6210s1",2,fase B
+g_P6210s1_principal,"Oc, P6050, P6210, P6210s1, P6800, P7045",6,fase B
+g_P6426_suma,P6426,1,fase B
+g_P6426_max,P6426,1,fase B
+g_P6426_min,P6426,1,fase B
+g_P6426_desv,P6426,1,fase B
+g_P6800_suma,P6800,1,fase B
+g_P6800_media,P6800,1,fase B
+g_P6800_max,P6800,1,fase B
+g_P6800_min,P6800,1,fase B
+g_P6800_desv,P6800,1,fase B
+g_P6800_jefe,"P6050, P6800",2,fase B
+g_P6800_principal,"Oc, P6050, P6210, P6210s1, P6800, P7045",6,fase B
+g_P7045_suma,P7045,1,fase B
+g_P7045_media,P7045,1,fase B
+g_P7045_max,P7045,1,fase B
+g_P7045_min,P7045,1,fase B
+g_P7045_desv,P7045,1,fase B
+g_P7045_jefe,"P6050, P7045",2,fase B
+g_P7045_principal,"Oc, P6050, P6210, P6210s1, P6800, P7045",6,fase B
+g_P6020_1_n,P6020,1,fase B
+g_P6020_1_sh,"Nper, P6020",2,fase B
+g_P6020_jefe,"P6020, P6050",2,fase B
+g_P6020_principal,"Oc, P6020, P6050, P6210, P6210s1, P6800, P7045",7,fase B
+g_P6050_1_sh,"Nper, P6050",2,fase B
+g_P6050_2_n,P6050,1,fase B
+g_P6050_2_sh,"Nper, P6050",2,fase B
+g_P6050_3_sh,"Nper, P6050",2,fase B
+g_P6050_4_sh,"Nper, P6050",2,fase B
+g_P6050_5_sh,"Nper, P6050",2,fase B
+g_P6050_6_sh,"Nper, P6050",2,fase B
+g_P6050_7_sh,"Nper, P6050",2,fase B
+g_P6050_8_n,P6050,1,fase B
+g_P6050_8_sh,"Nper, P6050",2,fase B
+g_P6050_9_sh,"Nper, P6050",2,fase B
+g_P6050_principal,"Oc, P6050, P6210, P6210s1, P6800, P7045",6,fase B
+g_P6090_1_sh,"Nper, P6090",2,fase B
+g_P6090_2_sh,"Nper, P6090",2,fase B
+g_P6090_9_n,P6090,1,fase B
+g_P6090_9_sh,"Nper, P6090",2,fase B
+g_P6090_na_n,P6090,1,fase B
+g_P6090_jefe,"P6050, P6090",2,fase B
+g_P6090_principal,"Oc, P6050, P6090, P6210, P6210s1, P6800, P7045",7,fase B
+g_P6100_1_sh,"Nper, P6100",2,fase B
+g_P6100_2_sh,"Nper, P6100",2,fase B
+g_P6100_9_n,P6100,1,fase B
+g_P6100_9_sh,"Nper, P6100",2,fase B
+g_P6100_na_n,P6100,1,fase B
+g_P6100_principal,"Oc, P6050, P6100, P6210, P6210s1, P6800, P7045",7,fase B
+g_P6210_1_n,P6210,1,fase B
+g_P6210_1_sh,"Nper, P6210",2,fase B
+g_P6210_2_n,P6210,1,fase B
+g_P6210_2_sh,"Nper, P6210",2,fase B
+g_P6210_3_n,P6210,1,fase B
+g_P6210_3_sh,"Nper, P6210",2,fase B
+g_P6210_4_n,P6210,1,fase B
+g_P6210_4_sh,"Nper, P6210",2,fase B
+g_P6210_5_n,P6210,1,fase B
+g_P6210_5_sh,"Nper, P6210",2,fase B
+g_P6210_6_sh,"Nper, P6210",2,fase B
+g_P6210_9_n,P6210,1,fase B
+g_P6210_9_sh,"Nper, P6210",2,fase B
+g_P6210_na_n,P6210,1,fase B
+g_P6210_principal,"Oc, P6050, P6210, P6210s1, P6800, P7045",6,fase B
+g_P6240_1_n,P6240,1,fase B
+g_P6240_1_sh,"Nper, P6240",2,fase B
+g_P6240_2_n,P6240,1,fase B
+g_P6240_2_sh,"Nper, P6240",2,fase B
+g_P6240_3_sh,"Nper, P6240",2,fase B
+g_P6240_4_sh,"Nper, P6240",2,fase B
+g_P6240_5_sh,"Nper, P6240",2,fase B
+g_P6240_6_n,P6240,1,fase B
+g_P6240_6_sh,"Nper, P6240",2,fase B
+g_P6240_principal,"Oc, P6050, P6210, P6210s1, P6240, P6800, P7045",7,fase B
+g_P6430_1_sh,"Nper, P6430",2,fase B
+g_P6430_2_sh,"Nper, P6430",2,fase B
+g_P6430_3_sh,"Nper, P6430",2,fase B
+g_P6430_4_sh,"Nper, P6430",2,fase B
+g_P6430_5_sh,"Nper, P6430",2,fase B
+g_P6430_6_sh,"Nper, P6430",2,fase B
+g_P6430_7_sh,"Nper, P6430",2,fase B
+g_P6430_8_sh,"Nper, P6430",2,fase B
+g_P6430_9_sh,"Nper, P6430",2,fase B
+g_P6430_na_n,P6430,1,fase B
+g_P6870_1_sh,"Nper, P6870",2,fase B
+g_P6870_2_n,P6870,1,fase B
+g_P6870_2_sh,"Nper, P6870",2,fase B
+g_P6870_3_n,P6870,1,fase B
+g_P6870_3_sh,"Nper, P6870",2,fase B
+g_P6870_4_n,P6870,1,fase B
+g_P6870_4_sh,"Nper, P6870",2,fase B
+g_P6870_5_n,P6870,1,fase B
+g_P6870_5_sh,"Nper, P6870",2,fase B
+g_P6870_6_n,P6870,1,fase B
+g_P6870_6_sh,"Nper, P6870",2,fase B
+g_P6870_7_n,P6870,1,fase B
+g_P6870_7_sh,"Nper, P6870",2,fase B
+g_P6870_8_n,P6870,1,fase B
+g_P6870_8_sh,"Nper, P6870",2,fase B
+g_P6870_9_n,P6870,1,fase B
+g_P6870_9_sh,"Nper, P6870",2,fase B
+g_P6920_1_sh,"Nper, P6920",2,fase B
+g_P6920_2_n,P6920,1,fase B
+g_P6920_2_sh,"Nper, P6920",2,fase B
+g_P6920_3_sh,"Nper, P6920",2,fase B
+g_P6920_na_n,P6920,1,fase B
+g_P6920_jefe,"P6050, P6920",2,fase B
+g_P6920_principal,"Oc, P6050, P6210, P6210s1, P6800, P6920, P7045",7,fase B
+g_P7050_1_n,P7050,1,fase B
+g_P7050_1_sh,"Nper, P7050",2,fase B
+g_P7050_2_n,P7050,1,fase B
+g_P7050_2_sh,"Nper, P7050",2,fase B
+g_P7050_3_n,P7050,1,fase B
+g_P7050_3_sh,"Nper, P7050",2,fase B
+g_P7050_4_n,P7050,1,fase B
+g_P7050_4_sh,"Nper, P7050",2,fase B
+g_P7050_5_n,P7050,1,fase B
+g_P7050_5_sh,"Nper, P7050",2,fase B
+g_P7050_6_n,P7050,1,fase B
+g_P7050_6_sh,"Nper, P7050",2,fase B
+g_P7050_7_n,P7050,1,fase B
+g_P7050_7_sh,"Nper, P7050",2,fase B
+g_P7050_8_n,P7050,1,fase B
+g_P7050_8_sh,"Nper, P7050",2,fase B
+g_P7050_9_n,P7050,1,fase B
+g_P7050_9_sh,P7050,1,fase B
+g_P7050_na_n,P7050,1,fase B
+g_P7050_jefe,"P6050, P7050",2,fase B
+g_P7050_principal,"Oc, P6050, P6210, P6210s1, P6800, P7045, P7050",7,fase B
+g_P7350_1_n,P7350,1,fase B
+g_P7350_1_sh,"Nper, P7350",2,fase B
+g_P7350_2_n,P7350,1,fase B
+g_P7350_2_sh,"Nper, P7350",2,fase B
+g_P7350_3_n,P7350,1,fase B
+g_P7350_3_sh,"Nper, P7350",2,fase B
+g_P7350_4_n,P7350,1,fase B
+g_P7350_4_sh,"Nper, P7350",2,fase B
+g_P7350_5_n,P7350,1,fase B
+g_P7350_5_sh,"Nper, P7350",2,fase B
+g_P7350_6_n,P7350,1,fase B
+g_P7350_6_sh,"Nper, P7350",2,fase B
+g_P7350_7_n,P7350,1,fase B
+g_P7350_7_sh,"Nper, P7350",2,fase B
+g_P7350_8_n,P7350,1,fase B
+g_P7350_8_sh,"Nper, P7350",2,fase B
+g_P7350_9_n,P7350,1,fase B
+g_P7350_9_sh,"Nper, P7350",2,fase B
+g_P7350_na_n,P7350,1,fase B
+g_P7350_jefe,"P6050, P7350",2,fase B
+g_P7310_1_n,P7310,1,fase B
+g_P7310_1_sh,"Nper, P7310",2,fase B
+g_P7310_2_sh,"Nper, P7310",2,fase B
+g_P7310_na_n,P7310,1,fase B
+g_P7310_jefe,"P6050, P7310",2,fase B
+g_oficio_gg0_n,Oficio,1,fase B
+g_oficio_gg0_sh,"Nper, Oficio",2,fase B
+g_oficio_gg1_n,Oficio,1,fase B
+g_oficio_gg1_sh,"Nper, Oficio",2,fase B
+g_oficio_gg2_n,Oficio,1,fase B
+g_oficio_gg2_sh,"Nper, Oficio",2,fase B
+g_oficio_gg3_n,Oficio,1,fase B
+g_oficio_gg3_sh,"Nper, Oficio",2,fase B
+g_oficio_gg4_n,Oficio,1,fase B
+g_oficio_gg4_sh,"Nper, Oficio",2,fase B
+g_oficio_gg5_n,Oficio,1,fase B
+g_oficio_gg5_sh,"Nper, Oficio",2,fase B
+g_oficio_gg6_n,Oficio,1,fase B
+g_oficio_gg6_sh,"Nper, Oficio",2,fase B
+g_oficio_gg7_n,Oficio,1,fase B
+g_oficio_gg7_sh,"Nper, Oficio",2,fase B
+g_oficio_gg8_n,Oficio,1,fase B
+g_oficio_gg8_sh,"Nper, Oficio",2,fase B
+g_oficio_gg9_n,Oficio,1,fase B
+g_oficio_gg9_sh,"Nper, Oficio",2,fase B
+g_oficio_distintos,Oficio,1,fase B
+g_P7040_no,P7040,1,fase B
+g_P7040_tasa,P7040,1,fase B
+g_P7040_jefe,"P6050, P7040",2,fase B
+g_P7090_no,P7090,1,fase B
+g_P7090_tasa,P7090,1,fase B
+g_P7090_jefe,"P6050, P7090",2,fase B
+g_P7110_si,P7110,1,fase B
+g_P7110_no,P7110,1,fase B
+g_P7110_tasa,P7110,1,fase B
+g_P7110_jefe,"P6050, P7110",2,fase B
+g_P7120_si,P7120,1,fase B
+g_P7120_no,P7120,1,fase B
+g_P7120_tasa,P7120,1,fase B
+g_P7120_jefe,"P6050, P7120",2,fase B
+g_P7150_no,P7150,1,fase B
+g_P7150_tasa,P7150,1,fase B
+g_P7150_jefe,"P6050, P7150",2,fase B
+g_P7160_si,P7160,1,fase B
+g_P7160_no,P7160,1,fase B
+g_P7160_ns,P7160,1,fase B
+g_P7160_tasa,P7160,1,fase B
+g_P7160_jefe,"P6050, P7160",2,fase B
+g_Pet_sh,"Nper, Pet",2,fase B
+g_Oc_sh,"Nper, Oc",2,fase B
+g_Des_sh,"Des, Nper",2,fase B
+g_Ina_sh,"Ina, Nper",2,fase B
+g_P5000_crudo,P5000,1,fase B
+t_dom_ARMENIA,Dominio,0,fase B
+t_dom_BARRANQUILLA,Dominio,0,fase B
+t_dom_BOGOTA,Dominio,0,fase B
+t_dom_BUCARAMANGA,Dominio,0,fase B
+t_dom_CALI,Dominio,0,fase B
+t_dom_CARTAGENA,Dominio,0,fase B
+t_dom_CUCUTA,Dominio,0,fase B
+t_dom_FLORENCIA,Dominio,0,fase B
+t_dom_IBAGUE,Dominio,0,fase B
+t_dom_MANIZALES,Dominio,0,fase B
+t_dom_MEDELLIN,Dominio,0,fase B
+t_dom_MONTERIA,Dominio,0,fase B
+t_dom_NEIVA,Dominio,0,fase B
+t_dom_PASTO,Dominio,0,fase B
+t_dom_PEREIRA,Dominio,0,fase B
+t_dom_POPAYAN,Dominio,0,fase B
+t_dom_QUIBDO,Dominio,0,fase B
+t_dom_RIOHACHA,Dominio,0,fase B
+t_dom_SANTA_MARTA,Dominio,0,fase B
+t_dom_SINCELEJO,Dominio,0,fase B
+t_dom_TUNJA,Dominio,0,fase B
+t_dom_VALLEDUPAR,Dominio,0,fase B
+t_dom_VILLAVICENCIO,Dominio,0,fase B
+t_depto_05,Depto,0,fase B
+t_depto_08,Depto,0,fase B
+t_depto_13,Depto,0,fase B
+t_depto_15,Depto,0,fase B
+t_depto_17,Depto,0,fase B
+t_depto_18,Depto,0,fase B
+t_depto_19,Depto,0,fase B
+t_depto_20,Depto,0,fase B
+t_depto_23,Depto,0,fase B
+t_depto_25,Depto,0,fase B
+t_depto_27,Depto,0,fase B
+t_depto_41,Depto,0,fase B
+t_depto_44,Depto,0,fase B
+t_depto_47,Depto,0,fase B
+t_depto_50,Depto,0,fase B
+t_depto_52,Depto,0,fase B
+t_depto_54,Depto,0,fase B
+t_depto_63,Depto,0,fase B
+t_depto_66,Depto,0,fase B
+t_depto_68,Depto,0,fase B
+t_depto_70,Depto,0,fase B
+t_depto_73,Depto,0,fase B
+t_depto_76,Depto,0,fase B
+t_jefe_pos_1,"P6050, P6430",2,fase B
+t_jefe_pos_2,"P6050, P6430",2,fase B
+t_jefe_pos_3,"P6050, P6430",2,fase B
+t_jefe_pos_4,"P6050, P6430",2,fase B
+t_jefe_pos_5,"P6050, P6430",2,fase B
+t_jefe_pos_6,"P6050, P6430",2,fase B
+t_jefe_pos_7,"P6050, P6430",2,fase B
+t_jefe_pos_8,"P6050, P6430",2,fase B
+t_jefe_pos_9,"P6050, P6430",2,fase B
+t_jefe_nivel_1,"P6050, P6210",2,fase B
+t_jefe_nivel_2,"P6050, P6210",2,fase B
+t_jefe_nivel_3,"P6050, P6210",2,fase B
+t_jefe_nivel_4,"P6050, P6210",2,fase B
+t_jefe_nivel_5,"P6050, P6210",2,fase B
+t_jefe_nivel_6,"P6050, P6210",2,fase B
+t_jefe_nivel_9,"P6050, P6210",2,fase B
+t_jefe_reg_9,"P6050, P6100",2,fase B
+t_jefe_act_1,"P6050, P6240",2,fase B
+t_jefe_act_2,"P6050, P6240",2,fase B
+t_jefe_act_5,"P6050, P6240",2,fase B
+t_jefe_act_6,"P6050, P6240",2,fase B
+t_jefe_tam_2,"P6050, P6870",2,fase B
+t_jefe_tam_3,"P6050, P6870",2,fase B
+t_jefe_tam_4,"P6050, P6870",2,fase B
+t_jefe_tam_5,"P6050, P6870",2,fase B
+t_jefe_tam_6,"P6050, P6870",2,fase B
+t_jefe_tam_7,"P6050, P6870",2,fase B
+t_jefe_tam_8,"P6050, P6870",2,fase B
+t_jefe_tam_9,"P6050, P6870",2,fase B
+t_jefe_ofgg_0,"Oficio, P6050",2,fase B
+t_jefe_ofgg_1,"Oficio, P6050",2,fase B
+t_jefe_ofgg_2,"Oficio, P6050",2,fase B
+t_jefe_ofgg_3,"Oficio, P6050",2,fase B
+t_jefe_ofgg_4,"Oficio, P6050",2,fase B
+t_jefe_ofgg_5,"Oficio, P6050",2,fase B
+t_jefe_ofgg_6,"Oficio, P6050",2,fase B
+t_jefe_ofgg_7,"Oficio, P6050",2,fase B
+t_jefe_ofgg_8,"Oficio, P6050",2,fase B
+t_jefe_ofgg_9,"Oficio, P6050",2,fase B
+t_ten_propia_pagada_x_cabecera,"Clase, P5090",1,fase B
+t_ten_propia_pagando_x_cabecera,"Clase, P5090",1,fase B
+t_ten_arriendo_x_cabecera,"Clase, P5090",1,fase B
+t_ten_usufructo_x_cabecera,"Clase, P5090",1,fase B
+t_ten_posesion_sin_titulo_x_cabecera,"Clase, P5090",1,fase B
+t_ten_otra_x_cabecera,"Clase, P5090",1,fase B
+t_jefe_primaria_o_menos,"P6050, P6210, P6210s1",3,fase B
+t_jefe_bachiller,"P6050, P6210, P6210s1",3,fase B
+t_jefe_superior,"P6050, P6210, P6210s1",3,fase B
+t_educmax_bachiller,"P6040, P6210, P6210s1",3,fase B
+t_educmax_superior,"P6040, P6210, P6210s1",3,fase B
+t_un_ocupado_hogar_grande,"Npersug, Oc",2,fase B
+t_sin_cotizantes_con_ocupados,"Oc, P6920",2,fase B
+t_arriendo_bajo_linea,"Dominio, Lp, Npersug, P5000, P5130, P5140",4,fase B
+t_arriendo_alto_linea,"Dominio, Lp, Npersug, P5000, P5130, P5140",4,fase B
+t_hacinamiento_gt2,"Nper, P5000",2,fase B
+t_lineas_por_ocupado_gt3,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050",6,fase B
+t_dependencia_ge2,P6040,1,fase B
+t_horas_pc_lt20,"Npersug, Oc, P6800, P7045",4,fase B
+t_ocupados_pc_lt_un_tercio,"Npersug, Oc",2,fase B
+t_requerido_casi_cero,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_ipm_2_o_mas,"Des, Nper, Oc, P5010, P6040, P6050, P6090, P6210, P6210s1, P6240, P6920",11,fase B
+t_perceptores_menor_lineas,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6430, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",19,fase B
+t_cuad_ingreso_requerido,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_cuad_u_n_lineas,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_cuad_u_requerido_pc,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_log_arriendo,"Dominio, P5000, P5130, P5140",3,fase B
+t_raiz_arriendo,"Dominio, P5000, P5130, P5140",3,fase B
+t_inv_arriendo,"Dominio, P5000, P5130, P5140",3,fase B
+t_cuad_arriendo,"Dominio, P5000, P5130, P5140",3,fase B
+t_log_arriendo_sobre_linea,"Dominio, Lp, Npersug, P5000, P5130, P5140",4,fase B
+t_raiz_arriendo_sobre_linea,"Dominio, Lp, Npersug, P5000, P5130, P5140",4,fase B
+t_inv_arriendo_sobre_linea,"Dominio, Lp, Npersug, P5000, P5130, P5140",4,fase B
+t_cuad_arriendo_sobre_linea,"Dominio, Lp, Npersug, P5000, P5130, P5140",4,fase B
+t_log_share_arriendo_imputado,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_raiz_share_arriendo_imputado,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_inv_share_arriendo_imputado,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_cuad_share_arriendo_imputado,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_cuad_requerido_sobre_linea,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_log_personas_por_dormitorio,"Nper, P5010",2,fase B
+t_raiz_personas_por_dormitorio,"Nper, P5010",2,fase B
+t_inv_personas_por_dormitorio,"Nper, P5010",2,fase B
+t_cuad_personas_por_dormitorio,"Nper, P5010",2,fase B
+t_log_personas_por_cuarto,"Nper, P5000",2,fase B
+t_raiz_personas_por_cuarto,"Nper, P5000",2,fase B
+t_inv_personas_por_cuarto,"Nper, P5000",2,fase B
+t_cuad_personas_por_cuarto,"Nper, P5000",2,fase B
+t_log_dependencia,P6040,1,fase B
+t_raiz_dependencia,P6040,1,fase B
+t_inv_dependencia,P6040,1,fase B
+t_cuad_dependencia,P6040,1,fase B
+t_log_ocupados_pc,"Npersug, Oc",2,fase B
+t_raiz_ocupados_pc,"Npersug, Oc",2,fase B
+t_inv_ocupados_pc,"Npersug, Oc",2,fase B
+t_cuad_ocupados_pc,"Npersug, Oc",2,fase B
+t_log_formales_pc,"Npersug, P6920",2,fase B
+t_raiz_formales_pc,"Npersug, P6920",2,fase B
+t_inv_formales_pc,"Npersug, P6920",2,fase B
+t_cuad_formales_pc,"Npersug, P6920",2,fase B
+t_log_horas_pc,"Npersug, Oc, P6800, P7045",4,fase B
+t_raiz_horas_pc,"Npersug, Oc, P6800, P7045",4,fase B
+t_inv_horas_pc,"Npersug, Oc, P6800, P7045",4,fase B
+t_cuad_horas_pc,"Npersug, Oc, P6800, P7045",4,fase B
+t_log_c_hs_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6210, P6210s1, P6800, P7045",10,fase B
+t_raiz_c_hs_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6210, P6210s1, P6800, P7045",10,fase B
+t_inv_c_hs_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6210, P6210s1, P6800, P7045",10,fase B
+t_cuad_c_hs_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6210, P6210s1, P6800, P7045",10,fase B
+t_log_c_horas_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6800, P7045",8,fase B
+t_raiz_c_horas_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6800, P7045",8,fase B
+t_inv_c_horas_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6800, P7045",8,fase B
+t_cuad_c_horas_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6800, P7045",8,fase B
+t_log_c_perceptores_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7505, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",19,fase B
+t_raiz_c_perceptores_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7505, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",19,fase B
+t_inv_c_perceptores_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7505, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",19,fase B
+t_cuad_c_perceptores_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7505, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",19,fase B
+t_log_i_perceptores_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6430, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",19,fase B
+t_raiz_i_perceptores_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6430, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",19,fase B
+t_inv_i_perceptores_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6430, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",19,fase B
+t_cuad_i_perceptores_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6430, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",19,fase B
+t_log_c_formales_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6920",7,fase B
+t_raiz_c_formales_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6920",7,fase B
+t_inv_c_formales_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6920",7,fase B
+t_cuad_c_formales_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6920",7,fase B
+t_log_educ_max_adultos,"P6040, P6210, P6210s1",3,fase B
+t_raiz_educ_max_adultos,"P6040, P6210, P6210s1",3,fase B
+t_inv_educ_max_adultos,"P6040, P6210, P6210s1",3,fase B
+t_cuad_educ_max_adultos,"P6040, P6210, P6210s1",3,fase B
+t_log_educ_media_adultos,"P6040, P6210, P6210s1",3,fase B
+t_raiz_educ_media_adultos,"P6040, P6210, P6210s1",3,fase B
+t_inv_educ_media_adultos,"P6040, P6210, P6210s1",3,fase B
+t_cuad_educ_media_adultos,"P6040, P6210, P6210s1",3,fase B
+t_log_jefe_anios_educ,"P6050, P6210, P6210s1",3,fase B
+t_raiz_jefe_anios_educ,"P6050, P6210, P6210s1",3,fase B
+t_inv_jefe_anios_educ,"P6050, P6210, P6210s1",3,fase B
+t_cuad_jefe_anios_educ,"P6050, P6210, P6210s1",3,fase B
+t_log_jefe_edad,"P6040, P6050",2,fase B
+t_raiz_jefe_edad,"P6040, P6050",2,fase B
+t_inv_jefe_edad,"P6040, P6050",2,fase B
+t_cuad_jefe_edad,"P6040, P6050",2,fase B
+t_log_edad_media,P6040,1,fase B
+t_raiz_edad_media,P6040,1,fase B
+t_inv_edad_media,P6040,1,fase B
+t_cuad_edad_media,P6040,1,fase B
+t_log_Nper,Nper,1,fase B
+t_raiz_Nper,Nper,1,fase B
+t_inv_Nper,Nper,1,fase B
+t_cuad_Nper,Nper,1,fase B
+t_log_Npersug,Npersug,1,fase B
+t_raiz_Npersug,Npersug,1,fase B
+t_inv_Npersug,Npersug,1,fase B
+t_cuad_Npersug,Npersug,1,fase B
+t_log_cuartos,P5000,1,fase B
+t_raiz_cuartos,P5000,1,fase B
+t_inv_cuartos,P5000,1,fase B
+t_cuad_cuartos,P5000,1,fase B
+t_log_n_horas,"Oc, P6800, P7045",3,fase B
+t_raiz_n_horas,"Oc, P6800, P7045",3,fase B
+t_inv_n_horas,"Oc, P6800, P7045",3,fase B
+t_cuad_n_horas,"Oc, P6800, P7045",3,fase B
+t_log_c_hs,"Oc, P6050, P6210, P6210s1, P6800, P7045",6,fase B
+t_raiz_c_hs,"Oc, P6050, P6210, P6210s1, P6800, P7045",6,fase B
+t_inv_c_hs,"Oc, P6050, P6210, P6210s1, P6800, P7045",6,fase B
+t_cuad_c_hs,"Oc, P6050, P6210, P6210s1, P6800, P7045",6,fase B
+t_log_c_hs_pc,"Npersug, Oc, P6050, P6210, P6210s1, P6800, P7045",7,fase B
+t_raiz_c_hs_pc,"Npersug, Oc, P6050, P6210, P6210s1, P6800, P7045",7,fase B
+t_inv_c_hs_pc,"Npersug, Oc, P6050, P6210, P6210s1, P6800, P7045",7,fase B
+t_cuad_c_hs_pc,"Npersug, Oc, P6050, P6210, P6210s1, P6800, P7045",7,fase B
+t_log_c_hx_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6040, P6050, P6210, P6210s1, P6800, P7045",11,fase B
+t_raiz_c_hx_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6040, P6050, P6210, P6210s1, P6800, P7045",11,fase B
+t_inv_c_hx_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6040, P6050, P6210, P6210s1, P6800, P7045",11,fase B
+t_cuad_c_hx_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6040, P6050, P6210, P6210s1, P6800, P7045",11,fase B
+t_log_c_exp_media_oc,"Oc, P6040, P6050, P6210, P6210s1",5,fase B
+t_raiz_c_exp_media_oc,"Oc, P6040, P6050, P6210, P6210s1",5,fase B
+t_inv_c_exp_media_oc,"Oc, P6040, P6050, P6210, P6210s1",5,fase B
+t_cuad_c_exp_media_oc,"Oc, P6040, P6050, P6210, P6210s1",5,fase B
+t_log_antiguedad_media_oc,"Oc, P6426",2,fase B
+t_raiz_antiguedad_media_oc,"Oc, P6426",2,fase B
+t_inv_antiguedad_media_oc,"Oc, P6426",2,fase B
+t_cuad_antiguedad_media_oc,"Oc, P6426",2,fase B
+t_log_p_puntaje,"Des, Nper, Oc, P5010, P6040, P6050, P6090, P6210, P6210s1, P6240, P6920",11,fase B
+t_raiz_p_puntaje,"Des, Nper, Oc, P5010, P6040, P6050, P6090, P6210, P6210s1, P6240, P6920",11,fase B
+t_inv_p_puntaje,"Des, Nper, Oc, P5010, P6040, P6050, P6090, P6210, P6210s1, P6240, P6920",11,fase B
+t_cuad_p_puntaje,"Des, Nper, Oc, P5010, P6040, P6050, P6090, P6210, P6210s1, P6240, P6920",11,fase B
+t_log_p_educ_media_15,"P6040, P6050, P6210, P6210s1",4,fase B
+t_raiz_p_educ_media_15,"P6040, P6050, P6210, P6210s1",4,fase B
+t_inv_p_educ_media_15,"P6040, P6050, P6210, P6210s1",4,fase B
+t_cuad_p_educ_media_15,"P6040, P6050, P6210, P6210s1",4,fase B
+t_log_share_subsidiado,"Nper, P6100",2,fase B
+t_raiz_share_subsidiado,"Nper, P6100",2,fase B
+t_inv_share_subsidiado,"Nper, P6100",2,fase B
+t_cuad_share_subsidiado,"Nper, P6100",2,fase B
+t_log_share_menores,"Nper, P6040",2,fase B
+t_raiz_share_menores,"Nper, P6040",2,fase B
+t_inv_share_menores,"Nper, P6040",2,fase B
+t_cuad_share_menores,"Nper, P6040",2,fase B
+t_log_u_arriendo_estimado_linea,"Lp, Npersug, P5130",2,fase B
+t_raiz_u_arriendo_estimado_linea,"Lp, Npersug, P5130",2,fase B
+t_inv_u_arriendo_estimado_linea,"Lp, Npersug, P5130",2,fase B
+t_cuad_u_arriendo_estimado_linea,"Lp, Npersug, P5130",2,fase B
+t_rec_ingreso_requerido,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_rgdom_ingreso_requerido,"Dominio, Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_qdom_ingreso_requerido,"Dominio, Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_rec_u_n_lineas,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_rgdom_u_n_lineas,"Dominio, Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_qdom_u_n_lineas,"Dominio, Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_rec_u_requerido_pc,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_rgdom_u_requerido_pc,"Dominio, Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_qdom_u_requerido_pc,"Dominio, Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_rec_arriendo,"Dominio, P5000, P5130, P5140",3,fase B
+t_rgdom_arriendo,"Dominio, P5000, P5130, P5140",3,fase B
+t_qdom_arriendo,"Dominio, P5000, P5130, P5140",3,fase B
+t_rec_arriendo_sobre_linea,"Dominio, Lp, Npersug, P5000, P5130, P5140",4,fase B
+t_rgdom_arriendo_sobre_linea,"Dominio, Lp, Npersug, P5000, P5130, P5140",4,fase B
+t_qdom_arriendo_sobre_linea,"Dominio, Lp, Npersug, P5000, P5130, P5140",4,fase B
+t_rec_share_arriendo_imputado,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_rgdom_share_arriendo_imputado,"Dominio, Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_qdom_share_arriendo_imputado,"Dominio, Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_rec_requerido_sobre_linea,"Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_rgdom_requerido_sobre_linea,"Dominio, Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_qdom_requerido_sobre_linea,"Dominio, Lp, Npersug, P5090, P5100, P5130",4,fase B
+t_rec_personas_por_dormitorio,"Nper, P5010",2,fase B
+t_rgdom_personas_por_dormitorio,"Dominio, Nper, P5010",2,fase B
+t_qdom_personas_por_dormitorio,"Dominio, Nper, P5010",2,fase B
+t_rec_personas_por_cuarto,"Nper, P5000",2,fase B
+t_rgdom_personas_por_cuarto,"Dominio, Nper, P5000",2,fase B
+t_qdom_personas_por_cuarto,"Dominio, Nper, P5000",2,fase B
+t_rec_dependencia,P6040,1,fase B
+t_rgdom_dependencia,"Dominio, P6040",1,fase B
+t_qdom_dependencia,"Dominio, P6040",1,fase B
+t_rec_ocupados_pc,"Npersug, Oc",2,fase B
+t_rgdom_ocupados_pc,"Dominio, Npersug, Oc",2,fase B
+t_qdom_ocupados_pc,"Dominio, Npersug, Oc",2,fase B
+t_rec_formales_pc,"Npersug, P6920",2,fase B
+t_rgdom_formales_pc,"Dominio, Npersug, P6920",2,fase B
+t_qdom_formales_pc,"Dominio, Npersug, P6920",2,fase B
+t_rec_horas_pc,"Npersug, Oc, P6800, P7045",4,fase B
+t_rgdom_horas_pc,"Dominio, Npersug, Oc, P6800, P7045",4,fase B
+t_qdom_horas_pc,"Dominio, Npersug, Oc, P6800, P7045",4,fase B
+t_rec_c_hs_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6210, P6210s1, P6800, P7045",10,fase B
+t_rgdom_c_hs_linea,"Dominio, Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6210, P6210s1, P6800, P7045",10,fase B
+t_qdom_c_hs_linea,"Dominio, Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6210, P6210s1, P6800, P7045",10,fase B
+t_rec_c_horas_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6800, P7045",8,fase B
+t_rgdom_c_horas_linea,"Dominio, Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6800, P7045",8,fase B
+t_qdom_c_horas_linea,"Dominio, Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6800, P7045",8,fase B
+t_rec_c_perceptores_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7505, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",19,fase B
+t_rgdom_c_perceptores_linea,"Dominio, Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7505, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",19,fase B
+t_qdom_c_perceptores_linea,"Dominio, Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7505, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",19,fase B
+t_rec_i_perceptores_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6430, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",19,fase B
+t_rgdom_i_perceptores_linea,"Dominio, Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6430, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",19,fase B
+t_qdom_i_perceptores_linea,"Dominio, Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6430, P7040, P7422, P7472, P7495, P7500s2, P7500s3, P7510s1, P7510s2, P7510s3, P7510s5, P7510s6, P7510s7",19,fase B
+t_rec_c_formales_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6920",7,fase B
+t_rgdom_c_formales_linea,"Dominio, Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6920",7,fase B
+t_qdom_c_formales_linea,"Dominio, Lp, Npersug, Oc, P5090, P5100, P5130, P6050, P6920",7,fase B
+t_rec_educ_max_adultos,"P6040, P6210, P6210s1",3,fase B
+t_rgdom_educ_max_adultos,"Dominio, P6040, P6210, P6210s1",3,fase B
+t_qdom_educ_max_adultos,"Dominio, P6040, P6210, P6210s1",3,fase B
+t_rec_educ_media_adultos,"P6040, P6210, P6210s1",3,fase B
+t_rgdom_educ_media_adultos,"Dominio, P6040, P6210, P6210s1",3,fase B
+t_qdom_educ_media_adultos,"Dominio, P6040, P6210, P6210s1",3,fase B
+t_rec_jefe_anios_educ,"P6050, P6210, P6210s1",3,fase B
+t_rec_jefe_edad,"P6040, P6050",2,fase B
+t_rec_edad_media,P6040,1,fase B
+t_rec_Nper,Nper,1,fase B
+t_rec_Npersug,Npersug,1,fase B
+t_rec_cuartos,P5000,1,fase B
+t_rec_n_horas,"Oc, P6800, P7045",3,fase B
+t_rec_c_hs,"Oc, P6050, P6210, P6210s1, P6800, P7045",6,fase B
+t_rec_c_hs_pc,"Npersug, Oc, P6050, P6210, P6210s1, P6800, P7045",7,fase B
+t_rec_c_hx_linea,"Lp, Npersug, Oc, P5090, P5100, P5130, P6040, P6050, P6210, P6210s1, P6800, P7045",11,fase B
+t_rec_c_exp_media_oc,"Oc, P6040, P6050, P6210, P6210s1",5,fase B
+t_rec_antiguedad_media_oc,"Oc, P6426",2,fase B
+t_rec_p_puntaje,"Des, Nper, Oc, P5010, P6040, P6050, P6090, P6210, P6210s1, P6240, P6920",11,fase B
+t_rec_p_educ_media_15,"P6040, P6050, P6210, P6210s1",4,fase B
+t_rec_share_menores,"Nper, P6040",2,fase B
+t_rec_u_arriendo_estimado_linea,"Lp, Npersug, P5130",2,fase B

@@ -1,0 +1,3 @@
+config,perdida_media,perdida_EE,F1_medio_particiones,F1_r1,F1_r2,iter_mediana,params,tiempo_s,elegido
+config 0,0.23036253010042113,0.0008270266230167299,0.7518754735890314,0.751457100257534,0.7522938469205288,150.0,"{""criterion"": ""log_loss"", ""max_features"": 0.1067560665, ""max_samples"": 0.4979684449, ""min_samples_leaf"": 8, ""n_estimators"": 150}",3573.09477519989,False
+config 1,0.23051304183723126,0.0007818536988533154,0.7519895713516129,0.7518489425086333,0.7521302001945926,150.0,"{""criterion"": ""log_loss"", ""max_features"": 0.1087056783, ""max_samples"": 0.6701096522, ""min_samples_leaf"": 16, ""n_estimators"": 150}",4425.758258104324,True
