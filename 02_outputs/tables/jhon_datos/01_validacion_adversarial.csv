@@ -1,0 +1,4 @@
+escenario,AUC
+train completo vs test,0.530806840767266
+train sin Bogotá vs test,0.49856303977598077
+sin Bogotá y sin Fex_c,0.49872572029364715
