@@ -1,0 +1,29 @@
+pregunta,media,ee,etiqueta
+P6050,0.690277886974926,0.009380440834839217,P6050 (Parentesco con el jefe o jefa del hogar)
+Npersug,0.5856387460193633,0.007512782378534099,Npersug (Número de personas de la unidad de gasto (listado + parentes…)
+Oc,0.5604112259981483,0.009691366568404825,Oc (Ocupado (derivado del módulo de fuerza de trabajo))
+P5090,0.37858216110744775,0.0028891757855386644,"P5090 (La vivienda ocupada por este hogar es: propia pagada, propia…)"
+P5130,0.37858216110744775,0.0028891757855386644,"P5130 (Si tuviera que pagar arriendo por esta vivienda, ¿cuánto est…)"
+P5100,0.37858216110744775,0.0028891757855386644,P5100 (¿Cuánto pagan mensualmente por cuota de amortización?)
+P5140,0.3587333002125207,0.004646105686300912,P5140 (¿Cuánto pagan mensualmente por arriendo?)
+P5000,0.3587333002125207,0.004646105686300912,"P5000 (Incluyendo sala-comedor, ¿de cuántos cuartos en total dispon…)"
+P6870,0.3587333002125207,0.004646105686300912,P6870 (¿Cuántas personas en total tiene la empresa donde trabaja?)
+P7045,0.3587333002125207,0.004646105686300912,P7045 (¿Cuántas horas trabajó la semana pasada en ese segundo traba…)
+P6800,0.3587333002125207,0.004646105686300912,P6800 (¿Cuántas horas a la semana trabaja normalmente en ese trabaj…)
+P7495,0.1390970959788283,0.004491138300977456,"P7495 (El mes pasado, ¿recibió pagos por arriendos y/o pensiones? (…)"
+P7500s3,0.1390970959788283,0.004491138300977456,"P7500s3 (¿Recibió pagos por pensión alimenticia (paternidad, divorcio…)"
+P7510s5,0.1390970959788283,0.004491138300977456,"P7510s5 (Últimos 12 meses: intereses, CDT, depósitos, utilidades o di…)"
+P7500s2,0.1390970959788283,0.004491138300977456,"P7500s2 (¿Recibió pagos por pensiones o jubilaciones (vejez, invalide…)"
+P6430,0.06882312550569333,0.0020149215362201965,P6430 (Posición ocupacional en el trabajo principal)
+P7510s2,0.06555877904345764,0.0027450543795376845,P7510s2 (Últimos 12 meses: dinero de hogares o personas residentes fu…)
+P7472,0.06555877904345764,0.0027450543795376845,P7472 (Inactivos: ¿recibió o ganó el mes pasado ingresos por trabaj…)
+P7422,0.06555877904345764,0.0027450543795376845,P7422 (Desocupados: ¿recibió o ganó el mes pasado ingresos por trab…)
+P7040,0.06555877904345764,0.0027450543795376845,P7040 (¿Tenía la semana pasada otro trabajo o negocio?)
+P7510s6,0.06555877904345764,0.0027450543795376845,P7510s6 (Últimos 12 meses: cesantías y/o intereses a las cesantías)
+P7510s3,0.06555877904345764,0.0027450543795376845,P7510s3 (Últimos 12 meses: ayudas en dinero de instituciones del país…)
+P7510s7,0.06555877904345764,0.0027450543795376845,P7510s7 (Últimos 12 meses: dinero de otras fuentes)
+P7510s1,0.06555877904345764,0.0027450543795376845,P7510s1 (Últimos 12 meses: dinero de otros hogares o personas residen…)
+Oficio,0.009360687137750767,0.001083925377359614,"Oficio (¿Qué hace en este trabajo? (oficio, CIUO-68 a 2 dígitos))"
+P6100,0.008267035225067564,0.0007581952936884878,"P6100 (Régimen de seguridad social en salud: contributivo, especial…)"
+P7150,0.004327038147829287,0.0003173642421518846,P7150 (¿Hizo diligencias para cambiar de trabajo?)
+P6590,0.0039004684316247483,0.0006184481155569028,"P6590 (Además del salario en dinero, ¿recibió alimentos como parte …)"

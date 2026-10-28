@@ -1,0 +1,206 @@
+{
+ "ACE": 0.02077777134,
+ "AUC": 0.9161186475,
+ "AUC_PR": 0.7382980018,
+ "Brier": 0.09243530867,
+ "EE_bootstrap": 0.002063425409,
+ "EE_entre_particiones": 0.0002845089018,
+ "EE_pliegues": 0.00329279404,
+ "EE_psi": 0.001997790103,
+ "F1_anidado_sinBOG": 0.6902902104,
+ "F1_medio_particiones": 0.6873348506,
+ "F1_particiones": {
+  "1": 0.68758318,
+  "2": 0.6870244208,
+  "3": 0.6873969512
+ },
+ "F1_postestratificado": 0.690266202,
+ "F1_reevaluacion_r4": 0.6897496364,
+ "F1_segunda_particion": 0.6870244208,
+ "IC95": [
+  0.6862651588,
+  0.6942708543
+ ],
+ "LogLoss": 0.2905715668,
+ "MCC": 0.6040528314,
+ "algoritmo_enunciado": "Naive Bayes",
+ "archivo": "NB_nb_categorico_bins_20_disc_cuantiles_alfa_9_98_n8_lb0_s1_v7.csv",
+ "bogota": {
+  "lam_B": 0.0,
+  "nota": "regla de Bayes: menor pérdida media"
+ },
+ "calibracion_dentro_del_pliegue": {
+  "isotonica": {
+   "ACE": 0.001834803738,
+   "Brier": 0.09102965393,
+   "F1_anidado": 0.6902538809,
+   "LogLoss": 0.2868192215,
+   "adoptar": true,
+   "dACE": -0.01894296758,
+   "dBrier": -0.001405654739,
+   "dF1_anidado": -3.632947425e-05,
+   "dLogLoss": -0.00375234533
+  },
+  "original": {
+   "ACE": 0.02077777132,
+   "Brier": 0.09243530867,
+   "F1_anidado": 0.6902902104,
+   "LogLoss": 0.2905715668
+  },
+  "platt": {
+   "ACE": 0.003638063236,
+   "Brier": 0.09136793686,
+   "F1_anidado": 0.6903994754,
+   "LogLoss": 0.287582552,
+   "adoptar": true,
+   "dACE": -0.01713970808,
+   "dBrier": -0.001067371802,
+   "dF1_anidado": 0.0001092649617,
+   "dLogLoss": -0.002989014778
+  }
+ },
+ "conjunto": "pars",
+ "datos": "v7 (v7)",
+ "desbalance": "ninguno (sólo umbral; sensibilidad con pesos balanceados reportada)",
+ "descripcion_kaggle": "Naive Bayes (clasificación, NB); tipo=categorico, n_bins=20, estrategia=cuantiles, alpha=9.985; 8 variables (28 preguntas); λ_B 0; umbral umbral fijo (tasa verificada) 0.383; F1 CV anidado sin Bogotá 0.6903; datos v7",
+ "diagnostico_umbral": {
+  "F1_oof_max": 0.6904829788,
+  "F_medio": 0.3452414894,
+  "banda_tasa": 0.003353996306,
+  "contraste_promedio_pliegues_dif": 0.001858904606,
+  "contraste_tasa_promedio_pliegues": 0.2463879821,
+  "dif_reglas": 0.0005742957321,
+  "media_prob_ok": false,
+  "media_prob_test": 0.2244317114,
+  "n_preguntas_efectivas": 28,
+  "n_vars_efectivas": 8,
+  "prevalencia_esperada_test": 0.2074892898,
+  "q_hat": 0.2471873725,
+  "regla": "umbral fijo (tasa verificada)",
+  "tasa_fija_test": 0.2466449039,
+  "tasa_igualada_test": 0.2472191996,
+  "tasa_ok": true,
+  "tasa_predicha_test": 0.2466449039,
+  "umbral_IC90": [
+   0.3703019705,
+   0.3853887679
+  ],
+  "umbral_argmax": 0.3846416534,
+  "umbral_oof": 0.3831672533,
+  "umbral_test": 0.3831672533
+ },
+ "estabilidad": {
+  "jaccard_preguntas": 0.7273123028,
+  "jaccard_preguntas_EE_boot": 0.06440063916,
+  "jaccard_variables": 0.3305361305,
+  "n_conjuntos": 5
+ },
+ "exhaustividad": 0.7568530616,
+ "hilos": 2,
+ "hiperparametros": {
+  "alpha": 9.9849765,
+  "estrategia": "cuantiles",
+  "n_bins": 20,
+  "tipo": "categorico"
+ },
+ "mapa_preguntas": "conjuntos_variables_v7.json (fase B: rastreo exacto de dependencias)",
+ "media_prob_test": 0.2244317114,
+ "meseta_umbral": {
+  "F1_max": 0.6904829788,
+  "meseta_0.0005": [
+   0.3754034698,
+   0.3895406467
+  ],
+  "meseta_0.001": [
+   0.3694178689,
+   0.414988818
+  ],
+  "tasas_0.0005": [
+   0.2464166122,
+   0.2481783501
+  ],
+  "tasas_0.001": [
+   0.2420576062,
+   0.255704598
+  ]
+ },
+ "modelo": "Naive Bayes",
+ "monotonia": {
+  "adoptada": false,
+  "aplica": false,
+  "restricciones": null
+ },
+ "n_candidatas": 8,
+ "n_preguntas": 28,
+ "n_vars": 8,
+ "optimismo": -0.002414785745,
+ "otras_versiones": [
+  {
+   "AUC": 0.8872497377,
+   "EE_psi": 0.002071456879,
+   "F1_anidado_sinBOG": 0.6322848777,
+   "archivo": "NB_nb_categorico_bins_20_disc_cuantiles_alfa_9_98_n25_lb1_s1_corta_v7.csv",
+   "lam_B": 1.0,
+   "n_preguntas": 19,
+   "n_vars": 25,
+   "ruta_csv": "G:\\Mi unidad\\Curso BigData\\Taller2\\submissions\\NB_nb_categorico_bins_20_disc_cuantiles_alfa_9_98_n25_lb1_s1_corta_v7.csv",
+   "tasa_predicha_test": 0.2743168903,
+   "umbral": 0.7790711097,
+   "version": "encuesta_corta"
+  }
+ ],
+ "peso_bogota": 0.0,
+ "pool_candidatas": null,
+ "precision": 0.6344889029,
+ "presupuesto": "reducido",
+ "prevalencia_esperada_test": 0.2074892898,
+ "registro_slug": "Naive_Bayes_v7_principal_8_vars",
+ "regla_umbral": "umbral fijo (tasa verificada)",
+ "ruta_csv": "G:\\Mi unidad\\Curso BigData\\Taller2\\submissions\\NB_nb_categorico_bins_20_disc_cuantiles_alfa_9_98_n8_lb0_s1_v7.csv",
+ "sesgo_tibshirani": {
+  "n_config": 33,
+  "sesgo_F1": 1.454288332e-05,
+  "sesgo_perdida": 0.0002048091253
+ },
+ "submuestra_prueba": null,
+ "tasa_coherente": true,
+ "tasa_pobres_train_sinBOG": 0.2072179438,
+ "tasa_predicha_oof_sinBOG": 0.2471873725,
+ "tasa_predicha_test": 0.2466449039,
+ "tiempo_total_min": 22.29138558,
+ "tiempos_min": {
+  "bogota": 0.2190980991,
+  "busqueda": 2.649561274,
+  "conjuntos": 5.02589666,
+  "desbalance": 0.05518065294,
+  "final": 0.4389802178,
+  "referencia": 1.878884578,
+  "seleccion": 10.96354498,
+  "sesgo": 0.4857927601
+ },
+ "umbral": 0.3831672533,
+ "umbral_por_dominio": false,
+ "variables": [
+  "x_u_requerido_sobre_arriendo__sobre__c_h_tam_linea",
+  "i_pension_o_capital",
+  "i_dependientes_por_perceptor",
+  "g_P7150_jefe",
+  "n_salud_especial",
+  "c_patronos_linea",
+  "i_especie_alimentos_linea",
+  "g_oficio_gg0_n"
+ ],
+ "verificado": "id,pobre; 66.168 filas; ids y orden de sample_submission; valores 0/1",
+ "version": "principal",
+ "versiones_paquetes": {
+  "catboost": "1.2.10",
+  "lightgbm": "4.7.0",
+  "numpy": "2.3.2",
+  "optuna": "5.0.0",
+  "pandas": "2.3.1",
+  "python": "3.13.5",
+  "scikit-learn": "1.7.2",
+  "scipy": "1.16.3",
+  "xgboost": "3.4.1"
+ }
+}
