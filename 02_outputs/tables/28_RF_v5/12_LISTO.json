@@ -1,0 +1,74 @@
+{
+ "modelo": "Random forest",
+ "algoritmo_enunciado": "Random Forest",
+ "datos": "v5",
+ "version": "principal",
+ "ruta_csv": "G:\\Mi unidad\\Curso BigData\\Taller2\\submissions\\RF_mtry_0_292_minleaf_156_ms_0_443_depth_None_cw_none_trees_600_n_25_bog0_5.csv",
+ "archivo": "RF_mtry_0_292_minleaf_156_ms_0_443_depth_None_cw_none_trees_600_n_25_bog0_5.csv",
+ "descripcion_kaggle": "Random forest (clasificación, RF); max_features=0.2921, min_samples_leaf=156, max_samples=0.4429, max_depth=None, criterion=gini, class_weight=None; 25 variables (g. f. top-40 impureza (con generadas) − bloques ACDEF); peso Bogotá 0.5; desbalance: ninguna (sólo umbral); umbral 0.364 (F1-óptimo OOF sin Bogotá); F1 CV anidado sin Bogotá 0.7774; bolsa de 5 semillas; datos v5",
+ "n_vars": 25,
+ "conjunto": "g. f. top-40 impureza (con generadas) − bloques ACDEF",
+ "hiperparametros": {
+  "n_estimators": 150,
+  "max_features": 0.29213086945767347,
+  "min_samples_leaf": 156,
+  "max_samples": 0.44290939178493327,
+  "max_depth": null,
+  "criterion": "gini",
+  "class_weight": null
+ },
+ "peso_bogota": 0.5,
+ "desbalance": "ninguna (sólo umbral)",
+ "umbral": 0.36442806465639915,
+ "umbral_por_dominio": false,
+ "F1_anidado_sinBOG": 0.7774114012417194,
+ "IC95": [
+  0.7739385736289425,
+  0.7809133157447562
+ ],
+ "F1_segunda_particion": 0.777631831397494,
+ "optimismo": 0.00017225265104103826,
+ "AUC": 0.9596258184391611,
+ "precision": 0.7406673647864602,
+ "exhaustividad": 0.8179914356265433,
+ "tasa_predicha_test": 0.23254443235400798,
+ "tasa_predicha_oof_sinBOG": 0.2322579391552726,
+ "tasa_pobres_train_sinBOG": 0.20721794381869643,
+ "tasa_coherente": true,
+ "otras_versiones": [
+  {
+   "version": "parsimoniosa",
+   "conjunto": "f. top-20 impureza (con generadas)",
+   "ruta_csv": "G:\\Mi unidad\\Curso BigData\\Taller2\\submissions\\RF_mtry_0_292_minleaf_156_ms_0_443_depth_None_cw_none_trees_360_n_20_pars_bog0_5.csv",
+   "archivo": "RF_mtry_0_292_minleaf_156_ms_0_443_depth_None_cw_none_trees_360_n_20_pars_bog0_5.csv",
+   "n_vars": 20,
+   "F1_anidado_sinBOG": 0.7778024878056012,
+   "AUC": 0.959586834189273,
+   "umbral": 0.3759218772037907,
+   "tasa_predicha_test": 0.2295973884657236
+  },
+  {
+   "version": "sin generadas",
+   "conjunto": "d. S3 + búsqueda 09 + categóricas (sin generadas)",
+   "ruta_csv": "G:\\Mi unidad\\Curso BigData\\Taller2\\submissions\\RF_mtry_0_292_minleaf_156_ms_0_443_depth_None_cw_none_trees_360_n_179_singen_bog0_5.csv",
+   "archivo": "RF_mtry_0_292_minleaf_156_ms_0_443_depth_None_cw_none_trees_360_n_179_singen_bog0_5.csv",
+   "n_vars": 179,
+   "F1_anidado_sinBOG": 0.7205116545158499,
+   "AUC": 0.9361459437106545,
+   "umbral": 0.37322921186625513,
+   "tasa_predicha_test": 0.23376858904606457
+  }
+ ],
+ "verificado": "id,pobre; 66.168 filas; ids y orden de sample_submission; valores 0/1",
+ "submuestra_prueba": null,
+ "tiempos_min": {
+  "seleccion_min": 16.065837268034617,
+  "optuna_min": 16.67387772401174,
+  "bogota_min": 1.346971086661021,
+  "desbalance_min": 1.3553573807080588,
+  "segunda_particion_min": 1.4284000476201375,
+  "finales_min": 7.463238787651062,
+  "total_min": 44.78102657397588
+ },
+ "tiempo_total_min": 44.78102657397588
+}

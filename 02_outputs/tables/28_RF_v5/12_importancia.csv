@@ -1,0 +1,26 @@
+variable,importancia_impureza,bloque,acumulado
+v5_zhat_hogar,0.3010063690065461,G. Variable generada (1.ª etapa),0.3010063690065461
+v5_gap_hogar,0.16210009349962548,G. Variable generada (1.ª etapa),0.4631064625061716
+v5_prob_pobre_hogar,0.16061930406208508,G. Variable generada (1.ª etapa),0.6237257665682567
+v5_prob_pobre_fw,0.1049491453367474,G. Variable generada (1.ª etapa),0.7286749119050041
+v5_gap_fw,0.09986151120356153,G. Variable generada (1.ª etapa),0.8285364231085657
+v5_lz,0.06343878866327857,G. Variable generada (1.ª etapa),0.8919752117718442
+lz_ingreso_esperado,0.039704735072664886,G. Variable generada (1.ª etapa),0.9316799468445092
+v5_brecha,0.029298198801313735,G. Variable generada (1.ª etapa),0.9609781456458228
+x_lz_ingreso_esperado__sobre__n_subsidio_transporte,0.014119061924915518,G. Variable generada (1.ª etapa),0.9750972075707384
+brecha_esperada,0.010396554782198896,G. Variable generada (1.ª etapa),0.9854937623529373
+x_brecha_esperada__sobre__n_recibe_pension_jubilacion,0.002052187332032907,G. Variable generada (1.ª etapa),0.9875459496849702
+log_ing_esp_max,0.001242332943552698,G. Variable generada (1.ª etapa),0.9887882826285229
+v5_mu_log,0.0011178525601196238,G. Variable generada (1.ª etapa),0.9899061351886426
+v5_sigma_hogar,0.0010462716827163098,G. Variable generada (1.ª etapa),0.9909524068713589
+x_brecha_esperada__sobre__n_pos_obrero_particular,0.000944102248935327,G. Variable generada (1.ª etapa),0.9918965091202943
+v5_cv_ing,0.0009131361428473682,G. Variable generada (1.ª etapa),0.9928096452631416
+v5_lz_transferencias,0.0009082897099849692,G. Variable generada (1.ª etapa),0.9937179349731267
+v5_sd_log,0.0008800342899549033,G. Variable generada (1.ª etapa),0.9945979692630815
+log_ing_esp_jefe,0.0008294716906305866,G. Variable generada (1.ª etapa),0.9954274409537122
+v5_lz_laboral,0.0008035466905448685,G. Variable generada (1.ª etapa),0.996230987644257
+v5_perceptores_esp_pc,0.000787719082729331,G. Variable generada (1.ª etapa),0.9970187067269863
+v5_lz_capital,0.0007866035412463828,G. Variable generada (1.ª etapa),0.9978053102682327
+v5_log_ing_jefe_linea,0.0007356423927946962,G. Variable generada (1.ª etapa),0.9985409526610274
+share_principal_perceptor,0.0007318109510693441,G. Variable generada (1.ª etapa),0.9992727636120967
+v5_log_ing_max_linea,0.0007272363879037173,G. Variable generada (1.ª etapa),1.0000000000000004
